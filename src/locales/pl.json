@@ -1,0 +1,29 @@
+{
+  "app": {
+    "title": "ClarityAge",
+    "welcome": "Witamy w Twojej aplikacji React + Material-UI"
+  },
+  "buttons": {
+    "getStarted": "Rozpocznij",
+    "learnMore": "Dowiedz się więcej",
+    "language": "Język"
+  },
+  "languages": {
+    "en": "English",
+    "pl": "Polski"
+  },
+  "features": {
+    "materialUI": {
+      "title": "Motyw Material-UI",
+      "description": "Twoja aplikacja jest skonfigurowana z ciemnym motywem Material-UI i zawiera czcionki Roboto dla profesjonalnego wyglądu."
+    },
+    "viteReact": {
+      "title": "Vite + React",
+      "description": "Zbudowane z Vite dla szybkiego rozwoju i wymiany modułów na gorąco. Obsługa TypeScript jest włączona."
+    },
+    "readyToBuild": {
+      "title": "Gotowe do budowy",
+      "description": "Zacznij budować swoją aplikację z nowoczesnymi wzorcami React i komponentami Material-UI."
+    }
+  }
+}
