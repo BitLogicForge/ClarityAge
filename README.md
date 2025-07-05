@@ -80,27 +80,3 @@ Contributions are welcome! Feel free to open issues or submit pull requests.
 This project is open source and available under the [MIT License](LICENSE).
 
 ---
-
-_Reflect. Explore. Grow._
-{
-files: ['**/*.{ts,tsx}'],
-extends: [
-// Other configs...
-// Enable lint rules for React
-reactX.configs['recommended-typescript'],
-// Enable lint rules for React DOM
-reactDom.configs.recommended,
-],
-languageOptions: {
-parserOptions: {
-project: ['./tsconfig.node.json', './tsconfig.app.json'],
-tsconfigRootDir: import.meta.dirname,
-},
-// other options...
-},
-},
-])
-
-```
-
-```
