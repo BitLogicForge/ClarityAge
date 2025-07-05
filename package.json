@@ -1,6 +1,6 @@
 {
   "name": "clarityage",
-  "homepage": "https://bitlogicforge.github.io/clarityage",
+  "homepage": "https://bitlogicforge.github.io/ClarityAge",
   "private": true,
   "version": "0.0.1",
   "type": "module",
@@ -9,7 +9,8 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "deploy": "gh-pages -d build"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
