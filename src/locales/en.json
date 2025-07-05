@@ -1,12 +1,16 @@
 {
   "app": {
     "title": "ClarityAge",
+    "description": "Explore philosophical questions and personal values",
     "welcome": "Welcome to your React + Material-UI application"
   },
   "buttons": {
     "getStarted": "Get Started",
     "learnMore": "Learn More",
-    "language": "Language"
+    "language": "Language",
+    "checkAnswers": "Check Answers",
+    "clearAnswers": "Clear Answers",
+    "next": "Next"
   },
   "languages": {
     "en": "English",
@@ -113,10 +117,10 @@
     }
   },
   "likertScale": {
-    "stronglyDisagree": "Bardzo Nie",
-    "disagree": "Nie",
-    "neutral": "Nie wiem",
-    "agree": "Tak",
-    "stronglyAgree": "Bardzo Tak"
+    "stronglyDisagree": "Strongly Disagree",
+    "disagree": "Disagree",
+    "neutral": "Neutral",
+    "agree": "Agree",
+    "stronglyAgree": "Strongly Agree"
   }
 }

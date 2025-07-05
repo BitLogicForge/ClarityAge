@@ -1,12 +1,16 @@
 {
   "app": {
     "title": "ClarityAge",
-    "welcome": "Witamy w Twojej aplikacji React + Material-UI"
+    "welcome": "Witamy w Twojej aplikacji React + Material-UI",
+    "description": "Odkrywaj pytania filozoficzne i osobiste wartości"
   },
   "buttons": {
     "getStarted": "Rozpocznij",
     "learnMore": "Dowiedz się więcej",
-    "language": "Język"
+    "language": "Język",
+    "checkAnswers": "Sprawdź odpowiedzi",
+    "clearAnswers": "Wyczyść odpowiedzi",
+    "next": "Dalej"
   },
   "languages": {
     "en": "English",
