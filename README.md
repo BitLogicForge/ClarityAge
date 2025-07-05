@@ -1,69 +1,106 @@
-# React + TypeScript + Vite
+# ClarityAge - 40
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A thoughtful questionnaire exploring philosophical perspectives and personal values through the lens of life experience.
 
-Currently, two official plugins are available:
+## ✨ About
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+ClarityAge is an interactive web application that presents carefully curated philosophical questions designed to help users reflect on their life perspectives, values, and approaches to meaning. Each question is accompanied by wisdom from notable thinkers and philosophers.
 
-## Expanding the ESLint configuration
+## 🎯 Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Interactive Questionnaire** - Navigate through thought-provoking questions at your own pace
+- **Enhanced Progress Tracking** - Beautiful circular progress indicator with smooth animations
+- **Multilingual Support** - Available in English and Polish
+- **Dark/Light Theme** - Seamless theme switching for comfortable reading
+- **Responsive Design** - Optimized for desktop and mobile devices
+- **Modern UI** - Built with Material-UI for a clean, professional experience
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🚀 Tech Stack
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- **React 19** with TypeScript
+- **Material-UI (MUI)** for components and theming
+- **Redux Toolkit** for state management
+- **i18next** for internationalization
+- **Framer Motion** for smooth animations
+- **Vite** for fast development and building
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🛠️ Getting Started
+
+### Prerequisites
+
+- Node.js (v18 or higher)
+- npm or yarn
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/BitLogicForge/ClarityAge.git
+
+# Navigate to project directory
+cd ClarityAge
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Build for Production
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+```bash
+npm run build
+```
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
+### Deploy to GitHub Pages
+
+```bash
+npm run deploy
+```
+
+## 🎨 Customization
+
+The application is designed to be easily customizable:
+
+- **Questions**: Modify `/src/config/base.ts` to add or edit questions
+- **Translations**: Update `/src/locales/` files for different languages
+- **Themes**: Customize colors and styling in the ThemeProvider component
+
+## 📱 Live Demo
+
+Visit the live application: [ClarityAge - 40](https://bitlogicforge.github.io/ClarityAge)
+
+## 🤝 Contributing
+
+Contributions are welcome! Feel free to open issues or submit pull requests.
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+---
+
+_Reflect. Explore. Grow._
+{
+files: ['**/*.{ts,tsx}'],
+extends: [
+// Other configs...
+// Enable lint rules for React
+reactX.configs['recommended-typescript'],
+// Enable lint rules for React DOM
+reactDom.configs.recommended,
+],
+languageOptions: {
+parserOptions: {
+project: ['./tsconfig.node.json', './tsconfig.app.json'],
+tsconfigRootDir: import.meta.dirname,
+},
+// other options...
+},
+},
 ])
+
+```
+
 ```
