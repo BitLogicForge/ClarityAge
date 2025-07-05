@@ -8,14 +8,12 @@ import {
   CardContent,
   Chip,
   Divider,
-  FormControlLabel,
-  Radio,
-  RadioGroup,
   Typography,
 } from "@mui/material";
 import { useTranslation } from "react-i18next";
-import { likertScaleMarks, type TPhilosophyQuestion } from "../config/base";
+import { type TPhilosophyQuestion } from "../config/base";
 import QuoteBox from "./QuoteBox";
+import RadioAnswers from "./RadioAnswers";
 
 export default function Question(question: TPhilosophyQuestion) {
   const { t } = useTranslation();
@@ -84,41 +82,7 @@ export default function Question(question: TPhilosophyQuestion) {
         </Typography>
 
         {/* Radio Group */}
-        <RadioGroup
-          sx={{
-            gap: 1,
-            "& .MuiFormControlLabel-root": {
-              ml: 0,
-              mr: 0,
-              py: 0.5,
-              px: 2,
-              borderRadius: 1,
-              transition: "all 0.2s ease",
-              "&:hover": {
-                backgroundColor: "action.hover",
-              },
-            },
-            "& .MuiRadio-root": {
-              color: "primary.main",
-              "&.Mui-checked": {
-                color: "primary.main",
-              },
-            },
-            "& .MuiFormControlLabel-label": {
-              fontSize: "0.9rem",
-              fontWeight: 500,
-            },
-          }}
-        >
-          {likertScaleMarks.map((mark) => (
-            <FormControlLabel
-              key={mark.value}
-              value={mark.value}
-              control={<Radio />}
-              label={t(mark.label) ?? ""}
-            />
-          ))}
-        </RadioGroup>
+        <RadioAnswers />
       </CardContent>
     </Card>
   );
