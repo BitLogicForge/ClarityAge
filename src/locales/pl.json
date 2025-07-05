@@ -11,7 +11,21 @@
     "checkAnswers": "Sprawdź odpowiedzi",
     "clearAnswers": "Wyczyść odpowiedzi",
     "next": "Dalej",
-    "doItAgain": "Zrób to ponownie"
+    "doItAgain": "Zrób to ponownie",
+    "close": "Zamknij",
+    "contact": "Kontakt"
+  },
+  "theme": {
+    "light": "Jasny",
+    "dark": "Ciemny"
+  },
+  "contact": {
+    "title": "Kontakt",
+    "description": "Masz pytania, uwagi lub sugestie? Chętnie Cię wysłucham! Napisz do mnie w sprawie ClarityAge.",
+    "emailLabel": "Skontaktuj się:",
+    "revealEmail": "Pokaż adres email",
+    "copyEmail": "Kopiuj email",
+    "responseTime": "Zazwyczaj odpowiadam w ciągu 24-48 godzin."
   },
   "languages": {
     "en": "English",
