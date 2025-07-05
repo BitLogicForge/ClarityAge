@@ -122,5 +122,17 @@
     "neutral": "Nie wiem",
     "agree": "Tak",
     "stronglyAgree": "Bardzo Tak"
+  },
+  "progress": {
+    "label": "Postęp"
+  },
+  "validation": {
+    "incomplete": "Proszę odpowiedzieć na wszystkie pytania przed sprawdzeniem wyników.",
+    "complete": "Wszystkie pytania zostały odpowiedziane! Sprawdź swoje wyniki poniżej.",
+    "cleared": "Wszystkie odpowiedzi zostały wyczyszczone."
+  },
+  "results": {
+    "title": "Kwestionariusz Ukończony!",
+    "placeholder": "Twoja analiza filozoficzna pojawi się tutaj. Wynik na podstawie ukończenia:"
   }
 }

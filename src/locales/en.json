@@ -122,5 +122,17 @@
     "neutral": "Neutral",
     "agree": "Agree",
     "stronglyAgree": "Strongly Agree"
+  },
+  "progress": {
+    "label": "Progress"
+  },
+  "validation": {
+    "incomplete": "Please answer all questions before checking your results.",
+    "complete": "All questions answered! Check your results below.",
+    "cleared": "All answers have been cleared."
+  },
+  "results": {
+    "title": "Questionnaire Complete!",
+    "placeholder": "Your philosophical analysis will appear here. Score based on completion:"
   }
 }

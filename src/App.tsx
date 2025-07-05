@@ -3,38 +3,88 @@ import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
+import { Brightness4, Brightness7 } from "@mui/icons-material";
 import {
+  Alert,
   Box,
   Button,
   ButtonGroup,
   createTheme,
   CssBaseline,
+  IconButton,
+  LinearProgress,
+  Snackbar,
   Stack,
   Typography,
 } from "@mui/material";
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import "./App.css";
 import LanguageSwitcher from "./components/LanguageSwitcher";
 import Question from "./components/Question";
 import { questions } from "./config/base";
-import { useAppDispatch } from "./store/hooks";
+import { useAppDispatch, useAppSelector } from "./store/hooks";
 import { checkAnswers, clearAnswers } from "./store/questionsSlice";
 
 function App() {
   const { t } = useTranslation();
   const dispatch = useAppDispatch();
+  const { answers } = useAppSelector((state) => state.questions);
+
+  // Theme state
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  // Snackbar state
+  const [snackbar, setSnackbar] = useState({
+    open: false,
+    message: "",
+    severity: "info" as "success" | "error" | "warning" | "info",
+  });
+
+  // Calculate progress
+  const totalQuestions = questions.length;
+  const answeredQuestions = Object.keys(answers).length;
+  const progress = (answeredQuestions / totalQuestions) * 100;
+  const allAnswered = answeredQuestions === totalQuestions;
 
   const handleCheckAnswers = () => {
+    if (!allAnswered) {
+      setSnackbar({
+        open: true,
+        message: t("validation.incomplete"),
+        severity: "warning",
+      });
+      return;
+    }
+
     dispatch(checkAnswers());
+    setSnackbar({
+      open: true,
+      message: t("validation.complete"),
+      severity: "success",
+    });
   };
 
   const handleClearAnswers = () => {
     dispatch(clearAnswers());
+    setSnackbar({
+      open: true,
+      message: t("validation.cleared"),
+      severity: "info",
+    });
+  };
+
+  const toggleTheme = () => {
+    setIsDarkMode(!isDarkMode);
+  };
+
+  const handleCloseSnackbar = () => {
+    setSnackbar((prev) => ({ ...prev, open: false }));
   };
 
   const theme = createTheme({
     palette: {
-      mode: true ? "dark" : "light",
+      mode: isDarkMode ? "dark" : "light",
     },
   });
   return (
@@ -51,15 +101,50 @@ function App() {
             px: { xs: 2, sm: 3 },
           }}
         >
-          {/* Language Switcher */}
+          {/* Header with Language Switcher and Theme Toggle */}
           <Box
             sx={{
               display: "flex",
-              justifyContent: "flex-end",
+              justifyContent: "space-between",
+              alignItems: "center",
               mb: { xs: 1, sm: 2 },
             }}
           >
+            <IconButton
+              onClick={toggleTheme}
+              sx={{ color: "primary.main" }}
+              aria-label="toggle theme"
+            >
+              {isDarkMode ? <Brightness7 /> : <Brightness4 />}
+            </IconButton>
+
             <LanguageSwitcher />
+          </Box>
+
+          {/* Progress Bar */}
+          <Box sx={{ mb: 3 }}>
+            <Box
+              sx={{ display: "flex", justifyContent: "space-between", mb: 1 }}
+            >
+              <Typography variant="body2" color="text.secondary">
+                {t("progress.label")}
+              </Typography>
+              <Typography variant="body2" color="text.secondary">
+                {answeredQuestions}/{totalQuestions}
+              </Typography>
+            </Box>
+            <LinearProgress
+              variant="determinate"
+              value={progress}
+              sx={{
+                height: 8,
+                borderRadius: 4,
+                backgroundColor: "action.hover",
+                "& .MuiLinearProgress-bar": {
+                  borderRadius: 4,
+                },
+              }}
+            />
           </Box>
 
           <Typography
@@ -129,7 +214,47 @@ function App() {
               </Button>
             </ButtonGroup>
           </Box>
+
+          {/* Results Placeholder */}
+          {allAnswered && (
+            <Box
+              sx={{
+                mt: 4,
+                p: 3,
+                borderRadius: 2,
+                backgroundColor: "success.light",
+                color: "success.contrastText",
+                textAlign: "center",
+              }}
+            >
+              <Typography variant="h6" gutterBottom>
+                🎉 {t("results.title")}
+              </Typography>
+              <Typography variant="body1">
+                {t("results.placeholder")}
+              </Typography>
+              <Typography variant="h4" sx={{ mt: 2, fontWeight: "bold" }}>
+                {Math.round((answeredQuestions / totalQuestions) * 100)}%
+              </Typography>
+            </Box>
+          )}
         </Box>
+
+        {/* Snackbar for notifications */}
+        <Snackbar
+          open={snackbar.open}
+          autoHideDuration={3000}
+          onClose={handleCloseSnackbar}
+          anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
+        >
+          <Alert
+            onClose={handleCloseSnackbar}
+            severity={snackbar.severity}
+            sx={{ width: "100%" }}
+          >
+            {snackbar.message}
+          </Alert>
+        </Snackbar>
       </ThemeProvider>
     </>
   );
