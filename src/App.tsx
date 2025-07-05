@@ -7,8 +7,6 @@ import {
   Box,
   Button,
   ButtonGroup,
-  Card,
-  CardContent,
   Container,
   createTheme,
   CssBaseline,
@@ -18,6 +16,8 @@ import {
 import { useTranslation } from "react-i18next";
 import "./App.css";
 import LanguageSwitcher from "./components/LanguageSwitcher";
+import Question from "./components/Question";
+import { questions } from "./config/base";
 function App() {
   const { t } = useTranslation();
   const theme = createTheme({
@@ -47,51 +47,22 @@ function App() {
               align="center"
               color="text.secondary"
             >
-              {t("app.welcome")}
+              {t("app.description")}
             </Typography>
 
             <Stack direction={{ xs: "column" }} spacing={3} sx={{ mt: 4 }}>
-              <Card sx={{ flex: 1 }}>
-                <CardContent>
-                  <Typography variant="h6" gutterBottom>
-                    🎨 {t("features.materialUI.title")}
-                  </Typography>
-                  <Typography variant="body2" color="text.secondary">
-                    {t("features.materialUI.description")}
-                  </Typography>
-                </CardContent>
-              </Card>
-
-              <Card sx={{ flex: 1 }}>
-                <CardContent>
-                  <Typography variant="h6" gutterBottom>
-                    ⚡ {t("features.viteReact.title")}
-                  </Typography>
-                  <Typography variant="body2" color="text.secondary">
-                    {t("features.viteReact.description")}
-                  </Typography>
-                </CardContent>
-              </Card>
-
-              <Card sx={{ flex: 1 }}>
-                <CardContent>
-                  <Typography variant="h6" gutterBottom>
-                    🚀 {t("features.readyToBuild.title")}
-                  </Typography>
-                  <Typography variant="body2" color="text.secondary">
-                    {t("features.readyToBuild.description")}
-                  </Typography>
-                </CardContent>
-              </Card>
+              {questions.map((question) => (
+                <Question key={question.title} {...question} />
+              ))}
             </Stack>
 
             <Box sx={{ mt: 4, textAlign: "center" }}>
               <ButtonGroup variant="contained" size="large" sx={{ gap: 2 }}>
                 <Button variant="contained" size="large">
-                  {t("buttons.getStarted")}
+                  {t("buttons.checkAnswers")}
                 </Button>
                 <Button variant="outlined" size="large">
-                  {t("buttons.learnMore")}
+                  {t("buttons.clearAnswers")}
                 </Button>
               </ButtonGroup>
             </Box>
