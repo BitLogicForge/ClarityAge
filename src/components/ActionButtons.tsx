@@ -16,7 +16,7 @@ export default function ActionButtons({
 }: ActionButtonsProps) {
   const { t } = useTranslation();
   const dispatch = useAppDispatch();
-  const { answers } = useAppSelector((state) => state.questions);
+  const { answers, appState } = useAppSelector((state) => state.questions);
 
   const totalQuestions = questions.length;
   const answeredQuestions = Object.keys(answers).length;
@@ -37,6 +37,36 @@ export default function ActionButtons({
     onShowNotification(t("validation.cleared"), "info");
   };
 
+  const handleDoItAgain = () => {
+    dispatch(clearAnswers());
+    onShowNotification(t("validation.restart"), "info");
+  };
+
+  // Show different buttons based on app state
+  if (appState === "completed") {
+    return (
+      <Box
+        sx={{
+          mt: { xs: 3, sm: 4 },
+          textAlign: "center",
+          px: { xs: 1, sm: 0 },
+        }}
+      >
+        <Button
+          variant="contained"
+          size="large"
+          onClick={handleDoItAgain}
+          sx={{
+            width: { xs: "100%", sm: "auto" },
+            minWidth: 200,
+          }}
+        >
+          {t("buttons.doItAgain")}
+        </Button>
+      </Box>
+    );
+  }
+
   return (
     <Box
       sx={{
@@ -45,32 +75,48 @@ export default function ActionButtons({
         px: { xs: 1, sm: 0 },
       }}
     >
-      <ButtonGroup
-        variant="contained"
-        size="large"
-        sx={{
-          gap: { xs: 1, sm: 2 },
-          flexDirection: { xs: "column", sm: "row" },
-          width: { xs: "100%", sm: "auto" },
-        }}
-      >
+      {allAnswered ? (
+        // Show "Do It Again" button when completed
         <Button
           variant="contained"
           size="large"
-          onClick={handleCheckAnswers}
-          sx={{ width: { xs: "100%", sm: "auto" } }}
+          onClick={handleDoItAgain}
+          sx={{
+            width: { xs: "100%", sm: "auto" },
+            minWidth: { sm: 200 },
+          }}
         >
-          {t("buttons.checkAnswers")}
+          🔄 {t("buttons.doItAgain")}
         </Button>
-        <Button
-          variant="outlined"
+      ) : (
+        // Show normal buttons when not completed
+        <ButtonGroup
+          variant="contained"
           size="large"
-          onClick={handleClearAnswers}
-          sx={{ width: { xs: "100%", sm: "auto" } }}
+          sx={{
+            gap: { xs: 1, sm: 2 },
+            flexDirection: { xs: "column", sm: "row" },
+            width: { xs: "100%", sm: "auto" },
+          }}
         >
-          {t("buttons.clearAnswers")}
-        </Button>
-      </ButtonGroup>
+          <Button
+            variant="contained"
+            size="large"
+            onClick={handleCheckAnswers}
+            sx={{ width: { xs: "100%", sm: "auto" } }}
+          >
+            {t("buttons.checkAnswers")}
+          </Button>
+          <Button
+            variant="outlined"
+            size="large"
+            onClick={handleClearAnswers}
+            sx={{ width: { xs: "100%", sm: "auto" } }}
+          >
+            {t("buttons.clearAnswers")}
+          </Button>
+        </ButtonGroup>
+      )}
     </Box>
   );
 }

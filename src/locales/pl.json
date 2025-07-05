@@ -10,7 +10,8 @@
     "language": "Język",
     "checkAnswers": "Sprawdź odpowiedzi",
     "clearAnswers": "Wyczyść odpowiedzi",
-    "next": "Dalej"
+    "next": "Dalej",
+    "doItAgain": "Zrób to ponownie"
   },
   "languages": {
     "en": "English",
@@ -129,7 +130,8 @@
   "validation": {
     "incomplete": "Proszę odpowiedzieć na wszystkie pytania przed sprawdzeniem wyników.",
     "complete": "Wszystkie pytania zostały odpowiedziane! Sprawdź swoje wyniki poniżej.",
-    "cleared": "Wszystkie odpowiedzi zostały wyczyszczone."
+    "cleared": "Wszystkie odpowiedzi zostały wyczyszczone.",
+    "restart": "Zaczynamy od nowa! Odpowiedz na pytania ponownie."
   },
   "results": {
     "title": "Kwestionariusz Ukończony!",

@@ -5,13 +5,12 @@ import { useAppSelector } from "../store/hooks";
 
 export default function ResultsDisplay() {
   const { t } = useTranslation();
-  const { answers } = useAppSelector((state) => state.questions);
+  const { answers, appState } = useAppSelector((state) => state.questions);
 
   const totalQuestions = questions.length;
   const answeredQuestions = Object.keys(answers).length;
-  const allAnswered = answeredQuestions === totalQuestions;
 
-  if (!allAnswered) {
+  if (appState !== "completed") {
     return null;
   }
 

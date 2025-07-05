@@ -10,7 +10,8 @@
     "language": "Language",
     "checkAnswers": "Check Answers",
     "clearAnswers": "Clear Answers",
-    "next": "Next"
+    "next": "Next",
+    "doItAgain": "Do It Again"
   },
   "languages": {
     "en": "English",
@@ -129,7 +130,8 @@
   "validation": {
     "incomplete": "Please answer all questions before checking your results.",
     "complete": "All questions answered! Check your results below.",
-    "cleared": "All answers have been cleared."
+    "cleared": "All answers have been cleared.",
+    "restart": "Starting fresh! Answer the questions again."
   },
   "results": {
     "title": "Questionnaire Complete!",

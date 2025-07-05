@@ -7,7 +7,12 @@ import { useTheme } from "./ThemeProvider";
 export default function ProgressBar() {
   const { t } = useTranslation();
   const { isDarkMode } = useTheme();
-  const { answers } = useAppSelector((state) => state.questions);
+  const { answers, appState } = useAppSelector((state) => state.questions);
+
+  // Hide progress bar when questionnaire is completed
+  if (appState === "completed") {
+    return null;
+  }
 
   const totalQuestions = questions.length;
   const answeredQuestions = Object.keys(answers).length;

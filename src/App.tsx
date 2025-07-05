@@ -14,10 +14,12 @@ import ProgressBar from "./components/ProgressBar";
 import QuestionList from "./components/QuestionList";
 import ResultsDisplay from "./components/ResultsDisplay";
 import ThemeProvider from "./components/ThemeProvider";
+import { useAppSelector } from "./store/hooks";
 
 function AppContent() {
   const { t } = useTranslation();
   const { showNotification } = useNotification();
+  const { appState } = useAppSelector((state) => state.questions);
 
   return (
     <>
