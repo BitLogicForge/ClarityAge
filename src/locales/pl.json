@@ -25,5 +25,98 @@
       "title": "Gotowe do budowy",
       "description": "Zacznij budować swoją aplikację z nowoczesnymi wzorcami React i komponentami Material-UI."
     }
+  },
+  "philosophies": {
+    "q1": {
+      "title": "Oświecona Śmiertelność: Czas jako najwyższa waluta",
+      "description": "Zamiast lęku - wdzięczność. Ograniczony czas przestaje być zagrożeniem, staje się priorytetowym algorytmem życia. Przestajesz być „zarządzany przez kalendarz” - to Ty zarządzasz swoim istnieniem przez świadome wybory.",
+      "quote": "Nie mamy zbyt mało czasu, ale wiele z niego marnujemy.",
+      "author": "Seneka",
+      "question": "Czuję, że mój sposób spędzania czasu odzwierciedla jego prawdziwą wartość."
+    },
+    "q2": {
+      "title": "Zasada Wystarczająco™ 2.0",
+      "description": "Nie tylko odróżniasz pragnienia od potrzeb - redefiniujesz sukces. Rezygnujesz z iluzji „więcej” na rzecz architektury życia zrównoważonego, eleganckiego i funkcjonalnego. Komfort, nie konsumpcja.",
+      "quote": "Rzeczy, które posiadasz, w końcu zaczynają posiadać ciebie.",
+      "author": "Tyler Durden (Fight Club)",
+      "question": "Uważam, że to, czego pragnę, rzeczywiście przyczyni się do mojego spokoju."
+    },
+    "q3": {
+      "title": "Zarządzanie Energią, Nie Czasem",
+      "description": "Nie planujesz dnia w oparciu o zegarek, ale o swoje rytmy biologiczne. Działasz w momentach mocy, a regenerujesz się w chwilach spadku - dzięki temu osiągasz więcej, wypalając się mniej.",
+      "quote": "Nie jesteśmy zmęczeni pracą, jesteśmy zmęczeni robieniem rzeczy bez znaczenia.",
+      "author": "Greg McKeown",
+      "question": "Czuję, że moje działania są zsynchronizowane z moją naturalną energią."
+    },
+    "q4": {
+      "title": "Sztuka Świętego NIE",
+      "description": "Każde TAK to zobowiązanie. Dlatego Twoją najpotężniejszą strategią staje się odmowa - spokojna, bez winy, pełna klarowności. Chronisz przestrzeń dla tego, co naprawdę się liczy.",
+      "quote": "Granice to nie mur - to brama z selektywnym dostępem.",
+      "author": "Brené Brown",
+      "question": "Potrafię stanowczo i spokojnie odmawiać, gdy coś nie służy moim priorytetom."
+    },
+    "q5": {
+      "title": "Zarabiaj Mądrze, Nie Więcej",
+      "description": "Twoja finansowa dojrzałość polega nie na imponujących dochodach, ale na świadomych wyborach. Pieniądze stają się narzędziem wolności, a nie spektaklu.",
+      "quote": "Nie bogactwo czyni cię wolnym, ale sposób, w jaki z niego korzystasz.",
+      "author": "Morgan Housel",
+      "question": "Czuję, że moje decyzje finansowe zwiększają moją wolność."
+    },
+    "q6": {
+      "title": "Ciało jako Kapitał",
+      "description": "Po czterdziestce ciało nie wybacza tyle co kiedyś - ale w zamian za troskę odpłaca się długowiecznością, siłą i jasnością umysłu. To nie kara - to logika inwestycji.",
+      "quote": "Twoje zdrowie to to, co inwestujesz, a nie to, co się po prostu zdarza.",
+      "author": "Peter Attia",
+      "question": "Dbam o swoje ciało jak o kapitał, który procentuje w przyszłości."
+    },
+    "q7": {
+      "title": "Relacje Wzajemności",
+      "description": "Nie utrzymujesz relacji z przyzwyczajenia. Twoja energia społeczna jest ograniczona - alokujesz ją tam, gdzie jest wymiana, nie jednostronne zużycie.",
+      "quote": "Nie każdy, kto był częścią twojej przeszłości, musi być częścią twojej przyszłości.",
+      "author": "Trent Shelton",
+      "question": "Utrzymuję relacje, które są wzajemne i wspierające."
+    },
+    "q8": {
+      "title": "Kapitał Doświadczenia",
+      "description": "Twoje błędy, lekcje, porażki - to dziś waluta. Uczysz, mentorujesz, projektujesz lepiej, bo Twoja wiedza jest oparta na rzeczywistości, nie na teorii.",
+      "quote": "Doświadczenie to nazwa, którą nadajemy naszym błędom.",
+      "author": "Oscar Wilde",
+      "question": "Potrafię wykorzystywać swoje doświadczenia jako przewagę."
+    },
+    "q9": {
+      "title": "Radar Emocjonalny",
+      "description": "Widzisz, kto karmi, a kto wysysa. Twoja inteligencja emocjonalna to system wczesnego ostrzegania - i tarcza. Jesteś spokojniejszy, bo nie wpuszczasz chaosu do środka.",
+      "quote": "Ludzie nie są toksyczni - ale ich zachowania mogą być śmiertelnie zaraźliwe.",
+      "author": "Susan David",
+      "question": "Potrafię rozpoznawać i chronić się przed emocjonalnym chaosem."
+    },
+    "q10": {
+      "title": "Myślenie Dziedzictwem",
+      "description": "Zamiast pytać 'co osiągnąłem?', pytasz 'co po mnie zostanie?'. Nie chodzi o pomniki - chodzi o trwały wpływ, który przetrwa Twoją obecność.",
+      "quote": "Sadź drzewa, pod którymi nigdy nie usiądziesz.",
+      "author": "Grecka maksyma",
+      "question": "Czuję, że buduję coś, co przetrwa mnie i będzie miało wartość dla innych."
+    },
+    "q11": {
+      "title": "Systemy, Nie Części",
+      "description": "Twoje życie przestaje być kolekcją oddzielnych projektów - zaczyna być ekosystemem. Praca wspiera zdrowie, zdrowie wspiera relacje, relacje wspierają misję.",
+      "quote": "Dopiero gdy wszystko gra razem, życie gra twoją melodię.",
+      "author": "James Clear",
+      "question": "Moje działania życiowe wspierają się wzajemnie i tworzą spójny system."
+    },
+    "q12": {
+      "title": "Radość z Integracji",
+      "description": "To nie perfekcja, ale spójność daje satysfakcję. Po raz pierwszy czujesz, że życie nie musi być kompromisem - może być całością, gdzie wszystko ma swoje miejsce.",
+      "quote": "Kiedy każda część twojego życia gra w jednej drużynie, zaczynasz wygrywać.",
+      "author": "Cal Newport",
+      "question": "Czuję, że moje życie jest spójne i zintegrowane."
+    }
+  },
+  "likertScale": {
+    "stronglyDisagree": "Bardzo Nie",
+    "disagree": "Nie",
+    "neutral": "Nie wiem",
+    "agree": "Tak",
+    "stronglyAgree": "Bardzo Tak"
   }
 }
