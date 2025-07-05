@@ -32,7 +32,7 @@ function App() {
   const { answers } = useAppSelector((state) => state.questions);
 
   // Theme state
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(true);
 
   // Snackbar state
   const [snackbar, setSnackbar] = useState({
