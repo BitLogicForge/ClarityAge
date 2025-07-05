@@ -11,6 +11,7 @@ import {
   Divider,
   Typography,
 } from "@mui/material";
+import { useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { type TPhilosophyQuestion } from "../config/base";
 import { useAppDispatch, useAppSelector } from "../store/hooks";
@@ -26,10 +27,24 @@ export default function Question(question: QuestionProps) {
   const { answers, hasBeenChecked, expandedQuestion } = useAppSelector(
     (state) => state.questions
   );
+  const accordionRef = useRef<HTMLDivElement>(null);
 
   const selectedAnswer = answers[question.id];
   const hasAnswer = !!selectedAnswer;
   const isExpanded = expandedQuestion === question.id;
+
+  // Scroll to this question when it becomes expanded (but not on initial load)
+  useEffect(() => {
+    if (isExpanded && accordionRef.current) {
+      // Small delay to allow accordion animation to start
+      setTimeout(() => {
+        accordionRef.current?.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }, 200); // Increased delay to let accordion fully expand
+    }
+  }, [isExpanded]);
 
   // Determine chip color based on state
   const getChipColor = () => {
@@ -55,12 +70,14 @@ export default function Question(question: QuestionProps) {
 
   return (
     <Accordion
+      ref={accordionRef}
       expanded={isExpanded}
       onChange={handleAccordionChange}
       sx={{
         maxWidth: "100%",
         boxShadow: 2,
         borderRadius: "8px !important",
+        scrollMarginTop: { xs: "72px", sm: "80px" }, // Account for floating progress bar
         "&:before": {
           display: "none",
         },
