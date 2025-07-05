@@ -14,7 +14,7 @@ import {
 import { useTranslation } from "react-i18next";
 import { type TPhilosophyQuestion } from "../config/base";
 import { useAppDispatch, useAppSelector } from "../store/hooks";
-import { setAnswer } from "../store/questionsSlice";
+import { setAnswer, setExpandedQuestion } from "../store/questionsSlice";
 import QuoteBox from "./QuoteBox";
 import RadioAnswers from "./RadioAnswers";
 
@@ -23,12 +23,13 @@ interface QuestionProps extends TPhilosophyQuestion {}
 export default function Question(question: QuestionProps) {
   const { t } = useTranslation();
   const dispatch = useAppDispatch();
-  const { answers, hasBeenChecked } = useAppSelector(
+  const { answers, hasBeenChecked, expandedQuestion } = useAppSelector(
     (state) => state.questions
   );
 
   const selectedAnswer = answers[question.id];
   const hasAnswer = !!selectedAnswer;
+  const isExpanded = expandedQuestion === question.id;
 
   // Determine chip color based on state
   const getChipColor = () => {
@@ -45,8 +46,17 @@ export default function Question(question: QuestionProps) {
     dispatch(setAnswer({ questionId: question.id, value }));
   };
 
+  const handleAccordionChange = (
+    _event: React.SyntheticEvent,
+    isExpanded: boolean
+  ) => {
+    dispatch(setExpandedQuestion(isExpanded ? question.id : null));
+  };
+
   return (
     <Accordion
+      expanded={isExpanded}
+      onChange={handleAccordionChange}
       sx={{
         maxWidth: "100%",
         boxShadow: 2,
