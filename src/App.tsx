@@ -50,11 +50,7 @@ function App() {
               {t("app.welcome")}
             </Typography>
 
-            <Stack
-              direction={{ xs: "column", md: "row" }}
-              spacing={3}
-              sx={{ mt: 4 }}
-            >
+            <Stack direction={{ xs: "column" }} spacing={3} sx={{ mt: 4 }}>
               <Card sx={{ flex: 1 }}>
                 <CardContent>
                   <Typography variant="h6" gutterBottom>
