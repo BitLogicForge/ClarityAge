@@ -2,10 +2,11 @@ import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import {
-  Box,
-  Card,
-  CardContent,
+  Accordion,
+  AccordionDetails,
+  AccordionSummary,
   Chip,
   Divider,
   Typography,
@@ -15,41 +16,63 @@ import { type TPhilosophyQuestion } from "../config/base";
 import QuoteBox from "./QuoteBox";
 import RadioAnswers from "./RadioAnswers";
 
-export default function Question(question: TPhilosophyQuestion) {
+interface QuestionProps extends TPhilosophyQuestion {
+  isChecked?: boolean;
+  selectedAnswer?: string;
+  onAnswerChange?: (value: string) => void;
+}
+
+export default function Question({
+  isChecked = false,
+  selectedAnswer,
+  onAnswerChange,
+  ...question
+}: QuestionProps) {
   const { t } = useTranslation();
   return (
-    <Card
+    <Accordion
       sx={{
         maxWidth: "100%",
-        boxShadow: 3,
-        borderRadius: 2,
-        transition: "all 0.3s ease",
-        "&:hover": {
-          boxShadow: 6,
+        boxShadow: 2,
+        borderRadius: "8px !important",
+        "&:before": {
+          display: "none",
+        },
+        "&.Mui-expanded": {
+          boxShadow: 4,
         },
       }}
     >
-      <CardContent sx={{ p: 3 }}>
-        {/* Header with ID and Title */}
-        <Box sx={{ display: "flex", alignItems: "center", gap: 2, mb: 2 }}>
-          <Chip
-            label={question.id}
-            color="primary"
-            size="medium"
-            sx={{ fontWeight: "bold" }}
-          />
-          <Typography
-            variant="h6"
-            sx={{
-              fontWeight: 600,
-              color: "primary.main",
-              flex: 1,
-            }}
-          >
-            {t(question.title)}
-          </Typography>
-        </Box>
+      <AccordionSummary
+        expandIcon={<ExpandMoreIcon />}
+        aria-controls={`panel-${question.id}-content`}
+        id={`panel-${question.id}-header`}
+        sx={{
+          "& .MuiAccordionSummary-content": {
+            alignItems: "center",
+            gap: 2,
+          },
+        }}
+      >
+        <Chip
+          label={question.id}
+          color={isChecked ? "success" : "primary"}
+          size="medium"
+          sx={{ fontWeight: "bold" }}
+        />
+        <Typography
+          variant="h6"
+          sx={{
+            fontWeight: 600,
+            color: "primary.main",
+            flex: 1,
+          }}
+        >
+          {t(question.title)}
+        </Typography>
+      </AccordionSummary>
 
+      <AccordionDetails sx={{ px: 3, pb: 3 }}>
         {/* Description */}
         <Typography
           variant="body2"
@@ -82,8 +105,11 @@ export default function Question(question: TPhilosophyQuestion) {
         </Typography>
 
         {/* Radio Group */}
-        <RadioAnswers />
-      </CardContent>
-    </Card>
+        <RadioAnswers
+          selectedValue={selectedAnswer}
+          onChange={onAnswerChange}
+        />
+      </AccordionDetails>
+    </Accordion>
   );
 }

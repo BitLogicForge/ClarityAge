@@ -6,10 +6,20 @@ import { FormControlLabel, Radio, RadioGroup } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import { likertScaleMarks } from "../config/base";
 
-export default function RadioAnswers() {
+interface RadioAnswersProps {
+  selectedValue?: string;
+  onChange?: (value: string) => void;
+}
+
+export default function RadioAnswers({
+  selectedValue,
+  onChange,
+}: RadioAnswersProps) {
   const { t } = useTranslation();
   return (
     <RadioGroup
+      value={selectedValue || ""}
+      onChange={(event) => onChange?.(event.target.value)}
       sx={{
         gap: 1,
         "& .MuiFormControlLabel-root": {

@@ -13,6 +13,7 @@ import {
   Stack,
   Typography,
 } from "@mui/material";
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import "./App.css";
 import LanguageSwitcher from "./components/LanguageSwitcher";
@@ -20,6 +21,26 @@ import Question from "./components/Question";
 import { questions } from "./config/base";
 function App() {
   const { t } = useTranslation();
+  const [answers, setAnswers] = useState<Record<number, string>>({});
+  const [checkedQuestions, setCheckedQuestions] = useState<Set<number>>(
+    new Set()
+  );
+
+  const handleAnswerChange = (questionId: number, value: string) => {
+    setAnswers((prev) => ({ ...prev, [questionId]: value }));
+  };
+
+  const handleCheckAnswers = () => {
+    // Mark all answered questions as checked
+    const answeredQuestionIds = Object.keys(answers).map(Number);
+    setCheckedQuestions(new Set(answeredQuestionIds));
+  };
+
+  const handleClearAnswers = () => {
+    setAnswers({});
+    setCheckedQuestions(new Set());
+  };
+
   const theme = createTheme({
     palette: {
       mode: true ? "dark" : "light",
@@ -52,16 +73,32 @@ function App() {
 
             <Stack direction={{ xs: "column" }} spacing={3} sx={{ mt: 4 }}>
               {questions.map((question) => (
-                <Question key={question.title} {...question} />
+                <Question
+                  key={question.title}
+                  {...question}
+                  isChecked={checkedQuestions.has(question.id)}
+                  selectedAnswer={answers[question.id]}
+                  onAnswerChange={(value) =>
+                    handleAnswerChange(question.id, value)
+                  }
+                />
               ))}
             </Stack>
 
             <Box sx={{ mt: 4, textAlign: "center" }}>
               <ButtonGroup variant="contained" size="large" sx={{ gap: 2 }}>
-                <Button variant="contained" size="large">
+                <Button
+                  variant="contained"
+                  size="large"
+                  onClick={handleCheckAnswers}
+                >
                   {t("buttons.checkAnswers")}
                 </Button>
-                <Button variant="outlined" size="large">
+                <Button
+                  variant="outlined"
+                  size="large"
+                  onClick={handleClearAnswers}
+                >
                   {t("buttons.clearAnswers")}
                 </Button>
               </ButtonGroup>
