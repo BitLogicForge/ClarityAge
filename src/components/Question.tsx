@@ -66,8 +66,9 @@ export default function Question(question: QuestionProps) {
         sx={{
           "& .MuiAccordionSummary-content": {
             alignItems: "center",
-            gap: 2,
+            gap: { xs: 1, sm: 2 }, // Reduce gap on mobile
           },
+          px: { xs: 2, sm: 3 }, // Reduce padding on mobile
         }}
       >
         <Chip
@@ -88,14 +89,15 @@ export default function Question(question: QuestionProps) {
         </Typography>
       </AccordionSummary>
 
-      <AccordionDetails sx={{ px: 3, pb: 3 }}>
+      <AccordionDetails sx={{ px: { xs: 2, sm: 3 }, pb: { xs: 2, sm: 3 } }}>
         {/* Description */}
         <Typography
           variant="body2"
           sx={{
             color: "text.secondary",
-            mb: 3,
+            mb: { xs: 2, sm: 3 },
             lineHeight: 1.6,
+            fontSize: { xs: "0.875rem", sm: "0.875rem" },
           }}
         >
           {t(question.description)}
@@ -104,7 +106,7 @@ export default function Question(question: QuestionProps) {
         {/* Quote Section */}
         <QuoteBox quote={question.quote} author={question.author} />
 
-        <Divider sx={{ mb: 3 }} />
+        <Divider sx={{ mb: { xs: 2, sm: 3 } }} />
 
         {/* Main Question */}
         <Typography
@@ -112,8 +114,8 @@ export default function Question(question: QuestionProps) {
           sx={{
             fontWeight: 500,
             color: "text.primary",
-            mb: 3,
-            fontSize: "1.1rem",
+            mb: { xs: 2, sm: 3 },
+            fontSize: { xs: "1rem", sm: "1.1rem" },
             lineHeight: 1.4,
           }}
         >
