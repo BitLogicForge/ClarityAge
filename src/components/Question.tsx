@@ -33,17 +33,23 @@ export default function Question(question: QuestionProps) {
   const hasAnswer = !!selectedAnswer;
   const isExpanded = expandedQuestion === question.id;
 
-  // Scroll to this question when it becomes expanded (but not on initial load)
+  const prevExpandedRef = useRef(isExpanded);
+
+  // Scroll to this question when it becomes expanded (only on actual state change)
   useEffect(() => {
-    if (isExpanded && accordionRef.current) {
+    // Only scroll if this question just became expanded (was not expanded before)
+    if (isExpanded && !prevExpandedRef.current && accordionRef.current) {
       // Small delay to allow accordion animation to start
       setTimeout(() => {
         accordionRef.current?.scrollIntoView({
           behavior: "smooth",
           block: "start",
         });
-      }, 200); // Increased delay to let accordion fully expand
+      }, 200);
     }
+
+    // Update the previous state
+    prevExpandedRef.current = isExpanded;
   }, [isExpanded]);
 
   // Determine chip color based on state
