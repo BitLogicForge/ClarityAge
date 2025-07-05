@@ -1,11 +1,11 @@
-import { IconButton, Menu, MenuItem } from "@mui/material";
+import { IconButton, Menu, MenuItem, Typography } from "@mui/material";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
-// Language configuration with flags and names
+// Language configuration with short codes instead of flags
 const languages = [
-  { code: "en", flag: "🇺🇸", name: "English" },
-  { code: "pl", flag: "🇵🇱", name: "Polski" },
+  { code: "en", display: "EN", name: "English" },
+  { code: "pl", display: "PL", name: "Polski" },
 ] as const;
 
 export default function LanguageSwitcher() {
@@ -18,6 +18,8 @@ export default function LanguageSwitcher() {
     languages.find((lang) => lang.code === i18n.language) || languages[0];
 
   const handleLanguageClick = (event: React.MouseEvent<HTMLElement>) => {
+    event.preventDefault();
+    event.stopPropagation();
     setAnchorEl(event.currentTarget);
   };
 
@@ -35,26 +37,71 @@ export default function LanguageSwitcher() {
       <IconButton
         onClick={handleLanguageClick}
         size="small"
-        sx={{ ml: 2, fontSize: "1.5rem" }}
+        sx={{
+          ml: 2,
+          cursor: "pointer",
+          minWidth: 48,
+          height: 48,
+          border: 1,
+          borderColor: "divider",
+          "&:hover": {
+            backgroundColor: "action.hover",
+            borderColor: "primary.main",
+          },
+        }}
         aria-label="language switcher"
+        disableRipple={false}
       >
-        <span style={{ fontSize: "1.2em" }}>{currentLanguage.flag}</span>
+        <Typography
+          variant="body2"
+          sx={{
+            fontWeight: "bold",
+            fontSize: "0.75rem",
+            userSelect: "none",
+            pointerEvents: "none",
+            color: "primary.main",
+          }}
+        >
+          {currentLanguage.display}
+        </Typography>
       </IconButton>
       <Menu
         anchorEl={anchorEl}
         open={open}
         onClose={handleLanguageClose}
-        onClick={handleLanguageClose}
+        MenuListProps={{
+          onClick: (e) => e.stopPropagation(),
+        }}
       >
         {languages.map((language) => (
           <MenuItem
             key={language.code}
-            onClick={() => handleLanguageChange(language.code)}
+            onClick={(e) => {
+              e.stopPropagation();
+              handleLanguageChange(language.code);
+            }}
             selected={i18n.language === language.code}
+            sx={{
+              cursor: "pointer",
+              "&:hover": {
+                backgroundColor: "action.hover",
+              },
+            }}
           >
-            <span style={{ marginRight: "8px", fontSize: "1.1em" }}>
-              {language.flag}
-            </span>
+            <Typography
+              variant="body2"
+              sx={{
+                marginRight: "12px",
+                fontWeight: "bold",
+                fontSize: "0.75rem",
+                userSelect: "none",
+                color: "primary.main",
+                minWidth: "24px",
+                textAlign: "center",
+              }}
+            >
+              {language.display}
+            </Typography>
             {language.name}
           </MenuItem>
         ))}
