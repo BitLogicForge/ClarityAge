@@ -13,22 +13,38 @@ import {
 } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import { type TPhilosophyQuestion } from "../config/base";
+import { useAppDispatch, useAppSelector } from "../store/hooks";
+import { setAnswer } from "../store/questionsSlice";
 import QuoteBox from "./QuoteBox";
 import RadioAnswers from "./RadioAnswers";
 
-interface QuestionProps extends TPhilosophyQuestion {
-  isChecked?: boolean;
-  selectedAnswer?: string;
-  onAnswerChange?: (value: string) => void;
-}
+interface QuestionProps extends TPhilosophyQuestion {}
 
-export default function Question({
-  isChecked = false,
-  selectedAnswer,
-  onAnswerChange,
-  ...question
-}: QuestionProps) {
+export default function Question(question: QuestionProps) {
   const { t } = useTranslation();
+  const dispatch = useAppDispatch();
+  const { answers, hasBeenChecked } = useAppSelector(
+    (state) => state.questions
+  );
+
+  const selectedAnswer = answers[question.id];
+  const hasAnswer = !!selectedAnswer;
+
+  // Determine chip color based on state
+  const getChipColor = () => {
+    if (hasAnswer) {
+      return "success"; // Green if answered
+    } else if (hasBeenChecked) {
+      return "error"; // Red if checked but no answer
+    } else {
+      return "primary"; // Blue if not checked yet
+    }
+  };
+
+  const handleAnswerChange = (value: string) => {
+    dispatch(setAnswer({ questionId: question.id, value }));
+  };
+
   return (
     <Accordion
       sx={{
@@ -56,7 +72,7 @@ export default function Question({
       >
         <Chip
           label={question.id}
-          color={isChecked ? "success" : "primary"}
+          color={getChipColor()}
           size="medium"
           sx={{ fontWeight: "bold" }}
         />
@@ -107,7 +123,7 @@ export default function Question({
         {/* Radio Group */}
         <RadioAnswers
           selectedValue={selectedAnswer}
-          onChange={onAnswerChange}
+          onChange={handleAnswerChange}
         />
       </AccordionDetails>
     </Accordion>

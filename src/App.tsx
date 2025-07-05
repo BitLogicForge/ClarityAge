@@ -13,32 +13,24 @@ import {
   Stack,
   Typography,
 } from "@mui/material";
-import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import "./App.css";
 import LanguageSwitcher from "./components/LanguageSwitcher";
 import Question from "./components/Question";
 import { questions } from "./config/base";
+import { useAppDispatch } from "./store/hooks";
+import { checkAnswers, clearAnswers } from "./store/questionsSlice";
+
 function App() {
   const { t } = useTranslation();
-  const [answers, setAnswers] = useState<Record<number, string>>({});
-  const [checkedQuestions, setCheckedQuestions] = useState<Set<number>>(
-    new Set()
-  );
-
-  const handleAnswerChange = (questionId: number, value: string) => {
-    setAnswers((prev) => ({ ...prev, [questionId]: value }));
-  };
+  const dispatch = useAppDispatch();
 
   const handleCheckAnswers = () => {
-    // Mark all answered questions as checked
-    const answeredQuestionIds = Object.keys(answers).map(Number);
-    setCheckedQuestions(new Set(answeredQuestionIds));
+    dispatch(checkAnswers());
   };
 
   const handleClearAnswers = () => {
-    setAnswers({});
-    setCheckedQuestions(new Set());
+    dispatch(clearAnswers());
   };
 
   const theme = createTheme({
@@ -73,15 +65,7 @@ function App() {
 
             <Stack direction={{ xs: "column" }} spacing={3} sx={{ mt: 4 }}>
               {questions.map((question) => (
-                <Question
-                  key={question.title}
-                  {...question}
-                  isChecked={checkedQuestions.has(question.id)}
-                  selectedAnswer={answers[question.id]}
-                  onAnswerChange={(value) =>
-                    handleAnswerChange(question.id, value)
-                  }
-                />
+                <Question key={question.title} {...question} />
               ))}
             </Stack>
 
