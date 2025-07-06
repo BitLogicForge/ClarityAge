@@ -8,7 +8,9 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "preview": "vite preview",
+    "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx}\"",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
@@ -38,7 +40,7 @@
     "gh-pages": "^6.3.0",
     "globals": "^16.2.0",
     "typescript": "~5.8.3",
-    "typescript-eslint": "^8.34.1",
-    "vite": "^7.0.0"
+    "typescript-eslint": "^8.35.1",
+    "vite": "^7.0.2"
   }
 }
