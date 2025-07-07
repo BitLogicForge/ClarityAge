@@ -48,89 +48,90 @@
   "philosophies": {
     "q1": {
       "title": "Enlightened Mortality: Time as the Ultimate Currency",
-      "description": "Instead of fear - gratitude. Limited time stops being a threat and becomes life's priority algorithm. You stop being 'managed by the calendar' - you manage your existence through conscious choices.",
+      "description": "This philosophy reframes the finite nature of time from a source of fear into a tool for prioritization. Recognizing that time is limited clarifies what is truly important, encouraging conscious and meaningful choices about how we live.",
       "quote": "We don't have too little time, but we waste much of it.",
       "author": "Seneca",
-      "question": "I feel that the way I spend my time reflects its true value."
+      "question": "If I were to audit my last week, would I be satisfied with where my time—my most finite resource—was allocated?"
     },
     "q2": {
       "title": "The Enough™ Principle 2.0",
-      "description": "You don't just distinguish wants from needs - you redefine success. You abandon the illusion of 'more' in favor of life architecture that's balanced, elegant, and functional. Comfort, not consumption.",
+      "description": "This principle challenges the relentless pursuit of 'more' by distinguishing between needs and wants. It focuses on designing a life that values balance, function, and comfort over endless consumption, redefining success as contentment rather than accumulation.",
       "quote": "The things you own end up owning you.",
       "author": "Tyler Durden (Fight Club)",
-      "question": "I believe that what I desire will actually contribute to my peace."
+      "question": "What am I pursuing out of a genuine need for well-being, and what am I pursuing out of habit or external expectation?"
     },
     "q3": {
       "title": "Energy Management, Not Time Management",
-      "description": "You don't plan your day based on the clock, but on your biological rhythms. You act in moments of power and regenerate during downturns - achieving more while burning out less.",
+      "description": "Instead of viewing productivity through the lens of a 24-hour clock, this approach prioritizes the body's natural biological rhythms. The aim is to align tasks with periods of peak energy and allow for intentional regeneration during lulls, leading to greater output with less burnout.",
       "quote": "We're not tired from work, we're tired from doing meaningless things.",
       "author": "Greg McKeown",
-      "question": "I feel that my actions are synchronized with my natural energy."
+      "question": "When during the day do I feel most effective and creative, and how can I better protect and utilize those specific times?"
     },
     "q4": {
       "title": "The Art of Sacred NO",
-      "description": "Every YES is a commitment. That's why your most powerful strategy becomes refusal - calm, guilt-free, full of clarity. You protect space for what truly matters.",
+      "description": "Every commitment (a 'yes') consumes our finite resources of time and energy. This philosophy treats the act of refusal ('no') as a powerful strategic tool to protect the space required for our most important priorities, free from guilt.",
       "quote": "Boundaries are not a wall - they're a gateway with selective access.",
       "author": "Brené Brown",
-      "question": "I can firmly and calmly refuse when something doesn't serve my priorities."
+      "question": "What have I said 'yes' to recently that, in hindsight, should have been a 'no', and what was the true cost of that commitment?"
     },
     "q5": {
       "title": "Earn Wisely, Not More",
-      "description": "Your financial maturity isn't about impressive income, but conscious choices. Money becomes a tool of freedom, not spectacle.",
+      "description": "Financial maturity is viewed not by the size of one's income, but by the quality of one's financial choices. This philosophy emphasizes using money as a tool to increase personal freedom, autonomy, and security, rather than for spectacle or status.",
       "quote": "It's not wealth that makes you free, but how you use it.",
       "author": "Morgan Housel",
-      "question": "I feel that my financial decisions increase my freedom."
+      "question": "Are my financial habits primarily creating more options and freedom in my life, or are they creating new forms of obligation?"
     },
     "q6": {
       "title": "Body as Capital",
-      "description": "After forty, the body doesn't forgive as much as it used to - but in return for care, it repays with longevity, strength, and mental clarity. It's not punishment - it's investment logic.",
+      "description": "This philosophy approaches physical health as a long-term investment that compounds over time. Consistent care in areas like nutrition, exercise, and sleep is seen not as a chore, but as a strategic deposit that pays dividends in future longevity, strength, and mental clarity.",
       "quote": "Your health is what you invest, not what just happens.",
       "author": "Peter Attia",
-      "question": "I care for my body as capital that compounds in the future."
+      "question": "What is one small, consistent investment I could make in my physical health today that would pay off significantly in 10 years?"
     },
     "q7": {
       "title": "Relationships of Reciprocity",
-      "description": "You don't maintain relationships out of habit. Your social energy is limited - you allocate it where there's exchange, not one-sided consumption.",
+      "description": "Recognizing that social energy is limited, this philosophy encourages a conscious allocation of that energy. It prioritizes relationships based on mutual support, growth, and exchange, while gracefully letting go of connections that are consistently one-sided or draining.",
       "quote": "Not everyone who was part of your past needs to be part of your future.",
       "author": "Trent Shelton",
-      "question": "I maintain relationships that are mutual and supportive."
+      "question": "Which of my relationships consistently leave me feeling energized and seen, and which ones tend to leave me feeling depleted?"
     },
     "q8": {
       "title": "Experience Capital",
-      "description": "Your mistakes, lessons, failures - they're currency today. You teach, mentor, design better because your knowledge is based on reality, not theory.",
+      "description": "This concept treats one's entire history—including mistakes, failures, and lessons learned—as a valuable form of capital. Past experiences, when reflected upon, become a unique asset that can inform better decisions, mentoring, and design in the present.",
       "quote": "Experience is the name we give to our mistakes.",
       "author": "Oscar Wilde",
-      "question": "I can leverage my experiences as an advantage."
+      "question": "What past failure or mistake holds a lesson that I am not fully utilizing today?"
     },
     "q9": {
       "title": "Emotional Radar",
-      "description": "You see who feeds and who drains. Your emotional intelligence is an early warning system - and a shield. You're calmer because you don't let chaos inside.",
+      "description": "This is the practice of developing emotional intelligence as an early warning system. It involves recognizing which interactions and environments are nourishing versus which are draining or chaotic, allowing for proactive measures to protect one's inner calm.",
       "quote": "People aren't toxic - but their behaviors can be lethally contagious.",
       "author": "Susan David",
-      "question": "I can recognize and protect myself from emotional chaos."
+      "question": "When did I last feel a sense of emotional chaos, and what behavior or environment triggered it?"
     },
     "q10": {
       "title": "Legacy Thinking",
-      "description": "Instead of asking 'what have I achieved?', you ask 'what will remain after me?'. It's not about monuments - it's about lasting impact that survives your presence.",
+      "description": "This mindset shifts the focus from short-term personal achievements to long-term, lasting impact. It prompts one to consider what of value—knowledge, kindness, creations, or principles—will remain for others long after they are gone.",
       "quote": "Plant trees under which you'll never sit.",
       "author": "Greek maxim",
-      "question": "I feel I'm building something that will outlast me and have value for others."
+      "question": "Beyond my own accomplishments, what am I building, teaching, or contributing that could benefit the next generation?"
     },
     "q11": {
       "title": "Systems, Not Parts",
-      "description": "Your life stops being a collection of separate projects - it becomes an ecosystem. Work supports health, health supports relationships, relationships support mission.",
+      "description": "This philosophy encourages viewing one's life as an interconnected ecosystem rather than a collection of separate projects. The goal is to create synergy where different areas—such as work, health, and relationships—mutually support and reinforce one another.",
       "quote": "Only when everything plays together does life play your melody.",
       "author": "James Clear",
-      "question": "My life actions support each other and create a coherent system."
+      "question": "Which area of my life, if improved, would create the most positive ripple effect across all other areas?"
     },
     "q12": {
       "title": "Joy of Integration",
-      "description": "It's not perfection, but coherence that brings satisfaction. For the first time, you feel that life doesn't have to be a compromise - it can be a whole where everything has its place.",
+      "description": "This is the deep satisfaction that arises not from achieving perfection, but from creating coherence among one's values, actions, and various life domains. It is the feeling that one's life, while imperfect, is a unified whole where everything has its place.",
       "quote": "When every part of your life plays on the same team, you start winning.",
       "author": "Cal Newport",
-      "question": "I feel that my life is coherent and integrated."
+      "question": "In which moments or activities do I feel the most 'whole'—where my actions, values, and identity are all in alignment?"
     }
   },
+
   "likertScale": {
     "stronglyDisagree": "Strongly Disagree",
     "disagree": "Disagree",
