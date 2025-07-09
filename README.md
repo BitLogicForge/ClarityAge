@@ -59,6 +59,15 @@ npm run build
 npm run deploy
 ```
 
+## 📚 Documentation
+
+Comprehensive project documentation is available in the `/src/docs/` directory:
+
+- **[Project Overview](src/docs/base.md)** - Core concept, target audience, and project goals
+- **[Features Documentation](src/docs/features.md)** - Detailed feature specifications organized by user stories
+- **[Design System](src/docs/design.md)** - UI/UX guidelines, color palette, typography, and component specifications
+- **[Implementation Guide](src/docs/implementation.md)** - Technical architecture, development setup, and deployment strategies
+
 ## 🎨 Customization
 
 The application is designed to be easily customizable:
@@ -74,6 +83,8 @@ Visit the live application: [ClarityAge - 40](https://bitlogicforge.github.io/Cl
 ## 🤝 Contributing
 
 Contributions are welcome! Feel free to open issues or submit pull requests.
+
+Please review the [Implementation Guide](src/docs/implementation.md) for development setup and coding standards.
 
 ## 📄 License
 
