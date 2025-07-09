@@ -1,8 +1,8 @@
 {
   "app": {
-    "title": "ClarityAge - 40stka",
-    "welcome": "Witamy w Twojej aplikacji React + Material-UI",
-    "description": "Odkrywaj pytania filozoficzne i osobiste wartości"
+    "title": "ClarityAge - 40",
+    "description": "Odkryj pytania filozoficzne i osobiste wartości",
+    "welcome": "Witamy w Twojej aplikacji React + Material-UI"
   },
   "buttons": {
     "getStarted": "Rozpocznij",
@@ -21,11 +21,11 @@
   },
   "contact": {
     "title": "Kontakt",
-    "description": "Masz pytania, uwagi lub sugestie? Chętnie Cię wysłucham! Napisz do mnie w sprawie ClarityAge.",
+    "description": "Masz pytania, uwagi lub sugestie? Chciałbym je usłyszeć! Skontaktuj się ze mną w sprawie ClarityAge.",
     "emailLabel": "Skontaktuj się:",
-    "revealEmail": "Pokaż adres email",
-    "copyEmail": "Kopiuj email",
-    "responseTime": "Zazwyczaj odpowiadam w ciągu 24-48 godzin."
+    "revealEmail": "Pokaż adres e-mail",
+    "copyEmail": "Kopiuj e-mail",
+    "responseTime": "Zwykle odpowiadam w ciągu 24-48 godzin."
   },
   "languages": {
     "en": "English",
@@ -45,98 +45,192 @@
       "description": "Zacznij budować swoją aplikację z nowoczesnymi wzorcami React i komponentami Material-UI."
     }
   },
+
   "philosophies": {
     "q1": {
-      "title": "Oświecona Śmiertelność: Czas jako najwyższa waluta",
-      "description": "Zamiast lęku - wdzięczność. Ograniczony czas przestaje być zagrożeniem, staje się priorytetowym algorytmem życia. Przestajesz być „zarządzany przez kalendarz” - to Ty zarządzasz swoim istnieniem przez świadome wybory.",
-      "quote": "Nie mamy zbyt mało czasu, ale wiele z niego marnujemy.",
+      "title": "Oświecona Śmiertelność: Czas jako Ostateczna Waluta",
+      "description": "Ta filozofia przekształca skończoną naturę czasu z źródła strachu w narzędzie do ustalania priorytetów. Uznanie, że czas jest ograniczony, wyjaśnia, co jest naprawdę ważne, zachęcając do świadomych i znaczących wyborów dotyczących tego, jak żyjemy.",
+      "quote": "Nie mamy za mało czasu, ale marnujemy go zbyt wiele.",
       "author": "Seneka",
-      "question": "Czuję, że mój sposób spędzania czasu odzwierciedla jego prawdziwą wartość."
+      "question": "Gdybym miał przeprowadzić audyt swojego ostatniego tygodnia, czy byłbym zadowolony z tego, jak został rozdzielony mój czas - mój najbardziej skończony zasób?",
+      "action_item": "Używaj prostego 'dziennika czasu' przez trzy dni, aby zobaczyć, gdzie naprawdę idą twoje godziny. Bez osądzania, tylko obserwacja.",
+      "common_pitfall": "Obsesja na punkcie produktywności zamiast obecności. Celem nie jest wypełnienie każdej sekundy, ale sprawienie, aby każda sekunda się liczyła.",
+      "further_reading": "Esej Seneki 'O krótkości życia'. To krótka, mocna lektura, która bezpośrednio odnosi się do tej filozofii.",
+      "affirmation": "Mój czas to moje życie. Rozdzialam go z intencją i szanuję jego wartość."
     },
     "q2": {
-      "title": "Zasada Wystarczająco™ 2.0",
-      "description": "Nie tylko odróżniasz pragnienia od potrzeb - redefiniujesz sukces. Rezygnujesz z iluzji „więcej” na rzecz architektury życia zrównoważonego, eleganckiego i funkcjonalnego. Komfort, nie konsumpcja.",
-      "quote": "Rzeczy, które posiadasz, w końcu zaczynają posiadać ciebie.",
+      "title": "Zasada Wystarczania™ 2.0",
+      "description": "Ta zasada kwestionuje nieustanne dążenie do 'więcej', rozróżniając między potrzebami a pragnieniami. Skupia się na projektowaniu życia, które ceni równowagę, funkcjonalność i komfort ponad niekończące się konsumpcję, redefiniując sukces jako zadowolenie, a nie akumulację.",
+      "quote": "Rzeczy, które posiadasz, w końcu cię posiadają.",
       "author": "Tyler Durden (Fight Club)",
-      "question": "Uważam, że to, czego pragnę, rzeczywiście przyczyni się do mojego spokoju."
+      "question": "Co poszukuję z prawdziwej potrzeby dobrego samopoczucia, a co z przyzwyczajenia lub zewnętrznych oczekiwań?",
+      "action_item": "Przed następnym nieistotnym zakupem nałóż 48-godzinny okres oczekiwania. Oceń ponownie, czy pragnienie jest wciąż silne po dwóch dniach.",
+      "common_pitfall": "Mylenie minimalizmu z pozbawieniem. Celem nie jest posiadanie mniej, ale zrobienie miejsca dla tego, co ważniejsze.",
+      "further_reading": "Książka 'Twoje pieniądze czy twoje życie' autorstwa Vicki Robin, która bada kompromis między energią życiową a posiadaniami materialnymi.",
+      "affirmation": "Mam wystarczająco. Jestem wystarczający. Mój sukces mierzy się moim spokojem, a nie moimi posiadaniami."
     },
     "q3": {
       "title": "Zarządzanie Energią, Nie Czasem",
-      "description": "Nie planujesz dnia w oparciu o zegarek, ale o swoje rytmy biologiczne. Działasz w momentach mocy, a regenerujesz się w chwilach spadku - dzięki temu osiągasz więcej, wypalając się mniej.",
-      "quote": "Nie jesteśmy zmęczeni pracą, jesteśmy zmęczeni robieniem rzeczy bez znaczenia.",
+      "description": "Zamiast postrzegać produktywność przez pryzmat 24-godzinnego zegara, to podejście priorytetowo traktuje naturalne biologiczne rytmy organizmu. Celem jest dopasowanie zadań do okresów szczytowej energii i umożliwienie celowej regeneracji podczas spadków, prowadząc do większej wydajności przy mniejszym wypaleniu.",
+      "quote": "Nie jesteśmy zmęczeni pracą, jesteśmy zmęczeni robieniem bezsensownych rzeczy.",
       "author": "Greg McKeown",
-      "question": "Czuję, że moje działania są zsynchronizowane z moją naturalną energią."
+      "question": "Kiedy w ciągu dnia czuję się najbardziej efektywny i kreatywny, i jak mogę lepiej chronić i wykorzystywać te konkretne czasy?",
+      "action_item": "Zidentyfikuj swoje pojedyncze 'okno szczytowej energii' (np. 10:00 - 12:00) i chroń je zaciekle dla swojego najważniejszego zadania. Planuj spotkania poza tym oknem.",
+      "common_pitfall": "Poczucie winy za odpoczynek w okresie niskiej energii. Prawdziwa produktywność wymaga cykli intensywnego wysiłku, po których następuje celowa regeneracja.",
+      "further_reading": "'Moc pełnego zaangażowania' autorstwa Jima Loehra i Tony'ego Schwartza, podstawowy tekst o zarządzaniu energią, nie czasem.",
+      "affirmation": "Szanuję moje naturalne rytmy. Pracuję, gdy jestem silny i odpoczywam, gdy potrzebuję, osiągając więcej przy mniejszym napięciu."
     },
     "q4": {
       "title": "Sztuka Świętego NIE",
-      "description": "Każde TAK to zobowiązanie. Dlatego Twoją najpotężniejszą strategią staje się odmowa - spokojna, bez winy, pełna klarowności. Chronisz przestrzeń dla tego, co naprawdę się liczy.",
-      "quote": "Granice to nie mur - to brama z selektywnym dostępem.",
+      "description": "Każde zobowiązanie ('tak') zużywa nasze skończone zasoby czasu i energii. Ta filozofia traktuje akt odmowy ('nie') jako potężne narzędzie strategiczne do ochrony przestrzeni wymaganej dla naszych najważniejszych priorytetów, wolnej od poczucia winy.",
+      "quote": "Granice nie są murem - to brama z selektywnym dostępem.",
       "author": "Brené Brown",
-      "question": "Potrafię stanowczo i spokojnie odmawiać, gdy coś nie służy moim priorytetom."
+      "question": "Na co ostatnio powiedziałem 'tak', co z perspektywy czasu powinno być 'nie', i jaki był prawdziwy koszt tego zobowiązania?",
+      "action_item": "Ćwicz mówienie jasnego 'nie' na jedną małą, nieważną prośbę w tym tygodniu. Przykład: 'Nie mogę, ale dziękuję, że o mnie pomyślałeś.'",
+      "common_pitfall": "Przesadne tłumaczenie się lub usprawiedliwianie swojego 'nie'. Prosta, pełna szacunku odmowa jest wystarczająca i często potężniejsza.",
+      "further_reading": "'Esencjalizm: Zdyscyplinowane dążenie do mniej' autorstwa Grega McKeowna, który przedstawia 'nie' jako strategiczny imperatyw.",
+      "affirmation": "Moje 'nie' robi miejsce dla bardziej znaczącego 'tak'. Chronię swoje priorytety z jasnością i życzliwością."
     },
     "q5": {
       "title": "Zarabiaj Mądrze, Nie Więcej",
-      "description": "Twoja finansowa dojrzałość polega nie na imponujących dochodach, ale na świadomych wyborach. Pieniądze stają się narzędziem wolności, a nie spektaklu.",
-      "quote": "Nie bogactwo czyni cię wolnym, ale sposób, w jaki z niego korzystasz.",
+      "description": "Dojrzałość finansowa jest postrzegana nie przez wielkość dochodu, ale przez jakość wyborów finansowych. Ta filozofia kładzie nacisk na używanie pieniędzy jako narzędzia do zwiększenia osobistej wolności, autonomii i bezpieczeństwa, a nie dla spektaklu czy statusu.",
+      "quote": "To nie bogactwo czyni cię wolnym, ale sposób, w jaki je używasz.",
       "author": "Morgan Housel",
-      "question": "Czuję, że moje decyzje finansowe zwiększają moją wolność."
+      "question": "Czy moje nawyki finansowe głównie tworzą więcej opcji i wolności w moim życiu, czy tworzą nowe formy zobowiązań?",
+      "action_item": "Przejrzyj swoje ostatnie trzy główne decyzje finansowe. Zapytaj: 'Czy ten wybór zwiększył moją wolność i opcje, czy je zmniejszył?'",
+      "common_pitfall": "Inflacja stylu życia - automatyczne zwiększanie wydatków wraz ze wzrostem dochodów, uwięzienie w cyklu konieczności zarabiania więcej.",
+      "further_reading": "'Psychologia pieniądza' autorstwa Morgana Housela, zbiór krótkich opowieści badających naszą relację z bogactwem.",
+      "affirmation": "Używam pieniędzy jako narzędzia do wolności. Każda decyzja finansowa to krok w kierunku większej autonomii."
     },
     "q6": {
       "title": "Ciało jako Kapitał",
-      "description": "Po czterdziestce ciało nie wybacza tyle co kiedyś - ale w zamian za troskę odpłaca się długowiecznością, siłą i jasnością umysłu. To nie kara - to logika inwestycji.",
-      "quote": "Twoje zdrowie to to, co inwestujesz, a nie to, co się po prostu zdarza.",
+      "description": "Ta filozofia podchodzi do zdrowia fizycznego jako długoterminowej inwestycji, która procentuje z czasem. Konsekwentna opieka w obszarach takich jak odżywianie, ćwiczenia i sen jest postrzegana nie jako obowiązek, ale jako strategiczny depozyt, który przynosi dywidendy w przyszłej długowieczności, sile i jasności umysłu.",
+      "quote": "Twoje zdrowie to to, w co inwestujesz, a nie to, co po prostu się dzieje.",
       "author": "Peter Attia",
-      "question": "Dbam o swoje ciało jak o kapitał, który procentuje w przyszłości."
+      "question": "Jaka jest jedna mała, konsekwentna inwestycja, którą mógłbym dziś poczynić w moje zdrowie fizyczne, która znacząco się opłaci za 10 lat?",
+      "action_item": "Wprowadź w tym miesiącu jeden nawyk 'długowieczności', jak 10-minutowy spacer po każdym posiłku lub 5 minut rozciągania przed snem.",
+      "common_pitfall": "Mentalność 'wszystko albo nic'. Przekonanie, że musisz wykonać idealny 60-minutowy trening, inaczej nie warto. Konsekwencja bije intensywność.",
+      "further_reading": "Książka Petera Attii 'Outlive: The Science and Art of Longevity', która szczegółowo opisuje strategiczne podejście do zdrowia.",
+      "affirmation": "Codziennie wpłacam na moje konto zdrowia. Moje przyszłe ja podziękuje mi za odsetki składane."
     },
     "q7": {
       "title": "Relacje Wzajemności",
-      "description": "Nie utrzymujesz relacji z przyzwyczajenia. Twoja energia społeczna jest ograniczona - alokujesz ją tam, gdzie jest wymiana, nie jednostronne zużycie.",
+      "description": "Uznając, że energia społeczna jest ograniczona, ta filozofia zachęca do świadomego rozdziału tej energii. Priorytetowo traktuje relacje oparte na wzajemnym wsparciu, wzroście i wymianie, jednocześnie z gracją puszczając połączenia, które są konsekwentnie jednostronne lub wyczerpujące.",
       "quote": "Nie każdy, kto był częścią twojej przeszłości, musi być częścią twojej przyszłości.",
       "author": "Trent Shelton",
-      "question": "Utrzymuję relacje, które są wzajemne i wspierające."
+      "question": "Które z moich relacji konsekwentnie sprawiają, że czuję się energiczny i widziany, a które zwykle sprawiają, że czuję się wyczerpany?",
+      "action_item": "Przeprowadź szybki 'audyt energii' po następnych kilku interakcjach społecznych. Po prostu zauważ, czy czujesz się bardziej energiczny czy bardziej wyczerpany.",
+      "common_pitfall": "Poczucie obowiązku utrzymywania relacji z powodu wspólnej historii, nawet gdy nie są już zdrowe lub wspierające.",
+      "further_reading": "'Granice' autorstwa dr. Henry'ego Clouda i dr. Johna Townsenda, klasyczny przewodnik po tworzeniu zdrowych dynamik relacyjnych.",
+      "affirmation": "Inwestuję moją energię społeczną tam, gdzie jest szanowana i odwzajemniana. Mój bliski krąg jest źródłem siły."
     },
     "q8": {
       "title": "Kapitał Doświadczenia",
-      "description": "Twoje błędy, lekcje, porażki - to dziś waluta. Uczysz, mentorujesz, projektujesz lepiej, bo Twoja wiedza jest oparta na rzeczywistości, nie na teorii.",
+      "description": "Ta koncepcja traktuje całą historię człowieka - włączając błędy, porażki i wyciągnięte lekcje - jako cenną formę kapitału. Przeszłe doświadczenia, po refleksji, stają się unikalnym atutem, który może informować lepsze decyzje, mentoring i projektowanie w teraźniejszości.",
       "quote": "Doświadczenie to nazwa, którą nadajemy naszym błędom.",
       "author": "Oscar Wilde",
-      "question": "Potrafię wykorzystywać swoje doświadczenia jako przewagę."
+      "question": "Jaka przeszła porażka lub błąd kryje lekcję, której dziś nie wykorzystuję w pełni?",
+      "action_item": "Zidentyfikuj jedną przeszłą 'porażkę'. Zapisz trzy konkretne lekcje, których cię nauczyła, i jeden sposób, w jaki możesz zastosować lekcję w tym tygodniu.",
+      "common_pitfall": "Rozmyślanie nad wstydem lub żalem z powodu błędu, zamiast wydobywania z niego cennych, możliwych do działania danych.",
+      "further_reading": "'Przeszkoda to droga' autorstwa Ryana Holidaya, która uczy stoickiej sztuki przekształcania przeciwności w przewagę.",
+      "affirmation": "Moja przeszłość nie jest ciężarem; to moja biblioteka lekcji. Wykorzystuję moje doświadczenie z mądrością."
     },
     "q9": {
       "title": "Radar Emocjonalny",
-      "description": "Widzisz, kto karmi, a kto wysysa. Twoja inteligencja emocjonalna to system wczesnego ostrzegania - i tarcza. Jesteś spokojniejszy, bo nie wpuszczasz chaosu do środka.",
-      "quote": "Ludzie nie są toksyczni - ale ich zachowania mogą być śmiertelnie zaraźliwe.",
+      "description": "To praktyka rozwijania inteligencji emocjonalnej jako systemu wczesnego ostrzegania. Polega na rozpoznawaniu, które interakcje i środowiska są odżywcze, a które wyczerpujące lub chaotyczne, umożliwiając proaktywne środki w celu ochrony wewnętrznego spokoju.",
+      "quote": "Ludzie nie są toksyczni - ale ich zachowania mogą być śmiertelnie zakaźne.",
       "author": "Susan David",
-      "question": "Potrafię rozpoznawać i chronić się przed emocjonalnym chaosem."
+      "question": "Kiedy ostatnio czułem poczucie emocjonalnego chaosu, i jakie zachowanie lub środowisko to wywołało?",
+      "action_item": "Następnym razem, gdy poczujesz silną negatywną emocję, zatrzymaj się i nazwij ją konkretnie (np. 'To jest rozczarowanie', a nie tylko 'Czuję się źle').",
+      "common_pitfall": "Próbowanie stłumienia lub ignorowania 'negatywnych' emocji. Celem jest zauważenie ich jako sygnałów, nie pozwalając im przejąć kontroli.",
+      "further_reading": "Książka Susan David 'Emotional Agility', która zapewnia ramy do nawigowania emocjami bez bycia przez nie zahaczkowanym.",
+      "affirmation": "Jestem spokojnym obserwatorem moich emocji, a nie ich jeńcem. Mogę zauważyć burzę, nie pozwalając jej zalać mojego domu."
     },
     "q10": {
-      "title": "Myślenie Dziedzictwem",
-      "description": "Zamiast pytać 'co osiągnąłem?', pytasz 'co po mnie zostanie?'. Nie chodzi o pomniki - chodzi o trwały wpływ, który przetrwa Twoją obecność.",
-      "quote": "Sadź drzewa, pod którymi nigdy nie usiądziesz.",
+      "title": "Myślenie o Dziedzictwie",
+      "description": "To nastawienie przesuwa fokus z krótkoterminowych osobistych osiągnięć na długoterminowy, trwały wpływ. Skłania do rozważenia, co wartościowego - wiedza, życzliwość, twórczość czy zasady - pozostanie dla innych długo po tym, jak odejdą.",
+      "quote": "Sadź drzewa, pod którymi nigdy nie będziesz siedział.",
       "author": "Grecka maksyma",
-      "question": "Czuję, że buduję coś, co przetrwa mnie i będzie miało wartość dla innych."
+      "question": "Poza moimi własnymi osiągnięciami, co buduję, nauczam lub do czego przyczyniam się, co mogłoby przynieść korzyść następnemu pokoleniu?",
+      "action_item": "Poświęć 15 minut na napisanie odpowiedzi na: 'Gdybym mógł przekazać jedną podstawową zasadę lub umiejętność następnemu pokoleniu, co by to było i dlaczego?'",
+      "common_pitfall": "Myślenie, że dziedzictwo musi być wielkim, monumentalnym aktem. Małe, konsekwentne akty mentoringu, życzliwości czy twórczości mają potężny efekt domina.",
+      "further_reading": "'Człowiek w poszukiwaniu sensu' autorstwa Viktora Frankla, głęboka eksploracja znalezienia celu nawet w najtrudniejszych okolicznościach.",
+      "affirmation": "Buduję coś wartościowego, co mnie przetrwa. Moje codzienne działania przyczyniają się do trwałego pozytywnego wpływu."
     },
     "q11": {
       "title": "Systemy, Nie Części",
-      "description": "Twoje życie przestaje być kolekcją oddzielnych projektów - zaczyna być ekosystemem. Praca wspiera zdrowie, zdrowie wspiera relacje, relacje wspierają misję.",
-      "quote": "Dopiero gdy wszystko gra razem, życie gra twoją melodię.",
+      "description": "Ta filozofia zachęca do postrzegania swojego życia jako połączonego ekosystemu, a nie zbioru oddzielnych projektów. Celem jest stworzenie synergii, gdzie różne obszary - takie jak praca, zdrowie i relacje - wzajemnie się wspierają i wzmacniają.",
+      "quote": "Tylko gdy wszystko gra razem, życie gra twoją melodię.",
       "author": "James Clear",
-      "question": "Moje działania życiowe wspierają się wzajemnie i tworzą spójny system."
+      "question": "Który obszar mojego życia, jeśli zostanie poprawiony, stworzy najbardziej pozytywny efekt domina we wszystkich innych obszarach?",
+      "action_item": "Zmapuj swoje kluczowe domeny życia (Zdrowie, Praca, Rodzina, Finanse). Narysuj linię od jednego działania, które pozytywnie wpłynęłoby na wszystkie z nich (np. 'Poprawa snu').",
+      "common_pitfall": "Próbowanie przebudowy wszystkich systemów naraz. Kluczem jest znalezienie jednego 'nawyku kamienia węgielnego', który tworzy kaskadę pozytywnych efektów.",
+      "further_reading": "'Atomowe nawyki' autorstwa Jamesa Cleara, definitywny przewodnik po budowaniu małych, połączonych nawyków, które tworzą niezwykłe rezultaty.",
+      "affirmation": "Moje życie to połączony system. Gdy poprawiam jedną część, wzmacniam całość."
     },
     "q12": {
       "title": "Radość z Integracji",
-      "description": "To nie perfekcja, ale spójność daje satysfakcję. Po raz pierwszy czujesz, że życie nie musi być kompromisem - może być całością, gdzie wszystko ma swoje miejsce.",
-      "quote": "Kiedy każda część twojego życia gra w jednej drużynie, zaczynasz wygrywać.",
+      "description": "To głęboka satysfakcja, która powstaje nie z osiągnięcia perfekcji, ale z tworzenia spójności między wartościami, działaniami i różnymi domenami życia. To uczucie, że życie, choć niedoskonałe, jest zjednoczonym całością, gdzie wszystko ma swoje miejsce.",
+      "quote": "Gdy każda część twojego życia gra w tej samej drużynie, zaczynasz wygrywać.",
       "author": "Cal Newport",
-      "question": "Czuję, że moje życie jest spójne i zintegrowane."
+      "question": "W których momentach lub działaniach czuję się najbardziej 'całościowy' - gdzie moje działania, wartości i tożsamość są w zgodzie?",
+      "action_item": "Zidentyfikuj jeden obszar swojego życia, który wydaje się nie być zsynchronizowany z twoimi wartościami. Pomyśl o jednej małej zmianie, aby lepiej go wyrównać.",
+      "common_pitfall": "Pogon za niemożliwym celem 'idealnej równowagi'. Celem jest spójność i autentyczność, a nie idealnie podzielony wykres kołowy twojego czasu.",
+      "further_reading": "'Głęboka praca' autorstwa Cala Newporta, która bada, jak zbudować życie wokół wartościowego, skoncentrowanego i spójnego wysiłku.",
+      "affirmation": "Znajduję satysfakcję w spójności, nie w perfekcji. Moje życie gra w tej samej drużynie i czuje się całościowo."
+    },
+    "q13": {
+      "title": "Sztuka Adaptacji",
+      "description": "Ta filozofia akceptuje, że zmiana i zakłócenia to nieuniknione cechy życia, a nie błędy. Zamiast opierać się rzeczywistości, uczy się giąć z nią, znajdując możliwości w przeciwnościach i siłę w elastyczności. To przejście od sztywnego planu do odpornego kompasu.",
+      "quote": "Dąb walczył z wiatrem i został złamany, wierzba gięła się, gdy musiała, i przetrwała.",
+      "author": "Robert Jordan",
+      "question": "Gdy moje dobrze ułożone plany były ostatnio zakłócone przez wydarzenia poza moją kontrolą, czy zareagowałem sztywną frustracją czy elastyczną adaptacją?",
+      "action_item": "Następnym razem, gdy wystąpi drobna niedogodność (np. korek, odwołane spotkanie), świadomie ćwicz przekształcenie tego w nieoczekiwaną możliwość na coś innego (np. posłuchaj podcastu, zadzwoń, lub po prostu zatrzymaj się).",
+      "common_pitfall": "Mylenie adaptacji z pasywnością. To nie o poddawaniu się; to o strategicznym ustępowaniu w krótkim terminie, aby zachować siłę i znaleźć nową drogę naprzód.",
+      "further_reading": "'Antikruchość: Rzeczy, które zyskują na nieporządku' autorstwa Nassima Nicholasa Taleba, która bada systemy, które wzmacniają się pod wpływem zmienności.",
+      "affirmation": "Jestem odporny. Nie łamię się, gdy plany się zmieniają; adaptuję się i znajduję nową drogę naprzód."
+    },
+    "q14": {
+      "title": "Ego jako Doradca, Nie Król",
+      "description": "Ta filozofia polega na nauczeniu się obserwowania swojego ego - części ciebie, która pragnie statusu, boi się wyglądać głupio i nalega na rację. Nie niszczysz ego, ale je degradujesz. Słuchasz jego rady jako ostrożnego doradcy, ale nie pozwalasz mu rządzić twoimi decyzjami.",
+      "quote": "Ego to wróg tego, czego chcesz i tego, co masz.",
+      "author": "Ryan Holiday",
+      "question": "Gdy ostatnio czułem się defensywny lub miałem silną potrzebę mieć rację, co moje ego próbowało chronić, i czy ta ochrona naprawdę mi służyła?",
+      "action_item": "Aktywnie poszukaj opinii kogoś, kto, jak wiesz, nie zgadza się z tobą w temacie o niskich stawkach. Słuchaj wyłącznie z intencją zrozumienia ich perspektywy, a nie obalenia.",
+      "common_pitfall": "Myślenie, że zarządzanie ego oznacza stanie się wycieraczką. Chodzi o pozbycie się potrzeby zewnętrznego potwierdzenia, co faktycznie zwiększa pewność siebie, a nie ją zmniejsza.",
+      "further_reading": "'Ego jest wrogiem' autorstwa Ryana Holidaya, nowoczesna klasyka na ten temat.",
+      "affirmation": "Cenię naukę ponad rację. Moja wartość nie jest związana z moją wydajnością czy opiniami innych."
+    },
+    "q15": {
+      "title": "Proaktywna Wdzięczność",
+      "description": "To świadoma praktyka skanowania i doceniania dobra, które już istnieje w twoim życiu. To antidotum na naturalną skłonność mózgu do negatywności i nieustanne dążenie do 'co dalej'. Nie ignoruje trudności życia, ale zapewnia, że nie przesłaniają one jego darów.",
+      "quote": "To nie radość czyni nas wdzięcznymi; to wdzięczność czyni nas radosnymi.",
+      "author": "David Steindl-Rast",
+      "question": "Poza dużymi, oczywistymi rzeczami, jaką małą, codzienną rzecz dziś brałem za pewnik, która naprawdę poprawia moje życie?",
+      "action_item": "Raz dziennie, przez tydzień, rób zdjęcie czegoś małego, za co jesteś wdzięczny. Może to być filiżanka kawy, promień słońca czy linia w książce. Akt patrzenia zmienia to, co widzisz.",
+      "common_pitfall": "Traktowanie wdzięczności jako obowiązku lub formy samolubstwa ('toksyczna pozytywność'). Prawdziwa wdzięczność uznaje zło, ale celowo nadaje wagę i uwagę dobru.",
+      "further_reading": "'Księga radości' autorstwa Dalajlamy i Desmonda Tutu, która bada, jak znaleźć radość w obliczu cierpienia.",
+      "affirmation": "Aktywnie szukam dobra w moim dniu. Moja uwaga na pozytywne kultywuje moją radość."
+    },
+    "q16": {
+      "title": "Cyfrowa Suwerenność",
+      "description": "Ta filozofia stwierdza, że twoja uwaga to twój najcenniejszy atut. Polega na świadomej i celowej relacji z technologią, szczególnie mediami społecznościowymi. Przestajesz być pasywnym użytkownikiem, stając się aktywnym suwerenem, który używa tych narzędzi do konkretnych celów, a następnie się rozłącza, chroniąc swój umysł przed rozproszeniem i porównywaniem.",
+      "quote": "Koszt rzeczy to ilość tego, co nazwę życiem, które musi być wymienione za nią, natychmiast lub na dłuższą metę.",
+      "author": "Henry David Thoreau (zaadaptowane na erę cyfrową przez Cala Newporta)",
+      "question": "Po przeciętnej sesji w mediach społecznościowych, czy czuję się bardziej połączony, naenergetyzowany i poinformowany, czy bardziej rozproszony, niespokojny i nieadekwatny?",
+      "action_item": "Usuń aplikacje mediów społecznościowych z telefonu na jeden weekend. Nadal możesz uzyskać do nich dostęp przez przeglądarkę internetową, jeśli potrzeba. Obserwuj zmianę w swoim stanie psychicznym i chęć 'sprawdzenia'.",
+      "common_pitfall": "Usprawiedliwianie, że 'potrzebujesz' tego do pracy lub utrzymywania kontaktu. Wyzwaniem jest rozróżnienie między świadomym, celowym użyciem a bezmyślnym, kompulsywnym przewijaniem.",
+      "further_reading": "'Cyfrowy minimalizm: Wybór skoncentrowanego życia w hałaśliwym świecie' autorstwa Cala Newporta.",
+      "affirmation": "Jestem kuratorem mojej własnej uwagi. Używam moich narzędzi; moje narzędzia nie używają mnie."
     }
   },
+
   "likertScale": {
-    "stronglyDisagree": "Bardzo Nie",
-    "disagree": "Nie",
-    "neutral": "Nie wiem",
-    "agree": "Tak",
-    "stronglyAgree": "Bardzo Tak"
+    "stronglyDisagree": "Zdecydowanie się nie zgadzam",
+    "disagree": "Nie zgadzam się",
+    "neutral": "Neutralny",
+    "agree": "Zgadzam się",
+    "stronglyAgree": "Zdecydowanie się zgadzam"
   },
   "progress": {
     "label": "Postęp"
@@ -148,7 +242,7 @@
     "restart": "Zaczynamy od nowa! Odpowiedz na pytania ponownie."
   },
   "results": {
-    "title": "Kwestionariusz Ukończony!",
-    "placeholder": "Twoja analiza filozoficzna pojawi się tutaj. Wynik na podstawie ukończenia:"
+    "title": "Kwestionariusz ukończony!",
+    "placeholder": "Twoja analiza filozoficzna pojawi się tutaj. Wynik oparty na ukończeniu:"
   }
 }
