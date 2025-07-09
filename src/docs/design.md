@@ -1,5 +1,9 @@
 # ClarityAge - 40: Design System Documentation
 
+**📚 Part of ClarityAge Documentation | See [README.md](../../README.md) for project overview**
+
+---
+
 ## Overview
 
 This document serves as the comprehensive design guide for ClarityAge - 40, defining the visual language, components, and user experience patterns that create a cohesive, thoughtful interface for philosophical reflection.

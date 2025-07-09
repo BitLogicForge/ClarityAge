@@ -61,12 +61,14 @@ npm run deploy
 
 ## 📚 Documentation
 
-Comprehensive project documentation is available in the `/src/docs/` directory:
+This README provides a comprehensive overview of ClarityAge. For detailed project documentation, see:
 
-- **[Project Overview](src/docs/base.md)** - Core concept, target audience, and project goals
-- **[Features Documentation](src/docs/features.md)** - Detailed feature specifications organized by user stories
-- **[Design System](src/docs/design.md)** - UI/UX guidelines, color palette, typography, and component specifications
+- **[Project Overview](src/docs/base.md)** - Detailed project concept, target audience, and goals
+- **[Features Documentation](src/docs/features.md)** - Complete feature specifications with user stories
+- **[Design System](src/docs/design.md)** - UI/UX guidelines, color palette, typography, and component library
 - **[Implementation Guide](src/docs/implementation.md)** - Technical architecture, development setup, and deployment strategies
+
+These documents complement this README and provide in-depth guidance for contributors and developers.
 
 ## 🎨 Customization
 

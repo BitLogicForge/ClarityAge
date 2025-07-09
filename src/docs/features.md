@@ -1,5 +1,9 @@
 # ClarityAge - 40: Features Documentation
 
+**📚 Part of ClarityAge Documentation | See [README.md](../../README.md) for project overview**
+
+---
+
 ## Overview
 
 This document outlines the feature set for ClarityAge - 40, a thoughtful interactive questionnaire exploring philosophical perspectives and personal values. Features are organized into logical groups and prioritized between MVP and future releases.

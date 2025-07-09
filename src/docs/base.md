@@ -1,3 +1,7 @@
+**📚 Part of ClarityAge Documentation | See [README.md](../../README.md) for project overview**
+
+---
+
 **1. Project Name:** ClarityAge - 40
 
 **2. The Core Idea (Elevator Pitch):** A thoughtful interactive questionnaire that explores philosophical perspectives and personal values through carefully curated questions, helping users reflect on their life approaches and meaning through the wisdom of notable thinkers and philosophers.

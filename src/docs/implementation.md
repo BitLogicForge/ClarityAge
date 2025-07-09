@@ -1,5 +1,9 @@
 # ClarityAge - 40: Implementation Guide
 
+**📚 Part of ClarityAge Documentation | See [README.md](../../README.md) for project overview**
+
+---
+
 ## Overview
 
 This document provides a comprehensive technical implementation plan for ClarityAge - 40, a React-based philosophical reflection application. This guide is designed for developers and covers architecture, state management, component structure, and development practices.
