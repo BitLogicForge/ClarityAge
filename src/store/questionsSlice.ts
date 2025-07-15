@@ -1,7 +1,14 @@
 import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
 import { questions } from "../config/base";
 
-export type AppState = "idle" | "in-progress" | "completed" | "error";
+export const APPSTATE = {
+  IDLE: "idle",
+  IN_PROGRESS: "in-progress",
+  COMPLETED: "completed",
+  ERROR: "error",
+};
+
+export type AppState = (typeof APPSTATE)[keyof typeof APPSTATE];
 
 interface QuestionsState {
   answers: Record<number, string>;
@@ -15,7 +22,7 @@ const initialState: QuestionsState = {
   answers: {},
   checkedQuestions: [],
   hasBeenChecked: false,
-  appState: "idle",
+  appState: APPSTATE.IDLE,
   expandedQuestion: 1, // Start with first question expanded
 };
 
@@ -29,8 +36,8 @@ const questionsSlice = createSlice({
     ) => {
       state.answers[action.payload.questionId] = action.payload.value;
       // Update app state to in-progress when first answer is given
-      if (state.appState === "idle") {
-        state.appState = "in-progress";
+      if (state.appState === APPSTATE.IDLE) {
+        state.appState = APPSTATE.IN_PROGRESS;
       }
 
       // Auto-expand next unanswered question
@@ -50,21 +57,21 @@ const questionsSlice = createSlice({
       // Mark all answered questions as checked
       state.checkedQuestions = Object.keys(state.answers).map(Number);
       state.hasBeenChecked = true;
-      state.appState = "completed";
+      state.appState = APPSTATE.COMPLETED;
     },
     clearAnswers: (state) => {
       state.answers = {};
       state.checkedQuestions = [];
       state.hasBeenChecked = false;
-      state.appState = "idle";
+      state.appState = APPSTATE.IDLE;
       state.expandedQuestion = 1; // Reset to first question
     },
     setError: (state) => {
-      state.appState = "error";
+      state.appState = APPSTATE.ERROR;
     },
     resetToInProgress: (state) => {
       state.hasBeenChecked = false;
-      state.appState = "in-progress";
+      state.appState = APPSTATE.IN_PROGRESS;
     },
     setExpandedQuestion: (state, action: PayloadAction<number | null>) => {
       state.expandedQuestion = action.payload;
