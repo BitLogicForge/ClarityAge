@@ -105,30 +105,3 @@ export const questions: TPhilosophyQuestion[] = [
     question: "philosophies.q12.question",
   },
 ];
-
-export type TLikertScaleValues = {
-  stronglyDisagree: number;
-  disagree: number;
-  neutral: number;
-  agree: number;
-  stronglyAgree: number;
-};
-
-export const likertScaleValues: TLikertScaleValues = {
-  stronglyDisagree: -2,
-  disagree: -1,
-  neutral: 0,
-  agree: 1,
-  stronglyAgree: 2,
-};
-
-export type TLikertScaleMark = {
-  value: number;
-  label: string; // Translation key
-};
-export const likertScaleMarks: TLikertScaleMark[] = Object.entries(
-  likertScaleValues
-).map(([key, value]) => ({
-  value,
-  label: `likertScale.${key}`, // Translation key
-}));

@@ -1,14 +1,7 @@
 import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
 import { questions } from "../config/base";
-
-export const APPSTATE = {
-  IDLE: "idle",
-  IN_PROGRESS: "in-progress",
-  COMPLETED: "completed",
-  ERROR: "error",
-};
-
-export type AppState = (typeof APPSTATE)[keyof typeof APPSTATE];
+import { APPSTATE } from "../config/constants";
+import type { AppState } from "../types/all.types";
 
 interface QuestionsState {
   answers: Record<number, string>;

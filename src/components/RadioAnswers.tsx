@@ -4,7 +4,7 @@ import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 import { Box, Button, ButtonGroup, Typography } from "@mui/material";
 import { useTranslation } from "react-i18next";
-import { likertScaleMarks } from "../config/base";
+import { likertScaleMarks } from "../types/all.types";
 
 interface RadioAnswersProps {
   selectedValue?: string;
