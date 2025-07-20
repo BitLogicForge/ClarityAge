@@ -2,7 +2,14 @@ import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
-import { Box, Button, ButtonGroup, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  ButtonGroup,
+  Typography,
+  useMediaQuery,
+  useTheme,
+} from "@mui/material";
 import { useTranslation } from "react-i18next";
 import { likertScaleMarks } from "../types/all.types";
 
@@ -16,52 +23,26 @@ export default function RadioAnswers({
   onChange,
 }: RadioAnswersProps) {
   const { t } = useTranslation();
-
+  const theme = useTheme();
+  const isSmall = useMediaQuery(theme.breakpoints.down("sm"));
   const handleClick = (value: number) => {
     onChange?.(value.toString());
   };
 
   return (
-    <Box sx={{ width: "100%" }}>
+    <Box>
       {/* Button Group for Selection */}
       <ButtonGroup
         variant="outlined"
         fullWidth
-        sx={{
-          "& .MuiButton-root": {
-            minWidth: "auto",
-            flex: 1,
-            py: 1.5,
-            px: { xs: 1, sm: 2 },
-            fontSize: { xs: "0.75rem", sm: "0.875rem" },
-            fontWeight: 500,
-            borderColor: "divider",
-            color: "text.secondary",
-            textTransform: "none",
-            "&:hover": {
-              borderColor: "primary.main",
-              backgroundColor: "primary.50",
-              color: "primary.main",
-            },
-            "&.selected": {
-              backgroundColor: "primary.main",
-              color: "primary.contrastText",
-              borderColor: "primary.main",
-              "&:hover": {
-                backgroundColor: "primary.dark",
-                borderColor: "primary.dark",
-                color: "primary.contrastText",
-              },
-            },
-          },
-        }}
+        orientation={isSmall ? "vertical" : "horizontal"}
       >
         {likertScaleMarks.map((mark) => (
           <Button
             key={mark.value}
             onClick={() => handleClick(mark.value)}
-            className={
-              selectedValue === mark.value.toString() ? "selected" : ""
+            variant={
+              selectedValue === mark.value.toString() ? "contained" : "outlined"
             }
           >
             {t(mark.label)}
