@@ -5,6 +5,10 @@ export type TPhilosophyQuestion = {
   quote: string;
   author: string;
   question: string;
+  commonPitfall: string;
+  affirmation: string;
+  actionItem: string;
+  furtherReading: string;
 };
 
 export const questions: TPhilosophyQuestion[] = [
@@ -15,6 +19,10 @@ export const questions: TPhilosophyQuestion[] = [
     quote: "philosophies.q1.quote",
     author: "philosophies.q1.author",
     question: "philosophies.q1.question",
+    commonPitfall: "philosophies.q1.common_pitfall",
+    affirmation: "philosophies.q1.affirmation",
+    actionItem: "philosophies.q1.action_item",
+    furtherReading: "philosophies.q1.further_reading",
   },
   {
     id: 2,
@@ -23,6 +31,10 @@ export const questions: TPhilosophyQuestion[] = [
     quote: "philosophies.q2.quote",
     author: "philosophies.q2.author",
     question: "philosophies.q2.question",
+    commonPitfall: "philosophies.q2.common_pitfall",
+    affirmation: "philosophies.q2.affirmation",
+    actionItem: "philosophies.q2.action_item",
+    furtherReading: "philosophies.q2.further_reading",
   },
   {
     id: 3,
@@ -31,6 +43,10 @@ export const questions: TPhilosophyQuestion[] = [
     quote: "philosophies.q3.quote",
     author: "philosophies.q3.author",
     question: "philosophies.q3.question",
+    commonPitfall: "philosophies.q3.common_pitfall",
+    affirmation: "philosophies.q3.affirmation",
+    actionItem: "philosophies.q3.action_item",
+    furtherReading: "philosophies.q3.further_reading",
   },
   {
     id: 4,
@@ -39,6 +55,10 @@ export const questions: TPhilosophyQuestion[] = [
     quote: "philosophies.q4.quote",
     author: "philosophies.q4.author",
     question: "philosophies.q4.question",
+    commonPitfall: "philosophies.q4.common_pitfall",
+    affirmation: "philosophies.q4.affirmation",
+    actionItem: "philosophies.q4.action_item",
+    furtherReading: "philosophies.q4.further_reading",
   },
   {
     id: 5,
@@ -47,6 +67,10 @@ export const questions: TPhilosophyQuestion[] = [
     quote: "philosophies.q5.quote",
     author: "philosophies.q5.author",
     question: "philosophies.q5.question",
+    commonPitfall: "philosophies.q5.common_pitfall",
+    affirmation: "philosophies.q5.affirmation",
+    actionItem: "philosophies.q5.action_item",
+    furtherReading: "philosophies.q5.further_reading",
   },
   {
     id: 6,
@@ -55,6 +79,10 @@ export const questions: TPhilosophyQuestion[] = [
     quote: "philosophies.q6.quote",
     author: "philosophies.q6.author",
     question: "philosophies.q6.question",
+    commonPitfall: "philosophies.q6.common_pitfall",
+    affirmation: "philosophies.q6.affirmation",
+    actionItem: "philosophies.q6.action_item",
+    furtherReading: "philosophies.q6.further_reading",
   },
   {
     id: 7,
@@ -63,6 +91,10 @@ export const questions: TPhilosophyQuestion[] = [
     quote: "philosophies.q7.quote",
     author: "philosophies.q7.author",
     question: "philosophies.q7.question",
+    commonPitfall: "philosophies.q7.common_pitfall",
+    affirmation: "philosophies.q7.affirmation",
+    actionItem: "philosophies.q7.action_item",
+    furtherReading: "philosophies.q7.further_reading",
   },
   {
     id: 8,
@@ -71,6 +103,10 @@ export const questions: TPhilosophyQuestion[] = [
     quote: "philosophies.q8.quote",
     author: "philosophies.q8.author",
     question: "philosophies.q8.question",
+    commonPitfall: "philosophies.q8.common_pitfall",
+    affirmation: "philosophies.q8.affirmation",
+    actionItem: "philosophies.q8.action_item",
+    furtherReading: "philosophies.q8.further_reading",
   },
   {
     id: 9,
@@ -79,6 +115,10 @@ export const questions: TPhilosophyQuestion[] = [
     quote: "philosophies.q9.quote",
     author: "philosophies.q9.author",
     question: "philosophies.q9.question",
+    commonPitfall: "philosophies.q9.common_pitfall",
+    affirmation: "philosophies.q9.affirmation",
+    actionItem: "philosophies.q9.action_item",
+    furtherReading: "philosophies.q9.further_reading",
   },
   {
     id: 10,
@@ -87,6 +127,10 @@ export const questions: TPhilosophyQuestion[] = [
     quote: "philosophies.q10.quote",
     author: "philosophies.q10.author",
     question: "philosophies.q10.question",
+    commonPitfall: "philosophies.q10.common_pitfall",
+    affirmation: "philosophies.q10.affirmation",
+    actionItem: "philosophies.q10.action_item",
+    furtherReading: "philosophies.q10.further_reading",
   },
   {
     id: 11,
@@ -95,6 +139,10 @@ export const questions: TPhilosophyQuestion[] = [
     quote: "philosophies.q11.quote",
     author: "philosophies.q11.author",
     question: "philosophies.q11.question",
+    commonPitfall: "philosophies.q11.common_pitfall",
+    affirmation: "philosophies.q11.affirmation",
+    actionItem: "philosophies.q11.action_item",
+    furtherReading: "philosophies.q11.further_reading",
   },
   {
     id: 12,
@@ -103,5 +151,9 @@ export const questions: TPhilosophyQuestion[] = [
     quote: "philosophies.q12.quote",
     author: "philosophies.q12.author",
     question: "philosophies.q12.question",
+    commonPitfall: "philosophies.q12.common_pitfall",
+    affirmation: "philosophies.q12.affirmation",
+    actionItem: "philosophies.q12.action_item",
+    furtherReading: "philosophies.q12.further_reading",
   },
 ];

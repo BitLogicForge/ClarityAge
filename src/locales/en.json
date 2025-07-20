@@ -4,6 +4,18 @@
     "description": "Explore philosophical questions and personal values",
     "welcome": "Welcome to your React + Material-UI application"
   },
+  "labels": {
+    "philosophies": "Philosophies",
+    "common_pitfall": "Common Pitfall",
+    "further_reading": "Further Reading",
+    "affirmation": "Affirmation",
+    "action_item": "Action Item",
+    "question": "Question",
+    "quote": "Quote",
+    "author": "Author",
+    "title": "Title",
+    "description": "Description"
+  },
   "buttons": {
     "getStarted": "Get Started",
     "learnMore": "Learn More",
