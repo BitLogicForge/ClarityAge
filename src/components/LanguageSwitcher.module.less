@@ -1,0 +1,38 @@
+.languageButton {
+  margin-left: 16px;
+  cursor: pointer;
+  min-width: 48px;
+  height: 48px;
+  border: 1px solid var(--mui-divider, #e0e0e0) !important; // Force border
+  box-sizing: border-box;
+  background: transparent;
+  &:hover {
+    background-color: var(--mui-action-hover, #f5f5f5) !important;
+    border-color: var(--mui-primary-main, #1976d2) !important;
+  }
+}
+
+.languageDisplay {
+  font-weight: bold;
+  font-size: 0.75rem;
+  user-select: none;
+  pointer-events: none;
+  color: var(--mui-primary-main, #1976d2);
+}
+
+.languageMenuItem {
+  cursor: pointer;
+  &:hover {
+    background-color: var(--mui-action-hover, #f5f5f5);
+  }
+}
+
+.languageDisplayMenu {
+  margin-right: 12px;
+  font-weight: bold;
+  font-size: 0.75rem;
+  user-select: none;
+  color: var(--mui-primary-main, #1976d2);
+  min-width: 24px;
+  text-align: center;
+}
