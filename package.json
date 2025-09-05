@@ -7,12 +7,17 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "lint:fix": "eslint . --ext ts,tsx --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "type-check": "tsc --noEmit",
     "preview": "vite preview",
-    "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx}\"",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "update": "npx npm-check-updates -u && npm install",
+    "deploy": "gh-pages -d dist",
+    "deploy:clean": "gh-pages -d dist -c",
+    "git:fix": "git add . && git commit -m 'clean' && git push",
+    "modules:clean": "rm -rf node_modules && npm install"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
