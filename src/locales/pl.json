@@ -4,6 +4,18 @@
     "description": "Odkryj pytania filozoficzne i osobiste wartości",
     "welcome": "Witamy w Twojej aplikacji React + Material-UI"
   },
+  "labels": {
+    "philosophies": "Filozofie",
+    "common_pitfall": "Typowy błąd",
+    "further_reading": "Dalsza lektura",
+    "affirmation": "Afirmacja",
+    "action_item": "Zadanie",
+    "question": "Pytanie",
+    "quote": "Cytat",
+    "author": "Autor",
+    "title": "Tytuł",
+    "description": "Opis"
+  },
   "buttons": {
     "getStarted": "Rozpocznij",
     "learnMore": "Dowiedz się więcej",
