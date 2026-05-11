@@ -1,0 +1,288 @@
+{
+  "philosophies": {
+    "q1": {
+      "title": "Enlightened Mortality: Time as the Ultimate Currency",
+      "description": "This philosophy reframes the finite nature of time from a source of fear into a tool for prioritization. Recognizing that time is limited clarifies what is truly important, encouraging conscious and meaningful choices about how we live.",
+      "quote": "We don't have too little time, but we waste much of it.",
+      "author": "Seneca",
+      "question": "How would an audit of your last week's time allocation reflect your deepest-held values? Describe the alignment or misalignment you observe. [19, 20]",
+      "action_item": "Use a simple 'time journal' for three days to see where your hours truly go. No judgment, just observation.",
+      "common_pitfall": "Becoming obsessed with productivity instead of presence. The goal isn't to fill every second, but to make each second count.",
+      "further_reading": "Seneca's essay 'On the Shortness of Life'. It's a short, powerful read that directly addresses this philosophy.",
+      "affirmation": "My time is my life. I allocate it with intention and honor its value.",
+      "philosophical_lens": "Evaluative [13]",
+      "cognitive_bias_alert": {
+        "name": "Optimism Bias [14, 16]",
+        "description": "Be aware of the tendency to believe we have more future time than we actually do. This bias can lead us to postpone what is truly important."
+      }
+    },
+    "q2": {
+      "title": "The Enough™ Principle 2.0",
+      "description": "This principle challenges the relentless pursuit of 'more' by distinguishing between needs and wants. It focuses on designing a life that values balance, function, and comfort over endless consumption, redefining success as contentment rather than accumulation.",
+      "quote": "The things you own end up owning you.",
+      "author": "Tyler Durden (Fight Club)",
+      "question": "What are you pursuing out of a genuine need for well-being, and what are you pursuing out of habit, social expectation, or a fear of missing out? [21, 22]",
+      "action_item": "Before your next non-essential purchase, impose a 48-hour waiting period. Re-evaluate if the desire is still strong after two days.",
+      "common_pitfall": "Confusing minimalism with deprivation. The goal is not to have less, but to make room for what matters more.",
+      "further_reading": "'Your Money or Your Life' by Vicki Robin, which explores the trade-off between life energy and material possessions.",
+      "affirmation": "I have enough. I am enough. My success is measured by my peace, not my possessions.",
+      "philosophical_lens": "Analytic [13]",
+      "cognitive_bias_alert": {
+        "name": "Status Quo Bias [14]",
+        "description": "Consider if your pursuits are driven by a genuine desire for improvement or by an unconscious preference to maintain your current lifestyle and habits, even if they no longer serve you."
+      }
+    },
+    "q3": {
+      "title": "Energy Management, Not Time Management",
+      "description": "Instead of viewing productivity through the lens of a 24-hour clock, this approach prioritizes the body's natural biological rhythms. The aim is to align tasks with periods of peak energy and allow for intentional regeneration during lulls, leading to greater output with less burnout.",
+      "quote": "We're not tired from work, we're tired from doing meaningless things.",
+      "author": "Greg McKeown",
+      "question": "Describe your ideal energy landscape for a typical day. What patterns emerge, and what systemic changes could you implement to honor those natural rhythms? [23, 19]",
+      "action_item": "Identify your single 'peak energy' window (e.g., 10 AM - 12 PM) and protect it fiercely for your most important task. Schedule meetings outside this window.",
+      "common_pitfall": "Feeling guilty for resting during a low-energy period. True productivity requires cycles of intense effort followed by intentional recovery.",
+      "further_reading": "'The Power of Full Engagement' by Jim Loehr and Tony Schwartz, the foundational text on managing energy, not time.",
+      "affirmation": "I honor my natural rhythms. I work when I'm strong and rest when I need to, achieving more with less strain.",
+      "philosophical_lens": "Phenomenological [13]",
+      "cognitive_bias_alert": {
+        "name": "Planning Fallacy [14, 24]",
+        "description": "We often underestimate the energy, not just the time, that tasks require. Does this fallacy cause you to over-schedule your high-energy periods?"
+      },
+      "reflection_prompts": {
+        "backward": "Describe a time you felt perfectly in sync with your energy, and what was the result? [17, 18]",
+        "inward": "What does your current state of energy reveal about the alignment between your activities and your values? [17, 18]",
+        "forward": "What is one concrete goal you can set for next week to better protect your energy? [17, 18]"
+      }
+    },
+    "q4": {
+      "title": "The Art of the Sacred NO",
+      "description": "Every commitment (a 'yes') consumes our finite resources of time and energy. This philosophy treats the act of refusal ('no') as a powerful strategic tool to protect the space required for our most important priorities, free from guilt.",
+      "quote": "The difference between successful people and really successful people is that really successful people say no to almost everything.",
+      "author": "Warren Buffett",
+      "question": "What have I said 'yes' to recently that, in hindsight, should have been a 'no'? What was the true cost of that commitment, and what fear or obligation drove the 'yes'? [21, 25]",
+      "action_item": "Practice saying a 'clear is kind' no to one small, low-stakes request this week. Example: 'I can't, but thank you for thinking of me.'",
+      "common_pitfall": "Over-explaining or justifying your 'no'. A simple, respectful refusal is sufficient and often more powerful.",
+      "further_reading": "'Essentialism: The Disciplined Pursuit of Less' by Greg McKeown, which frames 'no' as a strategic imperative.",
+      "affirmation": "My 'no' makes space for a more meaningful 'yes'. I protect my priorities with clarity and kindness.",
+      "philosophical_lens": "Criteriological [13]",
+      "cognitive_bias_alert": {
+        "name": "Courtesy Bias [15]",
+        "description": "Are you agreeing to things to be polite or to maintain social harmony, even when it goes against your own best interests? This bias can make saying 'no' feel confrontational."
+      }
+    },
+    "q5": {
+      "title": "Earn Wisely, Not More",
+      "description": "Financial maturity is viewed not by the size of one's income, but by the quality of one's financial choices. This philosophy emphasizes using money as a tool to increase personal freedom, autonomy, and security, rather than for spectacle or status.",
+      "quote": "Wealth is the ability to fully experience life.",
+      "author": "Henry David Thoreau",
+      "question": "How do your financial habits function in your life? Are they primarily creating more options and freedom, or are they creating new forms of obligation and anxiety? [25, 26]",
+      "action_item": "Review your last three major financial decisions. Ask: 'Did this choice increase my freedom and options, or decrease them?'",
+      "common_pitfall": "Lifestyle inflation—automatically increasing your spending as your income rises, trapping you in a cycle of needing to earn more.",
+      "further_reading": "'The Psychology of Money' by Morgan Housel, a collection of short stories exploring our relationship with wealth.",
+      "affirmation": "I use money as a tool for freedom. Every financial decision is a step toward greater autonomy.",
+      "philosophical_lens": "Teleological [13]",
+      "cognitive_bias_alert": {
+        "name": "Loss Aversion [14]",
+        "description": "The pain of losing money is psychologically about twice as powerful as the pleasure of gaining it. Does this fear drive you toward overly conservative financial decisions that limit your freedom?"
+      }
+    },
+    "q6": {
+      "title": "Body as Capital",
+      "description": "This philosophy approaches physical health as a long-term investment that compounds over time. Consistent care in areas like nutrition, exercise, and sleep is seen not as a chore, but as a strategic deposit that pays dividends in future longevity, strength, and mental clarity.",
+      "quote": "Take care of your body. It's the only place you have to live.",
+      "author": "Jim Rohn",
+      "question": "If you were to treat your health like a financial portfolio, which assets (sleep, nutrition, strength, flexibility) are you currently over-investing in, and which are you dangerously neglecting? [21, 27]",
+      "action_item": "Incorporate one 'longevity' habit this month, like taking a 10-minute walk after every meal or dedicating 5 minutes to stretching before bed.",
+      "common_pitfall": "The 'all-or-nothing' mindset. Believing you must do a perfect 60-minute workout or it's not worth it. Consistency beats intensity.",
+      "further_reading": "Peter Attia's book 'Outlive: The Science and Art of Longevity', which details the strategic approach to healthspan.",
+      "affirmation": "I am making daily deposits into my health account. My future self will thank me for the compounding interest.",
+      "philosophical_lens": "Metaphysical [13]",
+      "cognitive_bias_alert": {
+        "name": "Hyperbolic Discounting [15]",
+        "description": "This is the tendency to prefer smaller, immediate rewards (e.g., eating junk food now) over larger, later rewards (e.g., long-term health). How does this bias affect your daily health choices?"
+      }
+    },
+    "q7": {
+      "title": "Relationships of Reciprocity",
+      "description": "Recognizing that social energy is limited, this philosophy encourages a conscious allocation of that energy. It prioritizes relationships based on mutual support, growth, and exchange, while gracefully letting go of connections that are consistently one-sided or draining.",
+      "quote": "You are the average of the five people you spend the most time with.",
+      "author": "Jim Rohn",
+      "question": "Which of your relationships consistently leave you feeling energized and seen, and which ones tend to leave you feeling depleted? What defines the difference? [25, 26]",
+      "action_item": "Do a quick 'energy audit' after your next few social interactions. Simply note whether you feel more energized or more drained.",
+      "common_pitfall": "Feeling obligated to maintain relationships due to shared history, even when they are no longer healthy or supportive.",
+      "further_reading": "'Boundaries' by Dr. Henry Cloud & Dr. John Townsend, a classic guide on creating healthy relational dynamics.",
+      "affirmation": "I invest my social energy where it is respected and reciprocated. My inner circle is a source of strength.",
+      "philosophical_lens": "Evaluative [13]",
+      "cognitive_bias_alert": {
+        "name": "Sunk Cost Fallacy [14]",
+        "description": "Are you continuing to invest time and energy in a draining relationship simply because you've already invested so much in the past? This fallacy traps us into honoring past costs over future well-being."
+      }
+    },
+    "q8": {
+      "title": "Experience Capital",
+      "description": "This concept treats one's entire history—including mistakes, failures, and lessons learned—as a valuable form of capital. Past experiences, when reflected upon, become a unique asset that can inform better decisions, mentoring, and design in the present.",
+      "quote": "Experience is the name we give to our mistakes.",
+      "author": "Oscar Wilde",
+      "question": "Reframe a past 'failure' as a dataset. What were the inputs, processes, and outputs? What surprising correlations or causal links does this analysis reveal for future decisions? [18, 19]",
+      "action_item": "Identify one past 'failure'. Write down three concrete lessons it taught you and one way you can apply a lesson this week.",
+      "common_pitfall": "Dwelling on the shame or regret of a mistake, rather than mining it for valuable, actionable data.",
+      "further_reading": "'The Obstacle Is the Way' by Ryan Holiday, which teaches the Stoic art of turning adversity into advantage.",
+      "affirmation": "My past is not a liability; it is my library of lessons. I leverage my experience with wisdom.",
+      "philosophical_lens": "Hermeneutic [13]",
+      "cognitive_bias_alert": {
+        "name": "Hindsight Bias [14]",
+        "description": "The 'I-knew-it-all-along' effect can prevent us from genuinely analyzing why a past event occurred, as we mistakenly believe it was more predictable than it was. Are you truly learning, or just confirming what you think you already knew?"
+      }
+    },
+    "q9": {
+      "title": "Emotional Radar",
+      "description": "This is the practice of developing emotional intelligence as an early warning system. It involves recognizing which interactions and environments are nourishing versus which are draining or chaotic, allowing for proactive measures to protect one's inner calm.",
+      "quote": "Between stimulus and response there is a space. In that space is our power to choose our response. In our response lies our growth and our freedom.",
+      "author": "Viktor E. Frankl",
+      "question": "When did you last feel a sense of emotional chaos or profound calm? Describe the environment and behaviors that triggered it. What does this tell you about the conditions you need to thrive? [25, 26]",
+      "action_item": "The next time you feel a strong negative emotion, pause and name it specifically (e.g., 'This is disappointment,' not just 'I feel bad').",
+      "common_pitfall": "Trying to suppress or ignore 'negative' emotions. The goal is to notice them as signals without letting them take control.",
+      "further_reading": "Susan David's book 'Emotional Agility', which provides a framework for navigating emotions without getting hooked by them.",
+      "affirmation": "I am the calm observer of my emotions, not their captive. I can notice a storm without letting it flood my house.",
+      "philosophical_lens": "Phenomenological [13]",
+      "cognitive_bias_alert": {
+        "name": "Framing Effect [15]",
+        "description": "The way a situation is presented to us (or how we frame it for ourselves) can dramatically alter our emotional response. Are your emotions a reaction to an event itself, or to the story you're telling yourself about it?"
+      }
+    },
+    "q10": {
+      "title": "Legacy Thinking",
+      "description": "This mindset shifts the focus from short-term personal achievements to long-term, lasting impact. It prompts one to consider what of value—knowledge, kindness, creations, or principles—will remain for others long after they are gone.",
+      "quote": "A society grows great when old men plant trees in whose shade they know they shall never sit.",
+      "author": "Greek Proverb",
+      "question": "Beyond your own accomplishments, what are you building, teaching, or contributing that could benefit others a generation from now? How does this long-term view change your short-term priorities? [21, 22]",
+      "action_item": "Spend 15 minutes writing an answer to: 'If I could pass on one core principle or skill to the next generation, what would it be and why?'",
+      "common_pitfall": "Thinking legacy has to be a grand, monumental act. Small, consistent acts of mentorship, kindness, or creation have a powerful ripple effect.",
+      "further_reading": "'Man's Search for Meaning' by Viktor Frankl, a profound exploration of finding purpose even in the most difficult circumstances.",
+      "affirmation": "I am building something of value that will outlast me. My daily actions contribute to a lasting positive impact.",
+      "philosophical_lens": "Teleological [13]",
+      "cognitive_bias_alert": {
+        "name": "Availability Heuristic [16]",
+        "description": "We often overvalue recent, vivid achievements. Does this cause you to focus on short-term wins at the expense of building a more durable, long-term legacy?"
+      }
+    },
+    "q11": {
+      "title": "Systems, Not Parts",
+      "description": "This philosophy encourages viewing one's life as an interconnected ecosystem rather than a collection of separate projects. The goal is to create synergy where different areas—such as work, health, and relationships—mutually support and reinforce one another.",
+      "quote": "You do not rise to the level of your goals. You fall to the level of your systems.",
+      "author": "James Clear",
+      "question": "Which area of your life, if improved by 10%, would create the most positive ripple effect across all other areas? Why is this the keystone? [19, 25]",
+      "action_item": "Map out your key life domains (Health, Work, Family, Finances). Draw a line from one action that would positively impact all of them (e.g., 'Improve sleep').",
+      "common_pitfall": "Trying to overhaul all systems at once. The key is to find the one 'keystone habit' that creates a cascade of positive effects.",
+      "further_reading": "'Atomic Habits' by James Clear, the definitive guide to building small, interconnected habits that create remarkable results.",
+      "affirmation": "My life is a connected system. When I improve one part, I strengthen the whole.",
+      "philosophical_lens": "Analytic [13]",
+      "cognitive_bias_alert": {
+        "name": "Single Cause Fallacy [28]",
+        "description": "Be wary of attributing a complex problem (like burnout) to a single cause (like 'work'). A systems view encourages you to see the interconnected web of contributing factors."
+      }
+    },
+    "q12": {
+      "title": "Joy of Integration",
+      "description": "This is the deep satisfaction that arises not from achieving perfection, but from creating coherence among one's values, actions, and various life domains. It is the feeling that one's life, while imperfect, is a unified whole where everything has its place.",
+      "quote": "The good life is a process, not a state of being. It is a direction, not a destination.",
+      "author": "Carl Rogers",
+      "question": "In which moments or activities do you feel the most 'whole'—where your actions, values, and identity are all in alignment? How can you engineer more of these moments? [21, 26]",
+      "action_item": "Identify one area of your life that feels out of sync with your values. Brainstorm one small change to bring it into better alignment.",
+      "common_pitfall": "Chasing the impossible goal of 'perfect balance'. The aim is coherence and authenticity, not a perfectly divided pie chart of your time.",
+      "further_reading": "'Deep Work' by Cal Newport, which explores how to build a life around valuable, focused, and coherent effort.",
+      "affirmation": "I find satisfaction in coherence, not perfection. My life is playing on the same team, and it feels whole.",
+      "philosophical_lens": "Paradigmatic [13]",
+      "cognitive_bias_alert": {
+        "name": "Perfect Solution Fallacy [28]",
+        "description": "This is the tendency to reject a solution because it is imperfect. Are you avoiding small steps toward integration because you're waiting for a 'perfect' plan that will never arrive?"
+      }
+    },
+    "q13": {
+      "title": "The Art of Adaptation",
+      "description": "This philosophy accepts that change and disruption are inevitable features of life, not bugs. Instead of resisting reality, one learns to bend with it, finding opportunity in adversity and strength in flexibility. It's the shift from a rigid plan to a resilient compass.",
+      "quote": "The oak fought the wind and was broken, the willow bent when it must and survived.",
+      "author": "Robert Jordan",
+      "question": "When your well-laid plans were last disrupted by events outside your control, did you react with rigid frustration or with flexible adaptation? What did that choice cost or create? [18, 25]",
+      "action_item": "The next time a minor inconvenience occurs (e.g., traffic jam, cancelled appointment), consciously practice reframing it as an unexpected opportunity for something else (e.g., listen to a podcast, make a call, or simply pause).",
+      "common_pitfall": "Confusing adaptation with passivity. This isn't about giving up; it's about strategically yielding in the short term to preserve strength and find a new path forward.",
+      "further_reading": "'Antifragile: Things That Gain from Disorder' by Nassim Nicholas Taleb, which explores systems that strengthen when exposed to volatility.",
+      "affirmation": "I am resilient. I don't break when plans change; I adapt and find a new way forward.",
+      "philosophical_lens": "Counterintuitive [13]",
+      "cognitive_bias_alert": {
+        "name": "Reactance",
+        "description": "This is the urge to do the opposite of what someone or something wants you to do in order to prove your freedom of choice. Does this cause you to resist adaptation simply because you resent the change being forced upon you?"
+      }
+    },
+    "q14": {
+      "title": "Ego as an Advisor, Not a King",
+      "description": "This philosophy involves learning to observe your ego—the part of you that craves status, fears looking foolish, and insists on being right. You don't destroy the ego, but you demote it. You listen to its advice as a cautious advisor, but you don't let it rule your decisions.",
+      "quote": "Ego is the enemy of what you want and of what you have.",
+      "author": "Ryan Holiday",
+      "question": "When you last felt defensive or the strong need to be right, what was your ego trying to protect? Was that protection truly serving your long-term growth or just your short-term comfort? [19, 26]",
+      "action_item": "Actively seek out the opinion of someone you know disagrees with you on a low-stakes topic. Listen with the sole intent to understand their perspective, not to rebut.",
+      "common_pitfall": "Thinking that managing the ego means becoming a doormat. It's about shedding the need for external validation, which actually increases self-confidence, not decreases it.",
+      "further_reading": "'Ego Is the Enemy' by Ryan Holiday, a modern classic on this exact topic.",
+      "affirmation": "I value learning over being right. My self-worth is not tied to my performance or others' opinions.",
+      "philosophical_lens": "Epistemological [13]",
+      "cognitive_bias_alert": {
+        "name": "Dunning-Kruger Effect [15]",
+        "description": "This is the tendency for unskilled individuals to overestimate their ability. The ego often fuels this effect, preventing us from seeing our own incompetence and the need to learn."
+      }
+    },
+    "q15": {
+      "title": "Proactive Gratitude",
+      "description": "This is the conscious practice of scanning for and appreciating the good that already exists in your life. It's an antidote to the brain's natural negativity bias and the relentless pursuit of 'what's next.' It doesn't ignore life's difficulties, but it ensures they don't overshadow its gifts.",
+      "quote": "It is not joy that makes us grateful; it is gratitude that makes us joyful.",
+      "author": "David Steindl-Rast",
+      "question": "Beyond the big, obvious things, what small, everyday thing did you take for granted today that genuinely makes your life better? Describe it in detail. [21, 25]",
+      "action_item": "Once a day, for a week, take a photo of something small that you are grateful for. It could be a cup of coffee, a sunbeam, or a line in a book. The act of looking changes what you see.",
+      "common_pitfall": "Treating gratitude as a chore or a form of self-deception ('toxic positivity'). True gratitude acknowledges the bad but deliberately gives weight and attention to the good.",
+      "further_reading": "'The Book of Joy' by the Dalai Lama and Desmond Tutu, which explores how to find joy in the face of suffering.",
+      "affirmation": "I actively look for the good in my day. My attention to the positive cultivates my joy.",
+      "philosophical_lens": "Phenomenological [13]",
+      "cognitive_bias_alert": {
+        "name": "Negativity Bias",
+        "description": "Our brains are wired to give more weight to negative experiences than positive ones. Proactive gratitude is a conscious tool to counteract this default setting and give equal airtime to the good."
+      }
+    },
+    "q16": {
+      "title": "Digital Sovereignty",
+      "description": "This philosophy asserts that your attention is your most valuable asset. It involves a conscious and deliberate relationship with technology, especially social media. You cease to be a passive user, becoming an active sovereign who uses these tools for specific purposes and then disengages, protecting your mind from distraction and comparison.",
+      "quote": "The cost of a thing is the amount of what I will call life which is required to be exchanged for it, immediately or in the long run.",
+      "author": "Henry David Thoreau (adapted for the digital age)",
+      "question": "After an average session on social media, do you feel more connected, energized, and informed, or more distracted, anxious, and inadequate? What is the 'job' you are hiring this technology to do? [2, 3]",
+      "action_item": "Delete social media apps from your phone for one weekend. You can still access them via a web browser if needed. Observe the change in your mental state and the urge to 'check'.",
+      "common_pitfall": "The justification that you 'need' it for work or staying in touch. The challenge is to distinguish between conscious, intentional use and mindless, compulsive scrolling.",
+      "further_reading": "'Digital Minimalism: Choosing a Focused Life in a Noisy World' by Cal Newport.",
+      "affirmation": "I am the curator of my own attention. I use my tools; my tools do not use me.",
+      "philosophical_lens": "Distributive [13]",
+      "cognitive_bias_alert": {
+        "name": "Choice-supportive Bias [15]",
+        "description": "We tend to retroactively ascribe positive attributes to an option we have chosen. Do you defend your use of a particular app not because it's truly beneficial, but simply because you've chosen to use it?"
+      }
+    },
+    "q17": {
+      "title": "The Architect of Serendipity",
+      "description": "This philosophy suggests that creativity and insight are not just random events but can be cultivated. It involves designing systems and environments that encourage novel connections and fortuitous discoveries. [29]",
+      "quote": "Chance favors the prepared mind.",
+      "author": "Louis Pasteur",
+      "question": "In what ways could you redesign your physical environment, digital spaces, or daily routines to increase the probability of encountering novel ideas and perspectives? [29, 25]",
+      "action_item": "For one week, introduce a 'planned disruption': read a magazine from a completely unrelated field, take a different route to work, or listen to a podcast on a topic you know nothing about.",
+      "common_pitfall": "Confusing novelty with value. The goal is not just to collect random inputs, but to create a system that helps you synthesize those inputs into meaningful insights. [29]",
+      "further_reading": "'Where Good Ideas Come From' by Steven Johnson, which explores the environments that foster innovation.",
+      "affirmation": "I am the architect of my own inspiration. I build environments that foster discovery.",
+      "philosophical_lens": "Teleological [13]",
+      "cognitive_bias_alert": {
+        "name": "Confirmation Bias [14, 16]",
+        "description": "Our tendency to seek out information that confirms what we already believe is the enemy of serendipity. How can you build a system that actively pushes against this bias?"
+      }
+    }
+  },
+  "likertScale": {
+    "stronglyDisagree": "Strongly Disagree",
+    "disagree": "Disagree",
+    "neutral": "Neutral",
+    "agree": "Agree",
+    "stronglyAgree": "Strongly Agree"
+  }
+}
