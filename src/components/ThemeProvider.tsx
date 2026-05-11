@@ -1,6 +1,8 @@
-import { ThemeProvider as MuiThemeProvider } from "@emotion/react";
 import { createTheme, CssBaseline } from "@mui/material";
+import { ThemeProvider as MuiThemeProvider } from "@mui/material/styles";
 import { createContext, useContext, useState, type ReactNode } from "react";
+
+const THEME_STORAGE_KEY = "clarityage:theme";
 
 interface ThemeContextType {
   isDarkMode: boolean;
@@ -22,10 +24,29 @@ interface ThemeProviderProps {
 }
 
 export default function ThemeProvider({ children }: ThemeProviderProps) {
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  const [isDarkMode, setIsDarkMode] = useState(() => {
+    try {
+      return window.localStorage.getItem(THEME_STORAGE_KEY) !== "light";
+    } catch {
+      return true;
+    }
+  });
 
   const toggleTheme = () => {
-    setIsDarkMode(!isDarkMode);
+    setIsDarkMode(currentValue => {
+      const nextValue = !currentValue;
+
+      try {
+        window.localStorage.setItem(
+          THEME_STORAGE_KEY,
+          nextValue ? "dark" : "light"
+        );
+      } catch {
+        // Ignore storage failures; the visible theme can still change.
+      }
+
+      return nextValue;
+    });
   };
 
   const theme = createTheme({

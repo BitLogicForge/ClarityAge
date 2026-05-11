@@ -14,7 +14,9 @@
     "quote": "Cytat",
     "author": "Autor",
     "title": "Tytuł",
-    "description": "Opis"
+    "description": "Opis",
+    "answer_scale": "Skala odpowiedzi",
+    "selected_answer": "Wybrana odpowiedź"
   },
   "buttons": {
     "getStarted": "Rozpocznij",
@@ -255,6 +257,11 @@
   },
   "results": {
     "title": "Kwestionariusz ukończony!",
-    "placeholder": "Twoja analiza filozoficzna pojawi się tutaj. Wynik oparty na ukończeniu:"
+    "completion": "Ukończenie",
+    "tone": {
+      "aligned": "Twoje odpowiedzi wskazują na silną zgodę z tymi praktykami refleksji. Wykorzystaj tę jasność i wybierz jedno konkretne działanie na ten tydzień.",
+      "balanced": "Twoje odpowiedzi pokazują mieszaną, uważną postawę. Wróć do pytań, przy których pojawiła się neutralność; tam może być najwięcej sygnału.",
+      "questioning": "Twoje odpowiedzi są bardziej sceptyczne lub niepewne. To też może być wartościowe: wybierz jedno pytanie, które Cię poruszyło, i zapisz dlaczego."
+    }
   }
 }

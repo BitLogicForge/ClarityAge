@@ -5,7 +5,7 @@ import '@fontsource/roboto/700.css';
 import AssignmentTurnedInIcon from '@mui/icons-material/AssignmentTurnedIn';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
+import HelpIcon from '@mui/icons-material/Help';
 import ReportProblemIcon from '@mui/icons-material/ReportProblem';
 import { Accordion, AccordionDetails, AccordionSummary, Box, Chip, Divider, Paper, Typography } from '@mui/material';
 import { useTranslation } from 'react-i18next';
@@ -145,7 +145,7 @@ export default function Question(question: TPhilosophyQuestion) {
 
         <Paper elevation={2} sx={commonPaperSx}>
           <Box sx={boxSx}>
-            <HelpOutlineIcon color='secondary' sx={{ fontSize: 32 }} />
+            <HelpIcon color='secondary' sx={{ fontSize: 32 }} />
             <Typography variant='h5' color='secondary'>
               {t('labels.question')}
             </Typography>

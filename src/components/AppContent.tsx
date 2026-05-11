@@ -5,7 +5,6 @@ import '@fontsource/roboto/700.css';
 import { Box, Typography } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import ActionButtons from './ActionButtons';
-import './App.css';
 import Header from './Header';
 import { useNotification } from './NotificationProvider';
 import ProgressBar from './ProgressBar';
@@ -27,7 +26,7 @@ export default function AppContent() {
           mx: 'auto',
           py: { xs: 2, sm: 4 },
           px: { xs: 2, sm: 3 },
-          pt: { xs: 9, sm: 10 }, // Add top padding for floating progress bar
+          pt: { xs: 9, sm: 10 },
         }}
       >
         <Header />

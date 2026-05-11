@@ -3,7 +3,7 @@ import { questions } from "../config/base";
 import { APPSTATE } from "../config/constants";
 import type { AppState } from "../types/all.types";
 
-interface QuestionsState {
+export interface QuestionsState {
   answers: Record<number, string>;
   checkedQuestions: number[];
   hasBeenChecked: boolean;
@@ -11,7 +11,7 @@ interface QuestionsState {
   expandedQuestion: number | null;
 }
 
-const initialState: QuestionsState = {
+export const initialQuestionsState: QuestionsState = {
   answers: {},
   checkedQuestions: [],
   hasBeenChecked: false,
@@ -21,7 +21,7 @@ const initialState: QuestionsState = {
 
 const questionsSlice = createSlice({
   name: "questions",
-  initialState,
+  initialState: initialQuestionsState,
   reducers: {
     setAnswer: (
       state,

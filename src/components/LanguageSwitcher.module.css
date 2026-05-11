@@ -3,13 +3,14 @@
   cursor: pointer;
   min-width: 48px;
   height: 48px;
-  border: 1px solid var(--mui-divider, #e0e0e0) !important; // Force border
+  border: 1px solid var(--mui-divider, #e0e0e0) !important;
   box-sizing: border-box;
   background: transparent;
-  &:hover {
-    background-color: var(--mui-action-hover, #f5f5f5) !important;
-    border-color: var(--mui-primary-main, #1976d2) !important;
-  }
+}
+
+.languageButton:hover {
+  background-color: var(--mui-action-hover, #f5f5f5) !important;
+  border-color: var(--mui-primary-main, #1976d2) !important;
 }
 
 .languageDisplay {
@@ -22,9 +23,10 @@
 
 .languageMenuItem {
   cursor: pointer;
-  &:hover {
-    background-color: var(--mui-action-hover, #f5f5f5);
-  }
+}
+
+.languageMenuItem:hover {
+  background-color: var(--mui-action-hover, #f5f5f5);
 }
 
 .languageDisplayMenu {

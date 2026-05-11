@@ -14,7 +14,9 @@
     "quote": "Quote",
     "author": "Author",
     "title": "Title",
-    "description": "Description"
+    "description": "Description",
+    "answer_scale": "Answer scale",
+    "selected_answer": "Selected answer"
   },
   "buttons": {
     "getStarted": "Get Started",
@@ -255,6 +257,11 @@
   },
   "results": {
     "title": "Questionnaire Complete!",
-    "placeholder": "Your philosophical analysis will appear here. Score based on completion:"
+    "completion": "Completion",
+    "tone": {
+      "aligned": "Your answers lean toward strong agreement with these reflective practices. Use that clarity to choose one concrete action to protect this week.",
+      "balanced": "Your answers show a mixed, thoughtful stance. Revisit the questions where you felt neutral; they may hold the most useful signal.",
+      "questioning": "Your answers lean skeptical or unsettled. That can be productive: choose one question that bothered you and journal on why."
+    }
   }
 }

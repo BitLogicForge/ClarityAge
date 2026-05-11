@@ -1,7 +1,7 @@
 import { IconButton, Menu, MenuItem, Typography } from '@mui/material';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import styles from './LanguageSwitcher.module.less'; // Update to .less import
+import styles from './LanguageSwitcher.module.css';
 
 const languages = [
   { code: 'en', display: 'EN', name: 'English' },

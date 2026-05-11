@@ -25,33 +25,40 @@ export default function RadioAnswers({
   const { t } = useTranslation();
   const theme = useTheme();
   const isSmall = useMediaQuery(theme.breakpoints.down("sm"));
+
   const handleClick = (value: number) => {
     onChange?.(value.toString());
   };
 
+  const selectedLabel = likertScaleMarks.find(
+    mark => mark.value.toString() === selectedValue
+  )?.label;
+
   return (
     <Box>
-      {/* Button Group for Selection */}
       <ButtonGroup
         variant="outlined"
         fullWidth
         orientation={isSmall ? "vertical" : "horizontal"}
+        aria-label={t("labels.answer_scale")}
       >
-        {likertScaleMarks.map((mark) => (
-          <Button
-            key={mark.value}
-            onClick={() => handleClick(mark.value)}
-            variant={
-              selectedValue === mark.value.toString() ? "contained" : "outlined"
-            }
-          >
-            {t(mark.label)}
-          </Button>
-        ))}
+        {likertScaleMarks.map(mark => {
+          const isSelected = selectedValue === mark.value.toString();
+
+          return (
+            <Button
+              key={mark.value}
+              onClick={() => handleClick(mark.value)}
+              variant={isSelected ? "contained" : "outlined"}
+              aria-pressed={isSelected}
+            >
+              {t(mark.label)}
+            </Button>
+          );
+        })}
       </ButtonGroup>
 
-      {/* Selected Answer Display */}
-      {selectedValue && (
+      {selectedLabel && (
         <Typography
           variant="body2"
           sx={{
@@ -61,11 +68,7 @@ export default function RadioAnswers({
             fontWeight: 500,
           }}
         >
-          ✓{" "}
-          {t(
-            likertScaleMarks.find((m) => m.value.toString() === selectedValue)
-              ?.label || ""
-          )}
+          {t("labels.selected_answer")}: {t(selectedLabel)}
         </Typography>
       )}
     </Box>

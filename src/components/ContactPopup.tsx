@@ -24,13 +24,11 @@ export default function ContactPopup({ open, onClose }: ContactPopupProps) {
   const fullScreen = useMediaQuery(theme.breakpoints.down("md"));
   const [emailRevealed, setEmailRevealed] = useState(false);
 
-  // Email protection: Base64 encoded and obfuscated
   const getEmail = () => {
-    // This is "mail" encoded and split for protection
-    const part1 = atob("Yml0bG9naWNmb3JnZQ=="); // "xxx"
-    const part2 = atob("QA=="); // "@"
-    const part3 = atob("Z21haWw="); // "gmail"
-    const part4 = atob("LmNvbQ=="); // ".com"
+    const part1 = atob("Yml0bG9naWNmb3JnZQ==");
+    const part2 = atob("QA==");
+    const part3 = atob("Z21haWw=");
+    const part4 = atob("LmNvbQ==");
     return `${part1}${part2}${part3}${part4}`;
   };
 
@@ -39,12 +37,7 @@ export default function ContactPopup({ open, onClose }: ContactPopupProps) {
   };
 
   const handleCopyEmail = async () => {
-    try {
-      await navigator.clipboard.writeText(getEmail());
-      // You can add a toast notification here if needed
-    } catch (err) {
-      console.error("Failed to copy email:", err);
-    }
+    await navigator.clipboard.writeText(getEmail());
   };
 
   return (
@@ -54,10 +47,12 @@ export default function ContactPopup({ open, onClose }: ContactPopupProps) {
       fullScreen={fullScreen}
       maxWidth="sm"
       fullWidth
-      PaperProps={{
-        sx: {
-          borderRadius: { xs: 0, md: 2 },
-          mx: { xs: 0, md: 2 },
+      slotProps={{
+        paper: {
+          sx: {
+            borderRadius: { xs: 0, md: 2 },
+            mx: { xs: 0, md: 2 },
+          },
         },
       }}
     >
@@ -79,7 +74,7 @@ export default function ContactPopup({ open, onClose }: ContactPopupProps) {
             {t("contact.description")}
           </Typography>
 
-          <Stack spacing={2} alignItems="center">
+          <Stack spacing={2} sx={{ alignItems: "center" }}>
             <Typography variant="h6" color="primary">
               {t("contact.emailLabel")}
             </Typography>
@@ -94,7 +89,7 @@ export default function ContactPopup({ open, onClose }: ContactPopupProps) {
                 {t("contact.revealEmail")}
               </Button>
             ) : (
-              <Stack spacing={1} alignItems="center">
+              <Stack spacing={1} sx={{ alignItems: "center" }}>
                 <Typography
                   variant="body1"
                   sx={{
