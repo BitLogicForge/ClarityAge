@@ -6,4 +6,7 @@ import { APP_NAME } from "./src/config/constants";
 export default defineConfig({
   base: APP_NAME ? `/${APP_NAME}/` : "/",
   plugins: [react()],
+  server: {
+    host: "0.0.0.0",
+  },
 });
