@@ -1,12 +1,13 @@
 {
   "name": "ClarityAge",
   "image": "mcr.microsoft.com/devcontainers/typescript-node:dev-24-bookworm",
+    "runArgs": ["--name=clarityage-dev"],
   "remoteUser": "node",
   "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
   "mounts": [
     "source=${localWorkspaceFolderBasename}-node_modules,target=${containerWorkspaceFolder}/node_modules,type=volume"
   ],
-  "postCreateCommand": "npm ci --ignore-scripts",
+"postCreateCommand": "sudo chown -R node:node node_modules || true && npm install",
   "forwardPorts": [5173, 4173],
   "portsAttributes": {
     "5173": {
@@ -23,16 +24,9 @@
   },
   "customizations": {
     "vscode": {
-      "extensions": ["dbaeumer.vscode-eslint", "esbenp.prettier-vscode", "bradlc.vscode-tailwindcss"],
-      "settings": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.formatOnSave": true,
-        "editor.codeActionsOnSave": {
-          "source.fixAll.eslint": "explicit"
-        },
-        "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
-        "typescript.tsdk": "node_modules/typescript/lib"
-      }
+      "extensions": [],
+      "settings": {},
+      "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"]
     }
   }
 }
