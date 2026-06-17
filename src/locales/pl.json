@@ -1,267 +1,166 @@
 {
   "app": {
-    "title": "ClarityAge - 40",
-    "description": "Odkryj pytania filozoficzne i osobiste wartości",
-    "welcome": "Witamy w Twojej aplikacji React + Material-UI"
+    "title": "CES-D - Narzędzie Screeningu Depresji",
+    "description": "Poufne narzędzie do oceny objawów depresji"
+  },
+  "cesd": {
+    "disclaimer": {
+      "title": "Ważne Zastrzeżenie",
+      "text": "To narzędzie screeningu NIE jest narzędziem diagnostycznym. Zostało zaprojektowane, aby pomóc Ci zidentyfikować objawy depresji i zachęcić do rozmowy z lekarzem. To narzędzie NIE zastępuje profesjonalnej opieki psychiatrycznej. Jeśli przeżywasz nagły przypadek psychiatryczny lub masz myśli samobójcze, skontaktuj się z usługami ratunkowymi (112 w Polsce) lub dzwoń na Antydepresyjny Telefon Zaufania.",
+      "agree": "Rozumiem i zgadzam się kontynuować",
+      "notDiagnostic": "To narzędzie screeningu, NIE jest narzędziem diagnostycznym. Wyniki należy omówić z qualified pracownikiem służby zdrowia.",
+      "notReplacement": "Ta aplikacja NIE zastępuje profesjonalnej opieki psychiatrycznej.",
+      "emergency": "Jeśli jesteś w kryzysie, skontaktuj się z usługami ratunkowymi lub zadzwoń na numer 112 natychmiast."
+    },
+    "intro": {
+      "title": "Witamy w CES-D",
+      "description": "Skala Depresji w Centrum Badań Epidemiologicznych (CES-D) to 20-pytaniowe samooceniane narzędzie pomiarowe, które mierzy objawy depresji w populacji ogólnej. Proszę odpowiedzieć na każde pytanie w oparciu o to, jak czułeś się PRZEZ OSTATNI TYDZIEŃ.",
+      "timeframe": "Okres odniesienia: Ostatnie 7 dni",
+      "instructions": "Dla każdego pytania wybierz opcję, która najlepiej opisuje jak często czułeś lub zachowywałeś się w ten sposób w ciągu ostatniego tygodnia.",
+      "getStarted": "Rozpocznij Ocenę"
+    },
+    "questions": {
+      "q1": "Byłem niepokojony rzeczami, które zwykle mnie nie niepokoją.",
+      "q2": "Nie miałem ochoty jeść; mój apetyt był słaby.",
+      "q3": "Czułem, że nie mogę pozbyć się smutku, nawet z pomocą mojej rodziny lub przyjaciół.",
+      "q4": "Czułem, że jestem tak dobry jak inni ludzie.",
+      "q5": "Miałem trudności z skupieniem uwagi na tym, co robiłem.",
+      "q6": "Czułem się przygnębiony.",
+      "q7": "Czułem, że wszystko co robiłem, było wysiłkiem.",
+      "q8": "Czułem się pełen nadziei co do przyszłości.",
+      "q9": "Myślałem, że moje życie było porażką.",
+      "q10": "Czułem się przerażony.",
+      "q11": "Mój sen był niespokojny.",
+      "q12": "Byłem szczęśliwy.",
+      "q13": "Mówiłem mniej niż zwykle.",
+      "q14": "Czułem się samotny.",
+      "q15": "Ludzie byli nieprzyjaźni.",
+      "q16": "Czerpałem przyjemność z życia.",
+      "q17": "Miałem napady płaczu.",
+      "q18": "Czułem się smutny.",
+      "q19": "Czułem, że ludzie mnie nie lubią.",
+      "q20": "Nie mogłem się \"zabrać do pracy.\""
+    },
+    "responses": {
+      "r0": "Rzadko lub wcale (mniej niż 1 dzień)",
+      "r1": "Czasami lub trochę (1-2 dni)",
+      "r2": "Umiarkowanie lub często (3-4 dni)",
+      "r3": "Często lub prawie zawsze (5-7 dni)"
+    },
+    "responseShort": {
+      "r0": "Rzadko lub wcale",
+      "r1": "Czasami lub trochę",
+      "r2": "Umiarkowanie",
+      "r3": "Często lub zawsze"
+    },
+    "navigation": {
+      "next": "Następne pytanie",
+      "previous": "Poprzednie pytanie",
+      "submit": "Prześlij ocenę",
+      "skip": "Pomiń"
+    },
+    "results": {
+      "title": "Wyniki Twojej oceny",
+      "scoreLabel": "Twój wynik",
+      "outOf": "z 60",
+      "categoryLabel": "Kategoria",
+      "minimal": {
+        "title": "Minimalne objawy depresyjne",
+        "description": "Twoje odpowiedzi sugerują minimalne objawy depresyjne. Oznacza to, że generalnie funkcjonujesz dobrze bez znaczących oznak depresji.",
+        "interpretation": "Wynik poniżej 16 zazwyczaj wskazuje, że objawy depresyjne nie zakłócają znacząco Twojego codziennego życia. To jest pozytywny wynik, ale kontynuuj monitorowanie zdrowia psychicznego jako część ogólnego dobrostanu.",
+        "recommendations": "Utrzymuj zdrowe nawyki wspierające dobre samopoczucie: regularne ćwiczenia, odpowiedni sen, połączenie społeczne i zarządzanie stresem. Jeśli zauważysz zmiany w tym jak się czujesz, nie wahaj się skontaktować z lekarzem."
+      },
+      "mild": {
+        "title": "Łagodne objawy depresyjne",
+        "description": "Twoje odpowiedzi sugerują łagodne objawy depresyjne. Możesz doświadczać pewnych trudności, które wpływają na Twoje codzienne życie.",
+        "interpretation": "Wynik między 16-20 wskazuje na obecność łagodnych objawów depresyjnych, które mogą wymagać uwagi. Choć nie są poważne, te objawy mogą wpływać na jakość Twojego życia i nie powinny być ignorowane.",
+        "recommendations": "Rozważ rozmowę z lekarzem o Twoich objawach. Mogą pomóc określić, czy dalsza ocena lub wsparcie jest potrzebne. Aktywności samoopiekuńcze jak regularne ćwiczenia, utrzymywanie rutyny i połączenie z innymi mogą być korzystne. To badanie nie jest diagnozą—profesjonalna ocena jest ważna."
+      },
+      "moderate": {
+        "title": "Umiarkowane objawy depresyjne",
+        "description": "Twoje odpowiedzi sugerują umiarkowane objawy depresyjne. Możesz doświadczać znaczących trudności, które wpływają na Twoje codzienne życie.",
+        "interpretation": "Wynik między 21-25 wskazuje na umiarkowane objawy depresyjne, które prawdopodobnie zakłócają codzienne funkcjonowanie. Ten poziom objawów sugeruje potrzebę profesjonalnej oceny i wsparcia.",
+        "recommendations": "Mocno zachęcamy do rozmowy z lekarzem o tych objawach. Profesor zdrowia psychicznego może przeprowadzić odpowiednią ocenę i omówić opcje leczenia. Proszę nie stawiaj czoła temu sam—wsparcie jest dostępne i skuteczne leczenia istnieją."
+      },
+      "severe": {
+        "title": "Ciężkie objawy depresyjne",
+        "description": "Twoje odpowiedzi sugerują ciężkie objawy depresyjne. Możesz doświadczać znaczących trudności, które wpływają na Twoje codzienne życie.",
+        "interpretation": "Wynik 26 lub powyżej wskazuje na ciężkie objawy depresyjne. Ten poziom sugeruje potrzebę natychmiastowej uwagi profesjonalnej i wsparcia.",
+        "recommendations": "Proszę rozważyć rozmowę z lekarzem lub profesjonalistą zdrowia psychicznego tak szybko jak to możliwe. Skuteczne leczenia są dostępne, i nie musisz stawiać czoła temu sam. Jeśli masz myśli samobójcze, proszę skontaktować się z usługami ratunkowymi lub linią kryzysową natychmiast.",
+        "urgent": "Jeśli jesteś w kryzysie, proszę zwróć się o pomoc od razu."
+      }
+    },
+    "resources": {
+      "title": "Zasoby i wsparcie",
+      "crisis": {
+        "title": "Zasoby kryzysowe",
+        "description": "Jeśli przeżywasz kryzys psychiatryczny lub masz myśli samobójcze, proszę zwróć się o pomoc natychmiast:",
+        "call988": "Antydepresyjny Telefon Zaufania: 22 484 88 01",
+        "call911": "Zadzwoń na 112 (Polska)",
+        "crisisTextLine": "Linia wsparcia dla młodzieży: 116 123",
+        "international": "Międzynarodowe zasoby kryzysowe dostępne na: findahelpline.com"
+      },
+      "professional": {
+        "title": "Poszukiwanie profesjonalnej pomocy",
+        "description": "Rozmowa z lekarzem jest ważnym krokiem. Rozważ:",
+        "primaryCare": "Umów się na wizytę u lekarza rodzinnego",
+        "mentalHealth": "Skontaktuj się z profesjonalistą zdrowia psychicznego (psycholog, psychiatra lub terapeuta)",
+        "insurance": "Sprawdź katalog ubezpieczyciela dla pokrytych usług zdrowia psychicznego",
+        "community": "Poszukaj lokalnych centrów zdrowia psychicznego lub klinik"
+      },
+      "selfHelp": {
+        "title": "Strategie samopomocy",
+        "description": "Choć nie zastępują profesjonalnej opieki, te strategie mogą pomóc wsparciu Twojego dobrego samopoczucia:",
+        "exercise": "Regularna aktywność fizyczna (nawet krótkie spacery mogą pomóc)",
+        "sleep": "Utrzymuj regularny harmonogram snu",
+        "social": "Pozostań w kontakcie z wspierającymi przyjaciółmi i rodziną",
+        "routine": "Utrzymuj codzienną rutynę, nawet w trudne dni",
+        "mindfulness": "Praktykuj techniki relaksacyjne jak głębokie oddychanie lub uważność",
+        "journaling": "Rozważ prowadzenie dziennika do przetwarzania myśli i uczuć",
+        "limitAlcohol": "Ogranicz alkohol i unikaj używek"
+      },
+      "education": {
+        "title": "Zrozumienie depresji",
+        "description": "Depresja jest powszechnym i uleczalnym schorzeniem. Nie jest oznaką słabości.",
+        "common": "Depresja dotyka miliony ludzi każdego roku",
+        "treatable": "Skuteczne leczenia w tym terapia i leki są dostępne",
+        "recovery": "Z odpowiednim leczeniem, ludzie wracają do zdrowia i prowadzą satysfakcjonujące życie"
+      }
+    },
+    "actions": {
+      "retake": "Ponów ocenę",
+      "print": "Wydrukuj wyniki",
+      "share": "Omuów z lekarzem",
+      "resources": "Zobacz zasoby"
+    },
+    "privacy": {
+      "title": "Twoja prywatność",
+      "description": "To narzędzie screeningu jest całkowicie prywatne. Żadne dane nie są przechowywane na tym urządzeniu ani przesyłane gdziekolwiek. Twoje odpowiedzi istnieją tylko w Twojej obecnej sesji przeglądarki. Kiedy zamykasz to okno, wszystkie informacje są trwale usunięte."
+    }
   },
   "labels": {
-    "philosophies": "Filozofie",
-    "common_pitfall": "Typowy błąd",
-    "further_reading": "Dalsza lektura",
-    "affirmation": "Afirmacja",
-    "action_item": "Zadanie",
     "question": "Pytanie",
-    "quote": "Cytat",
-    "author": "Autor",
-    "title": "Tytuł",
-    "description": "Opis",
-    "answer_scale": "Skala odpowiedzi",
-    "selected_answer": "Wybrana odpowiedź"
+    "of": "z",
+    "score": "Wynik",
+    "category": "Kategoria"
   },
   "buttons": {
     "getStarted": "Rozpocznij",
-    "learnMore": "Dowiedz się więcej",
-    "language": "Język",
-    "checkAnswers": "Sprawdź odpowiedzi",
-    "clearAnswers": "Wyczyść odpowiedzi",
+    "start": "Rozpocznij ocenę",
     "next": "Dalej",
-    "doItAgain": "Zrób to ponownie",
+    "previous": "Wstecz",
+    "submit": "Prześlij",
+    "retake": "Ponów ocenę",
     "close": "Zamknij",
-    "contact": "Kontakt"
+    "back": "Wstecz",
+    "continue": "Kontynuuj"
   },
   "theme": {
     "light": "Jasny",
     "dark": "Ciemny"
   },
-  "contact": {
-    "title": "Kontakt",
-    "description": "Masz pytania, uwagi lub sugestie? Chciałbym je usłyszeć! Skontaktuj się ze mną w sprawie ClarityAge.",
-    "emailLabel": "Skontaktuj się:",
-    "revealEmail": "Pokaż adres e-mail",
-    "copyEmail": "Kopiuj e-mail",
-    "responseTime": "Zwykle odpowiadam w ciągu 24-48 godzin."
-  },
   "languages": {
     "en": "English",
     "pl": "Polski"
-  },
-  "features": {
-    "materialUI": {
-      "title": "Motyw Material-UI",
-      "description": "Twoja aplikacja jest skonfigurowana z ciemnym motywem Material-UI i zawiera czcionki Roboto dla profesjonalnego wyglądu."
-    },
-    "viteReact": {
-      "title": "Vite + React",
-      "description": "Zbudowane z Vite dla szybkiego rozwoju i wymiany modułów na gorąco. Obsługa TypeScript jest włączona."
-    },
-    "readyToBuild": {
-      "title": "Gotowe do budowy",
-      "description": "Zacznij budować swoją aplikację z nowoczesnymi wzorcami React i komponentami Material-UI."
-    }
-  },
-
-  "philosophies": {
-    "q1": {
-      "title": "Oświecona Śmiertelność: Czas jako Ostateczna Waluta",
-      "description": "Ta filozofia przekształca skończoną naturę czasu z źródła strachu w narzędzie do ustalania priorytetów. Uznanie, że czas jest ograniczony, wyjaśnia, co jest naprawdę ważne, zachęcając do świadomych i znaczących wyborów dotyczących tego, jak żyjemy.",
-      "quote": "Nie mamy za mało czasu, ale marnujemy go zbyt wiele.",
-      "author": "Seneka",
-      "question": "Gdybym miał przeprowadzić audyt swojego ostatniego tygodnia, czy byłbym zadowolony z tego, jak został rozdzielony mój czas - mój najbardziej skończony zasób?",
-      "action_item": "Używaj prostego 'dziennika czasu' przez trzy dni, aby zobaczyć, gdzie naprawdę idą twoje godziny. Bez osądzania, tylko obserwacja.",
-      "common_pitfall": "Obsesja na punkcie produktywności zamiast obecności. Celem nie jest wypełnienie każdej sekundy, ale sprawienie, aby każda sekunda się liczyła.",
-      "further_reading": "Esej Seneki 'O krótkości życia'. To krótka, mocna lektura, która bezpośrednio odnosi się do tej filozofii.",
-      "affirmation": "Mój czas to moje życie. Rozdzialam go z intencją i szanuję jego wartość."
-    },
-    "q2": {
-      "title": "Zasada Wystarczania™ 2.0",
-      "description": "Ta zasada kwestionuje nieustanne dążenie do 'więcej', rozróżniając między potrzebami a pragnieniami. Skupia się na projektowaniu życia, które ceni równowagę, funkcjonalność i komfort ponad niekończące się konsumpcję, redefiniując sukces jako zadowolenie, a nie akumulację.",
-      "quote": "Rzeczy, które posiadasz, w końcu cię posiadają.",
-      "author": "Tyler Durden (Fight Club)",
-      "question": "Co poszukuję z prawdziwej potrzeby dobrego samopoczucia, a co z przyzwyczajenia lub zewnętrznych oczekiwań?",
-      "action_item": "Przed następnym nieistotnym zakupem nałóż 48-godzinny okres oczekiwania. Oceń ponownie, czy pragnienie jest wciąż silne po dwóch dniach.",
-      "common_pitfall": "Mylenie minimalizmu z pozbawieniem. Celem nie jest posiadanie mniej, ale zrobienie miejsca dla tego, co ważniejsze.",
-      "further_reading": "Książka 'Twoje pieniądze czy twoje życie' autorstwa Vicki Robin, która bada kompromis między energią życiową a posiadaniami materialnymi.",
-      "affirmation": "Mam wystarczająco. Jestem wystarczający. Mój sukces mierzy się moim spokojem, a nie moimi posiadaniami."
-    },
-    "q3": {
-      "title": "Zarządzanie Energią, Nie Czasem",
-      "description": "Zamiast postrzegać produktywność przez pryzmat 24-godzinnego zegara, to podejście priorytetowo traktuje naturalne biologiczne rytmy organizmu. Celem jest dopasowanie zadań do okresów szczytowej energii i umożliwienie celowej regeneracji podczas spadków, prowadząc do większej wydajności przy mniejszym wypaleniu.",
-      "quote": "Nie jesteśmy zmęczeni pracą, jesteśmy zmęczeni robieniem bezsensownych rzeczy.",
-      "author": "Greg McKeown",
-      "question": "Kiedy w ciągu dnia czuję się najbardziej efektywny i kreatywny, i jak mogę lepiej chronić i wykorzystywać te konkretne czasy?",
-      "action_item": "Zidentyfikuj swoje pojedyncze 'okno szczytowej energii' (np. 10:00 - 12:00) i chroń je zaciekle dla swojego najważniejszego zadania. Planuj spotkania poza tym oknem.",
-      "common_pitfall": "Poczucie winy za odpoczynek w okresie niskiej energii. Prawdziwa produktywność wymaga cykli intensywnego wysiłku, po których następuje celowa regeneracja.",
-      "further_reading": "'Moc pełnego zaangażowania' autorstwa Jima Loehra i Tony'ego Schwartza, podstawowy tekst o zarządzaniu energią, nie czasem.",
-      "affirmation": "Szanuję moje naturalne rytmy. Pracuję, gdy jestem silny i odpoczywam, gdy potrzebuję, osiągając więcej przy mniejszym napięciu."
-    },
-    "q4": {
-      "title": "Sztuka Świętego NIE",
-      "description": "Każde zobowiązanie ('tak') zużywa nasze skończone zasoby czasu i energii. Ta filozofia traktuje akt odmowy ('nie') jako potężne narzędzie strategiczne do ochrony przestrzeni wymaganej dla naszych najważniejszych priorytetów, wolnej od poczucia winy.",
-      "quote": "Granice nie są murem - to brama z selektywnym dostępem.",
-      "author": "Brené Brown",
-      "question": "Na co ostatnio powiedziałem 'tak', co z perspektywy czasu powinno być 'nie', i jaki był prawdziwy koszt tego zobowiązania?",
-      "action_item": "Ćwicz mówienie jasnego 'nie' na jedną małą, nieważną prośbę w tym tygodniu. Przykład: 'Nie mogę, ale dziękuję, że o mnie pomyślałeś.'",
-      "common_pitfall": "Przesadne tłumaczenie się lub usprawiedliwianie swojego 'nie'. Prosta, pełna szacunku odmowa jest wystarczająca i często potężniejsza.",
-      "further_reading": "'Esencjalizm: Zdyscyplinowane dążenie do mniej' autorstwa Grega McKeowna, który przedstawia 'nie' jako strategiczny imperatyw.",
-      "affirmation": "Moje 'nie' robi miejsce dla bardziej znaczącego 'tak'. Chronię swoje priorytety z jasnością i życzliwością."
-    },
-    "q5": {
-      "title": "Zarabiaj Mądrze, Nie Więcej",
-      "description": "Dojrzałość finansowa jest postrzegana nie przez wielkość dochodu, ale przez jakość wyborów finansowych. Ta filozofia kładzie nacisk na używanie pieniędzy jako narzędzia do zwiększenia osobistej wolności, autonomii i bezpieczeństwa, a nie dla spektaklu czy statusu.",
-      "quote": "To nie bogactwo czyni cię wolnym, ale sposób, w jaki je używasz.",
-      "author": "Morgan Housel",
-      "question": "Czy moje nawyki finansowe głównie tworzą więcej opcji i wolności w moim życiu, czy tworzą nowe formy zobowiązań?",
-      "action_item": "Przejrzyj swoje ostatnie trzy główne decyzje finansowe. Zapytaj: 'Czy ten wybór zwiększył moją wolność i opcje, czy je zmniejszył?'",
-      "common_pitfall": "Inflacja stylu życia - automatyczne zwiększanie wydatków wraz ze wzrostem dochodów, uwięzienie w cyklu konieczności zarabiania więcej.",
-      "further_reading": "'Psychologia pieniądza' autorstwa Morgana Housela, zbiór krótkich opowieści badających naszą relację z bogactwem.",
-      "affirmation": "Używam pieniędzy jako narzędzia do wolności. Każda decyzja finansowa to krok w kierunku większej autonomii."
-    },
-    "q6": {
-      "title": "Ciało jako Kapitał",
-      "description": "Ta filozofia podchodzi do zdrowia fizycznego jako długoterminowej inwestycji, która procentuje z czasem. Konsekwentna opieka w obszarach takich jak odżywianie, ćwiczenia i sen jest postrzegana nie jako obowiązek, ale jako strategiczny depozyt, który przynosi dywidendy w przyszłej długowieczności, sile i jasności umysłu.",
-      "quote": "Twoje zdrowie to to, w co inwestujesz, a nie to, co po prostu się dzieje.",
-      "author": "Peter Attia",
-      "question": "Jaka jest jedna mała, konsekwentna inwestycja, którą mógłbym dziś poczynić w moje zdrowie fizyczne, która znacząco się opłaci za 10 lat?",
-      "action_item": "Wprowadź w tym miesiącu jeden nawyk 'długowieczności', jak 10-minutowy spacer po każdym posiłku lub 5 minut rozciągania przed snem.",
-      "common_pitfall": "Mentalność 'wszystko albo nic'. Przekonanie, że musisz wykonać idealny 60-minutowy trening, inaczej nie warto. Konsekwencja bije intensywność.",
-      "further_reading": "Książka Petera Attii 'Outlive: The Science and Art of Longevity', która szczegółowo opisuje strategiczne podejście do zdrowia.",
-      "affirmation": "Codziennie wpłacam na moje konto zdrowia. Moje przyszłe ja podziękuje mi za odsetki składane."
-    },
-    "q7": {
-      "title": "Relacje Wzajemności",
-      "description": "Uznając, że energia społeczna jest ograniczona, ta filozofia zachęca do świadomego rozdziału tej energii. Priorytetowo traktuje relacje oparte na wzajemnym wsparciu, wzroście i wymianie, jednocześnie z gracją puszczając połączenia, które są konsekwentnie jednostronne lub wyczerpujące.",
-      "quote": "Nie każdy, kto był częścią twojej przeszłości, musi być częścią twojej przyszłości.",
-      "author": "Trent Shelton",
-      "question": "Które z moich relacji konsekwentnie sprawiają, że czuję się energiczny i widziany, a które zwykle sprawiają, że czuję się wyczerpany?",
-      "action_item": "Przeprowadź szybki 'audyt energii' po następnych kilku interakcjach społecznych. Po prostu zauważ, czy czujesz się bardziej energiczny czy bardziej wyczerpany.",
-      "common_pitfall": "Poczucie obowiązku utrzymywania relacji z powodu wspólnej historii, nawet gdy nie są już zdrowe lub wspierające.",
-      "further_reading": "'Granice' autorstwa dr. Henry'ego Clouda i dr. Johna Townsenda, klasyczny przewodnik po tworzeniu zdrowych dynamik relacyjnych.",
-      "affirmation": "Inwestuję moją energię społeczną tam, gdzie jest szanowana i odwzajemniana. Mój bliski krąg jest źródłem siły."
-    },
-    "q8": {
-      "title": "Kapitał Doświadczenia",
-      "description": "Ta koncepcja traktuje całą historię człowieka - włączając błędy, porażki i wyciągnięte lekcje - jako cenną formę kapitału. Przeszłe doświadczenia, po refleksji, stają się unikalnym atutem, który może informować lepsze decyzje, mentoring i projektowanie w teraźniejszości.",
-      "quote": "Doświadczenie to nazwa, którą nadajemy naszym błędom.",
-      "author": "Oscar Wilde",
-      "question": "Jaka przeszła porażka lub błąd kryje lekcję, której dziś nie wykorzystuję w pełni?",
-      "action_item": "Zidentyfikuj jedną przeszłą 'porażkę'. Zapisz trzy konkretne lekcje, których cię nauczyła, i jeden sposób, w jaki możesz zastosować lekcję w tym tygodniu.",
-      "common_pitfall": "Rozmyślanie nad wstydem lub żalem z powodu błędu, zamiast wydobywania z niego cennych, możliwych do działania danych.",
-      "further_reading": "'Przeszkoda to droga' autorstwa Ryana Holidaya, która uczy stoickiej sztuki przekształcania przeciwności w przewagę.",
-      "affirmation": "Moja przeszłość nie jest ciężarem; to moja biblioteka lekcji. Wykorzystuję moje doświadczenie z mądrością."
-    },
-    "q9": {
-      "title": "Radar Emocjonalny",
-      "description": "To praktyka rozwijania inteligencji emocjonalnej jako systemu wczesnego ostrzegania. Polega na rozpoznawaniu, które interakcje i środowiska są odżywcze, a które wyczerpujące lub chaotyczne, umożliwiając proaktywne środki w celu ochrony wewnętrznego spokoju.",
-      "quote": "Ludzie nie są toksyczni - ale ich zachowania mogą być śmiertelnie zakaźne.",
-      "author": "Susan David",
-      "question": "Kiedy ostatnio czułem poczucie emocjonalnego chaosu, i jakie zachowanie lub środowisko to wywołało?",
-      "action_item": "Następnym razem, gdy poczujesz silną negatywną emocję, zatrzymaj się i nazwij ją konkretnie (np. 'To jest rozczarowanie', a nie tylko 'Czuję się źle').",
-      "common_pitfall": "Próbowanie stłumienia lub ignorowania 'negatywnych' emocji. Celem jest zauważenie ich jako sygnałów, nie pozwalając im przejąć kontroli.",
-      "further_reading": "Książka Susan David 'Emotional Agility', która zapewnia ramy do nawigowania emocjami bez bycia przez nie zahaczkowanym.",
-      "affirmation": "Jestem spokojnym obserwatorem moich emocji, a nie ich jeńcem. Mogę zauważyć burzę, nie pozwalając jej zalać mojego domu."
-    },
-    "q10": {
-      "title": "Myślenie o Dziedzictwie",
-      "description": "To nastawienie przesuwa fokus z krótkoterminowych osobistych osiągnięć na długoterminowy, trwały wpływ. Skłania do rozważenia, co wartościowego - wiedza, życzliwość, twórczość czy zasady - pozostanie dla innych długo po tym, jak odejdą.",
-      "quote": "Sadź drzewa, pod którymi nigdy nie będziesz siedział.",
-      "author": "Grecka maksyma",
-      "question": "Poza moimi własnymi osiągnięciami, co buduję, nauczam lub do czego przyczyniam się, co mogłoby przynieść korzyść następnemu pokoleniu?",
-      "action_item": "Poświęć 15 minut na napisanie odpowiedzi na: 'Gdybym mógł przekazać jedną podstawową zasadę lub umiejętność następnemu pokoleniu, co by to było i dlaczego?'",
-      "common_pitfall": "Myślenie, że dziedzictwo musi być wielkim, monumentalnym aktem. Małe, konsekwentne akty mentoringu, życzliwości czy twórczości mają potężny efekt domina.",
-      "further_reading": "'Człowiek w poszukiwaniu sensu' autorstwa Viktora Frankla, głęboka eksploracja znalezienia celu nawet w najtrudniejszych okolicznościach.",
-      "affirmation": "Buduję coś wartościowego, co mnie przetrwa. Moje codzienne działania przyczyniają się do trwałego pozytywnego wpływu."
-    },
-    "q11": {
-      "title": "Systemy, Nie Części",
-      "description": "Ta filozofia zachęca do postrzegania swojego życia jako połączonego ekosystemu, a nie zbioru oddzielnych projektów. Celem jest stworzenie synergii, gdzie różne obszary - takie jak praca, zdrowie i relacje - wzajemnie się wspierają i wzmacniają.",
-      "quote": "Tylko gdy wszystko gra razem, życie gra twoją melodię.",
-      "author": "James Clear",
-      "question": "Który obszar mojego życia, jeśli zostanie poprawiony, stworzy najbardziej pozytywny efekt domina we wszystkich innych obszarach?",
-      "action_item": "Zmapuj swoje kluczowe domeny życia (Zdrowie, Praca, Rodzina, Finanse). Narysuj linię od jednego działania, które pozytywnie wpłynęłoby na wszystkie z nich (np. 'Poprawa snu').",
-      "common_pitfall": "Próbowanie przebudowy wszystkich systemów naraz. Kluczem jest znalezienie jednego 'nawyku kamienia węgielnego', który tworzy kaskadę pozytywnych efektów.",
-      "further_reading": "'Atomowe nawyki' autorstwa Jamesa Cleara, definitywny przewodnik po budowaniu małych, połączonych nawyków, które tworzą niezwykłe rezultaty.",
-      "affirmation": "Moje życie to połączony system. Gdy poprawiam jedną część, wzmacniam całość."
-    },
-    "q12": {
-      "title": "Radość z Integracji",
-      "description": "To głęboka satysfakcja, która powstaje nie z osiągnięcia perfekcji, ale z tworzenia spójności między wartościami, działaniami i różnymi domenami życia. To uczucie, że życie, choć niedoskonałe, jest zjednoczonym całością, gdzie wszystko ma swoje miejsce.",
-      "quote": "Gdy każda część twojego życia gra w tej samej drużynie, zaczynasz wygrywać.",
-      "author": "Cal Newport",
-      "question": "W których momentach lub działaniach czuję się najbardziej 'całościowy' - gdzie moje działania, wartości i tożsamość są w zgodzie?",
-      "action_item": "Zidentyfikuj jeden obszar swojego życia, który wydaje się nie być zsynchronizowany z twoimi wartościami. Pomyśl o jednej małej zmianie, aby lepiej go wyrównać.",
-      "common_pitfall": "Pogon za niemożliwym celem 'idealnej równowagi'. Celem jest spójność i autentyczność, a nie idealnie podzielony wykres kołowy twojego czasu.",
-      "further_reading": "'Głęboka praca' autorstwa Cala Newporta, która bada, jak zbudować życie wokół wartościowego, skoncentrowanego i spójnego wysiłku.",
-      "affirmation": "Znajduję satysfakcję w spójności, nie w perfekcji. Moje życie gra w tej samej drużynie i czuje się całościowo."
-    },
-    "q13": {
-      "title": "Sztuka Adaptacji",
-      "description": "Ta filozofia akceptuje, że zmiana i zakłócenia to nieuniknione cechy życia, a nie błędy. Zamiast opierać się rzeczywistości, uczy się giąć z nią, znajdując możliwości w przeciwnościach i siłę w elastyczności. To przejście od sztywnego planu do odpornego kompasu.",
-      "quote": "Dąb walczył z wiatrem i został złamany, wierzba gięła się, gdy musiała, i przetrwała.",
-      "author": "Robert Jordan",
-      "question": "Gdy moje dobrze ułożone plany były ostatnio zakłócone przez wydarzenia poza moją kontrolą, czy zareagowałem sztywną frustracją czy elastyczną adaptacją?",
-      "action_item": "Następnym razem, gdy wystąpi drobna niedogodność (np. korek, odwołane spotkanie), świadomie ćwicz przekształcenie tego w nieoczekiwaną możliwość na coś innego (np. posłuchaj podcastu, zadzwoń, lub po prostu zatrzymaj się).",
-      "common_pitfall": "Mylenie adaptacji z pasywnością. To nie o poddawaniu się; to o strategicznym ustępowaniu w krótkim terminie, aby zachować siłę i znaleźć nową drogę naprzód.",
-      "further_reading": "'Antikruchość: Rzeczy, które zyskują na nieporządku' autorstwa Nassima Nicholasa Taleba, która bada systemy, które wzmacniają się pod wpływem zmienności.",
-      "affirmation": "Jestem odporny. Nie łamię się, gdy plany się zmieniają; adaptuję się i znajduję nową drogę naprzód."
-    },
-    "q14": {
-      "title": "Ego jako Doradca, Nie Król",
-      "description": "Ta filozofia polega na nauczeniu się obserwowania swojego ego - części ciebie, która pragnie statusu, boi się wyglądać głupio i nalega na rację. Nie niszczysz ego, ale je degradujesz. Słuchasz jego rady jako ostrożnego doradcy, ale nie pozwalasz mu rządzić twoimi decyzjami.",
-      "quote": "Ego to wróg tego, czego chcesz i tego, co masz.",
-      "author": "Ryan Holiday",
-      "question": "Gdy ostatnio czułem się defensywny lub miałem silną potrzebę mieć rację, co moje ego próbowało chronić, i czy ta ochrona naprawdę mi służyła?",
-      "action_item": "Aktywnie poszukaj opinii kogoś, kto, jak wiesz, nie zgadza się z tobą w temacie o niskich stawkach. Słuchaj wyłącznie z intencją zrozumienia ich perspektywy, a nie obalenia.",
-      "common_pitfall": "Myślenie, że zarządzanie ego oznacza stanie się wycieraczką. Chodzi o pozbycie się potrzeby zewnętrznego potwierdzenia, co faktycznie zwiększa pewność siebie, a nie ją zmniejsza.",
-      "further_reading": "'Ego jest wrogiem' autorstwa Ryana Holidaya, nowoczesna klasyka na ten temat.",
-      "affirmation": "Cenię naukę ponad rację. Moja wartość nie jest związana z moją wydajnością czy opiniami innych."
-    },
-    "q15": {
-      "title": "Proaktywna Wdzięczność",
-      "description": "To świadoma praktyka skanowania i doceniania dobra, które już istnieje w twoim życiu. To antidotum na naturalną skłonność mózgu do negatywności i nieustanne dążenie do 'co dalej'. Nie ignoruje trudności życia, ale zapewnia, że nie przesłaniają one jego darów.",
-      "quote": "To nie radość czyni nas wdzięcznymi; to wdzięczność czyni nas radosnymi.",
-      "author": "David Steindl-Rast",
-      "question": "Poza dużymi, oczywistymi rzeczami, jaką małą, codzienną rzecz dziś brałem za pewnik, która naprawdę poprawia moje życie?",
-      "action_item": "Raz dziennie, przez tydzień, rób zdjęcie czegoś małego, za co jesteś wdzięczny. Może to być filiżanka kawy, promień słońca czy linia w książce. Akt patrzenia zmienia to, co widzisz.",
-      "common_pitfall": "Traktowanie wdzięczności jako obowiązku lub formy samolubstwa ('toksyczna pozytywność'). Prawdziwa wdzięczność uznaje zło, ale celowo nadaje wagę i uwagę dobru.",
-      "further_reading": "'Księga radości' autorstwa Dalajlamy i Desmonda Tutu, która bada, jak znaleźć radość w obliczu cierpienia.",
-      "affirmation": "Aktywnie szukam dobra w moim dniu. Moja uwaga na pozytywne kultywuje moją radość."
-    },
-    "q16": {
-      "title": "Cyfrowa Suwerenność",
-      "description": "Ta filozofia stwierdza, że twoja uwaga to twój najcenniejszy atut. Polega na świadomej i celowej relacji z technologią, szczególnie mediami społecznościowymi. Przestajesz być pasywnym użytkownikiem, stając się aktywnym suwerenem, który używa tych narzędzi do konkretnych celów, a następnie się rozłącza, chroniąc swój umysł przed rozproszeniem i porównywaniem.",
-      "quote": "Koszt rzeczy to ilość tego, co nazwę życiem, które musi być wymienione za nią, natychmiast lub na dłuższą metę.",
-      "author": "Henry David Thoreau (zaadaptowane na erę cyfrową przez Cala Newporta)",
-      "question": "Po przeciętnej sesji w mediach społecznościowych, czy czuję się bardziej połączony, naenergetyzowany i poinformowany, czy bardziej rozproszony, niespokojny i nieadekwatny?",
-      "action_item": "Usuń aplikacje mediów społecznościowych z telefonu na jeden weekend. Nadal możesz uzyskać do nich dostęp przez przeglądarkę internetową, jeśli potrzeba. Obserwuj zmianę w swoim stanie psychicznym i chęć 'sprawdzenia'.",
-      "common_pitfall": "Usprawiedliwianie, że 'potrzebujesz' tego do pracy lub utrzymywania kontaktu. Wyzwaniem jest rozróżnienie między świadomym, celowym użyciem a bezmyślnym, kompulsywnym przewijaniem.",
-      "further_reading": "'Cyfrowy minimalizm: Wybór skoncentrowanego życia w hałaśliwym świecie' autorstwa Cala Newporta.",
-      "affirmation": "Jestem kuratorem mojej własnej uwagi. Używam moich narzędzi; moje narzędzia nie używają mnie."
-    }
-  },
-
-  "likertScale": {
-    "stronglyDisagree": "Zdecydowanie się nie zgadzam",
-    "disagree": "Nie zgadzam się",
-    "neutral": "Neutralny",
-    "agree": "Zgadzam się",
-    "stronglyAgree": "Zdecydowanie się zgadzam"
-  },
-  "progress": {
-    "label": "Postęp"
-  },
-  "validation": {
-    "incomplete": "Proszę odpowiedzieć na wszystkie pytania przed sprawdzeniem wyników.",
-    "complete": "Wszystkie pytania zostały odpowiedziane! Sprawdź swoje wyniki poniżej.",
-    "cleared": "Wszystkie odpowiedzi zostały wyczyszczone.",
-    "restart": "Zaczynamy od nowa! Odpowiedz na pytania ponownie."
-  },
-  "results": {
-    "title": "Kwestionariusz ukończony!",
-    "completion": "Ukończenie",
-    "tone": {
-      "aligned": "Twoje odpowiedzi wskazują na silną zgodę z tymi praktykami refleksji. Wykorzystaj tę jasność i wybierz jedno konkretne działanie na ten tydzień.",
-      "balanced": "Twoje odpowiedzi pokazują mieszaną, uważną postawę. Wróć do pytań, przy których pojawiła się neutralność; tam może być najwięcej sygnału.",
-      "questioning": "Twoje odpowiedzi są bardziej sceptyczne lub niepewne. To też może być wartościowe: wybierz jedno pytanie, które Cię poruszyło, i zapisz dlaczego."
-    }
   }
 }
