@@ -61,14 +61,25 @@ npm run deploy
 
 ## 📚 Documentation
 
-This README provides a comprehensive overview of ClarityAge. For detailed project documentation, see:
+For comprehensive project documentation, see the **[Documentation Hub](docs/README.md)**.
 
-- **[Project Overview](src/docs/base.md)** - Detailed project concept, target audience, and goals
-- **[Features Documentation](src/docs/features.md)** - Complete feature specifications with user stories
-- **[Design System](src/docs/design.md)** - UI/UX guidelines, color palette, typography, and component library
-- **[Implementation Guide](src/docs/implementation.md)** - Technical architecture, development setup, and deployment strategies
+### Quick Links
 
-These documents complement this README and provide in-depth guidance for contributors and developers.
+| Document | Description |
+|----------|-------------|
+| **[Documentation Hub](docs/README.md)** | Central index for all project documentation |
+| **[PURPOSE.md](docs/PURPOSE.md)** | Project purpose, goals, and problem statement |
+| **[ARCHITECTURE.md](docs/ARCHITECTURE.md)** | System architecture, tech stack, and component structure |
+| **[DEVELOPMENT.md](docs/DEVELOPMENT.md)** | Development setup, coding standards, and workflow |
+| **[DEPLOYMENT.md](docs/DEPLOYMENT.md)** | Deployment guide, environments, and CI/CD setup |
+| **[IMPLEMENTATION.md](docs/IMPLEMENTATION.md)** | Technical implementation details and code structure |
+| **[AI_AGENT_GUIDE.md](docs/AI_AGENT_GUIDE.md)** | Guidelines for AI agents working on this project |
+
+### Additional Resources
+
+- **[design.md](docs/design.md)** - Design system, UI components, and user experience patterns
+- **[features.md](docs/features.md)** - Feature specifications with user stories and priorities
+- **[AWARENESS.md](docs/AWARENESS.md)** - Development awareness and best practices
 
 ## 🎨 Customization
 
@@ -86,7 +97,7 @@ Visit the live application: [ClarityAge - 40](https://bitlogicforge.github.io/Cl
 
 Contributions are welcome! Feel free to open issues or submit pull requests.
 
-Please review the [Implementation Guide](src/docs/implementation.md) for development setup and coding standards.
+Please review the [Development Guide](docs/DEVELOPMENT.md) for development setup and coding standards.
 
 ## 📄 License
 
