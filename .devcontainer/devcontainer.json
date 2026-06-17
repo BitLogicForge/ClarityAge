@@ -1,15 +1,29 @@
 {
-  "name": "ClarityAge",
-  "image": "mcr.microsoft.com/devcontainers/typescript-node:dev-24-bookworm",
+  "name": "${localWorkspaceFolderBasename}",
+  "image": "my-node-dev:24",
   "runArgs": [
-    "--name=clarityage-dev"
+    "--name=${localWorkspaceFolderBasename}-dev",
+    "--network=shared-dev"
   ],
+  "containerEnv": {
+    "CHOKIDAR_USEPOLLING": "true",
+    "PROJECTPATH": "/workspaces/${localWorkspaceFolderBasename}",
+    "NPM_CONFIG_PREFIX": "/home/node/.npm-global"
+  },
+  "remoteEnv": {
+    "PATH": "/home/node/.npm-global/bin:${containerEnv:PATH}"
+  },
   "remoteUser": "node",
   "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
   "mounts": [
-    "source=${localWorkspaceFolderBasename}-node_modules,target=${containerWorkspaceFolder}/node_modules,type=volume"
+    "source=shared-node_modules,target=${containerWorkspaceFolder}/node_modules,type=volume",
+    "source=devScripts,target=/workspaces/dev_scripts,type=volume",
+    "source=npm-global-node,target=/home/node/.npm-global,type=volume",
+    "source=claude-config,target=/home/node/.claude,type=volume"
   ],
-  "postCreateCommand": "npm install",
+  "onCreateCommand": "",
+  "postCreateCommand": "/workspaces/dev_scripts/post_create.sh",
+  "postStartCommand": "/workspaces/dev_scripts/post_start.sh && /workspaces/dev_scripts/copy_config.sh shared_node",
   "forwardPorts": [
     5173,
     4173
@@ -17,16 +31,13 @@
   "portsAttributes": {
     "5173": {
       "label": "Vite dev server",
-      "onAutoForward": "notify",
+      "onAutoForward": "silent",
       "protocol": "http"
     },
     "4173": {
       "label": "Vite preview",
       "onAutoForward": "silent"
     }
-  },
-  "containerEnv": {
-    "CHOKIDAR_USEPOLLING": "true"
   },
   "customizations": {
     "vscode": {
