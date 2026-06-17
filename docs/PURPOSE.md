@@ -1,4 +1,4 @@
-# ClarityAge - 40: Project Purpose & Goals
+# CES-D Depression Screening: Project Purpose & Goals
 
 **📚 [Documentation Hub](./README.md) | [← Back to Documentation](./README.md)**
 
@@ -6,7 +6,7 @@
 
 ## Project Overview
 
-**ClarityAge - 40** is a thoughtful interactive questionnaire that explores philosophical perspectives and personal values through carefully curated questions, helping users reflect on their life approaches and meaning through the wisdom of notable thinkers and philosophers.
+**CES-D Depression Screening Tool** is a confidential web application based on the Center for Epidemiologic Studies Depression Scale (CES-D), providing a validated screening tool for depressive symptoms with complete user privacy.
 
 ---
 
@@ -14,17 +14,18 @@
 
 ### Elevator Pitch
 
-ClarityAge provides a digital space for meaningful self-reflection, combining ancient philosophical wisdom with modern interactive design. Each question is paired with insights from notable thinkers, creating an experience that guides users through contemplation of their values, priorities, and approaches to life's fundamental questions.
+CES-D Screening provides a confidential, accessible way for individuals to screen for depressive symptoms using a clinically-validated 20-question assessment. The tool provides immediate feedback with appropriate resources and crisis support, while maintaining complete privacy through zero data storage.
 
 ### What Makes Us Different
 
-Unlike typical personality quizzes or self-assessment tools, ClarityAge:
+Unlike many mental health apps that collect and monetize user data, CES-D Screening:
 
-- **Embraces depth over breadth** - Questions designed for genuine reflection, not quick categorization
-- **Integrates philosophical tradition** - Each question grounded in centuries of wisdom
-- **Prioritizes user autonomy** - No data collection, no profiling, personal tools for growth
-- **Supports multilingual accessibility** - Available in English and Polish with expansion planned
-- **Maintains aesthetic respect** - Clean, contemplative interface that honors the content
+- **Complete privacy** - No data collection, storage, or transmission
+- **Clinically validated** - Based on the CES-D, a well-established screening tool
+- **Evidence-based scoring** - Proper implementation with reverse-scored items
+- **Appropriate resources** - Crisis resources prominently displayed for severe scores
+- **No profiling** - No user categorization or data analysis
+- **Session-only** - All data lost when browser session ends
 
 ---
 
@@ -32,80 +33,80 @@ Unlike typical personality quizzes or self-assessment tools, ClarityAge:
 
 ### Primary Users
 
-**Thoughtful Individuals Seeking Personal Growth**
-- Age 35-55 experiencing life transitions
-- Professionals seeking deeper meaning in work and life
-- Parents reflecting on values and priorities
-- Anyone experiencing significant life changes (career, relationships, identity)
+**Adults Seeking Mental Health Information**
+- Adults 18+ experiencing symptoms of depression
+- Individuals concerned about their mental health
+- People considering whether to seek professional help
+- Those wanting to monitor their symptoms over time
 
 ### Secondary Users
 
-**Philosophy Students and Enthusiasts**
-- Individuals interested in exploring philosophical traditions
-- Students seeking interactive engagement with philosophical concepts
-- Reading groups and discussion circles
+**Healthcare and Mental Health Professionals**
+- Clinicians who want to share a validated screening tool with patients
+- Mental health professionals seeking resources for clients
+- Researchers studying depression screening tools
 
-**Personal Development Communities**
-- Coaches and therapists using tools for client reflection
-- Workshop facilitators needing structured reflection tools
-- Book clubs and discussion groups
+**Educational and Community Settings**
+- Educational institutions teaching about mental health
+- Community organizations providing mental health resources
+- Workplaces offering mental health screening
 
 ---
 
 ## Core Problems We Solve
 
-### Problem 1: Lack of Structured Reflection Tools
+### Problem 1: Inaccessible Mental Health Screening
 
-**The Challenge**: In a world of endless content and constant distraction, meaningful self-reflection is rare. Most people lack structured tools for examining their values, priorities, and life approaches.
+**The Challenge**: Many people want to screen for depression but lack access to validated tools or are hesitant to seek professional help initially.
 
-**Our Solution**: A guided, intentional space for reflection with carefully sequenced questions that build on each other, creating a comprehensive exploration of personal philosophy.
+**Our Solution**: Free, accessible, validated CES-D screening tool available online without barriers.
 
-### Problem 2: Inaccessible Philosophical Wisdom
+### Problem 2: Privacy Concerns in Mental Health Apps
 
-**The Challenge**: Philosophical insights are often locked in academic texts or presented without context. Many people want to engage with wisdom traditions but find them intimidating or disconnected from daily life.
+**The Challenge**: Most mental health apps collect and potentially monetize sensitive user data, creating distrust and preventing honest self-assessment.
 
-**Our Solution**: Each question is paired with relevant quotes and context from notable thinkers, making philosophical wisdom accessible and immediately applicable to personal reflection.
+**Our Solution**: Zero data collection. Complete privacy through session-only existence with no storage or transmission.
 
-### Problem 3: Language Barriers to Philosophical Resources
+### Problem 3: Lack of Crisis Resources
 
-**The Challenge**: Many quality philosophical resources are primarily available in English, limiting access for non-native speakers.
+**The Challenge**: Screening tools often fail to provide immediate support resources for those who need them most.
 
-**Our Solution**: Full multilingual support with culturally sensitive translations, making philosophical reflection accessible to diverse audiences. Currently available in English and Polish.
+**Our Solution**: Prominent crisis resources with emergency contact information for users scoring in the severe range.
 
-### Problem 4: Privacy Concerns in Digital Self-Reflection
+### Problem 4: Language Barriers
 
-**The Challenge**: Many digital tools collect and monetize user data, creating distrust and limiting honest self-reflection.
+**The Challenge**: Many mental health resources are primarily available in English.
 
-**Our Solution**: Frontend-only architecture with local state persistence. No user data collection, no profiling, no external tracking. Users own their reflection process completely.
+**Our Solution**: Full multilingual support with culturally sensitive translations, currently available in English and Polish.
 
 ---
 
 ## Project Goals
 
-### Short-Term Goals (MVP - Q1 2025)
+### Short-Term Goals (MVP - Complete)
 
-- ✅ **Launch core questionnaire** - 40 curated philosophical questions
-- ✅ **Implement responsive design** - Seamless desktop and mobile experience
-- ✅ **Multilingual support** - English and Polish with automatic detection
-- ✅ **Theme system** - Dark/light modes for comfortable reading
-- ✅ **State persistence** - User progress saved locally
-- ✅ **Modern UI** - Clean, contemplative Material-UI interface
+- ✅ **Functional CES-D implementation** - 20 questions with proper scoring
+- ✅ **Privacy-first architecture** - No data storage or transmission
+- ✅ **Clinical accuracy** - Evidence-based scoring and interpretation
+- ✅ **Crisis resources** - Appropriate resources for severe scores
+- ✅ **Multilingual support** - English and Polish
+- ✅ **Responsive design** - Works on all devices
+- ✅ **Accessible design** - WCAG 2.1 AA compliance
 
-### Medium-Term Goals (Q2-Q3 2025)
+### Medium-Term Goals (Future)
 
-- 🔄 **Enhanced features** - Bookmark questions, track progress over time
-- 🔄 **Question variety** - Multiple question sets and themed modules
-- 🔄 **Export functionality** - Allow users to save their reflections
-- 🔄 **Extended i18n** - Additional languages (Spanish, French, German)
-- 🔄 **Accessibility improvements** - Full screen reader support, keyboard navigation
+- 🔄 **Additional languages** - Spanish, French, German
+- 🔄 **Enhanced accessibility** - Screen reader optimization
+- 🔄 **Progress tracking** - Optional local tracking (with clear consent)
+- 🔄 **Print functionality** - Ability to print results for healthcare providers
+- 🔄 **Resource database** - Curated list of mental health resources by location
 
 ### Long-Term Vision (2025+)
 
-- 📋 **Community features** - Anonymous insight sharing, discussion forums
-- 📋 **Personalized recommendations** - Resources based on user responses
-- 📋 **Analytics dashboard** - Visual representations of philosophical leanings
-- 📋 **Collaborative modules** - Questions designed for group reflection
-- 📋 **Global philosophical traditions** - Non-Western philosophical perspectives
+- 📋 **Multiple validated scales** - PHQ-9, GAD-7, and others
+- 📋 **Provider portal** - Version for healthcare professionals
+- 📋 **Research contribution** - Anonymous, opt-in data collection for research
+- 📋 **Global resources** - International crisis and treatment resources
 
 ---
 
@@ -113,32 +114,36 @@ Unlike typical personality quizzes or self-assessment tools, ClarityAge:
 
 ### Core Principles
 
-**Contemplative Minimalism**
-- Clean, uncluttered interfaces that encourage deep thought
-- Intentional white space and typography
-- Purposeful animations that don't distract
+**Privacy First**
+- Zero data collection
+- Session-only existence
+- No tracking or analytics
+- Transparent privacy policy
 
-**Purposeful Elegance**
-- Every design element serves reflection
-- No features without clear purpose
-- Respect for user attention and time
+**Clinical Integrity**
+- Validated screening tools only
+- Evidence-based scoring
+- Proper reverse-scoring implementation
+- Clear disclaimers about limitations
 
-**Accessible Wisdom**
-- Complex philosophical concepts made approachable
-- Clear language without sacrificing depth
-- Context and attribution for all sources
+**User Safety**
+- Crisis resources for severe scores
+- Clear pathways to professional help
+- Appropriate language and tone
+- Never replace professional care
 
-**User Sovereignty**
-- No data collection or profiling
-- Local storage for user privacy
-- Transparent, open-source codebase
+**Accessibility**
+- WCAG 2.1 AA compliance
+- Screen reader optimization
+- Keyboard navigation
+- Clear, simple language
 
 ### Visual Personality
 
-- **Thoughtful**: Spacious layouts with intentional white space
-- **Sophisticated**: Modern typography and refined color choices
-- **Warm**: Approachable despite philosophical depth
-- **Timeless**: Design that ages gracefully
+- **Professional**: Clean, medical-appropriate design
+- **Supportive**: Warm, non-judgmental interface
+- **Clear**: High contrast, readable typography
+- **Safe**: Feels secure and private
 
 ---
 
@@ -146,24 +151,24 @@ Unlike typical personality quizzes or self-assessment tools, ClarityAge:
 
 ### User Engagement
 
-- **Completion Rate**: Users completing the full questionnaire (>70% target)
-- **Return Rate**: Users returning to review responses (>30% target)
-- **Session Duration**: Meaningful engagement with content
-- **Mobile Adoption**: Consistent experience across devices
+- **Completion Rate**: Users completing full assessment (>80% target)
+- **Appropriate Help-Seeking**: Users with moderate/severe scores seeking professional help
+- **Return Rate**: Users retaking assessment (>30% target)
+- **Resource Access**: Users viewing crisis resources when needed
 
 ### Technical Performance
 
 - **Load Time**: <3 seconds initial load across devices
-- **Accessibility**: WCAG 2.1 AA compliance
-- **Multi-language Usage**: Engagement across supported languages
-- **Zero Data Breaches**: Maintain privacy-first architecture
+- **Privacy Verification**: Zero data storage verified through audits
+- **Accessibility**: WCAG 2.1 AA compliance maintained
+- **Cross-Language Usage**: Engagement across supported languages
 
 ### Impact Indicators
 
-- **User Feedback**: Qualitative feedback on value and experience
-- **Community Growth**: Organic growth through word-of-mouth
-- **Resource Sharing**: Users recommending to others
-- **Cultural Reach**: Usage across diverse regions and languages
+- **User Feedback**: Qualitative feedback on usefulness and appropriateness
+- **Clinical Review**: Approval from mental health professionals
+- **Resource Accuracy**: Crisis resources kept current and functional
+- **Community Reach**: Usage across diverse regions and languages
 
 ---
 
@@ -171,34 +176,41 @@ Unlike typical personality quizzes or self-assessment tools, ClarityAge:
 
 ### Privacy & Data
 
-- No user data collection or storage
-- No third-party analytics or tracking
-- No profiling or categorization of users
-- Open-source codebase for transparency
+- **No data collection**: No user data collected, stored, or transmitted
+- **Session-only**: All data lost when session ends
+- **No third-party services**: No analytics, tracking, or external services
+- **Open source**: Transparent codebase for verification
 
 ### Content Integrity
 
-- Accurate attribution of philosophical quotes
-- Context provided for all philosophical concepts
-- Respect for diverse philosophical traditions
-- Clear distinction between fact and interpretation
+- **Validated tools**: Only use clinically-validated screening instruments
+- **Accurate scoring**: Proper implementation of scoring algorithms
+- **Evidence-based resources**: All resources based on clinical evidence
+- **Regular review**: Content reviewed by mental health professionals
+
+### Safety Protocols
+
+- **Crisis resources**: Prominent display for severe scores
+- **Clear disclaimers**: Strong disclaimers about screening vs. diagnosis
+- **Appropriate referrals**: Always encourage professional consultation
+- **Never delay help**: Clear pathways to emergency services
 
 ### Accessibility
 
-- Commitment to WCAG 2.1 AA standards
-- Screen reader optimization
-- Keyboard navigation support
-- High contrast modes available
+- **WCAG 2.1 AA**: Compliance with web accessibility standards
+- **Screen reader**: Optimized for screen reader users
+- **Keyboard navigation**: Full keyboard accessibility
+- **Clear language**: Accessible language for diverse literacy levels
 
 ---
 
 ## Related Documentation
 
 - **[ARCHITECTURE.md](./ARCHITECTURE.md)** - System design and technical architecture
-- **[features.md](./features.md)** - Detailed feature specifications
-- **[design.md](./design.md)** - Design system and UI components
+- **[IMPLEMENTATION.md](./IMPLEMENTATION.md)** - Technical implementation details
 - **[DEVELOPMENT.md](./DEVELOPMENT.md)** - Development guidelines and workflow
+- **[DEPLOYMENT.md](./DEPLOYMENT.md)** - Deployment procedures
 
 ---
 
-*This purpose document serves as the foundation for all project decisions. When in doubt about direction or priorities, return to the core problem we're solving: helping people reflect meaningfully on their lives through philosophical wisdom.*
+*This purpose document serves as the foundation for all project decisions. When in doubt about direction or priorities, return to our core values: privacy, clinical integrity, and user safety.*

@@ -1,19 +1,21 @@
-# ClarityAge - 40
+# CES-D Depression Screening Tool
 
-A thoughtful questionnaire exploring philosophical perspectives and personal values through the lens of life experience.
+A confidential screening tool for depressive symptoms based on the Center for Epidemiologic Studies Depression Scale (CES-D).
 
 ## ✨ About
 
-ClarityAge is an interactive web application that presents carefully curated philosophical questions designed to help users reflect on their life perspectives, values, and approaches to meaning. Each question is accompanied by wisdom from notable thinkers and philosophers.
+The CES-D (Center for Epidemiologic Studies Depression Scale) is a 20-question self-report assessment that measures depressive symptoms in the general population. This tool provides a confidential way to screen for symptoms and encourages conversation with healthcare providers.
 
 ## 🎯 Features
 
-- **Interactive Questionnaire** - Navigate through thought-provoking questions at your own pace
-- **Enhanced Progress Tracking** - Beautiful circular progress indicator with smooth animations
+- **Validated Screening Tool** - Based on the CES-D, a clinically-validated assessment
+- **Complete Privacy** - No data storage or transmission. All responses exist only in your current browser session
+- **Evidence-Based Scoring** - Proper scoring algorithm with reverse-scored items
+- **Clinical Interpretation** - Results categorized as minimal, mild, moderate, or severe depressive symptoms
+- **Crisis Resources** - Prominent crisis resources for severe scores
 - **Multilingual Support** - Available in English and Polish
-- **Dark/Light Theme** - Seamless theme switching for comfortable reading
-- **Responsive Design** - Optimized for desktop and mobile devices
-- **Modern UI** - Built with Material-UI for a clean, professional experience
+- **Dark/Light Theme** - Comfortable reading in any lighting condition
+- **Responsive Design** - Works on desktop and mobile devices
 
 ## 🚀 Tech Stack
 
@@ -21,7 +23,6 @@ ClarityAge is an interactive web application that presents carefully curated phi
 - **Material-UI (MUI)** for components and theming
 - **Redux Toolkit** for state management
 - **i18next** for internationalization
-- **Framer Motion** for smooth animations
 - **Vite** for fast development and building
 
 ## 🛠️ Getting Started
@@ -81,21 +82,27 @@ For comprehensive project documentation, see the **[Documentation Hub](docs/READ
 - **[features.md](docs/features.md)** - Feature specifications with user stories and priorities
 - **[AWARENESS.md](docs/AWARENESS.md)** - Development awareness and best practices
 
-## 🎨 Customization
+## ⚠️ Important Disclaimer
 
-The application is designed to be easily customizable:
+**This screening tool is NOT a diagnostic instrument.** It is designed to help identify symptoms of depression and encourage conversation with a healthcare provider. This tool does NOT replace professional mental health care.
 
-- **Questions**: Modify `/src/config/base.ts` to add or edit questions
-- **Translations**: Update `/src/locales/` files for different languages
-- **Themes**: Customize colors and styling in the ThemeProvider component
+If you are experiencing a mental health emergency or having thoughts of self-harm, please contact emergency services (911 in the US) or call/text 988 for the Suicide & Crisis Lifeline immediately.
+
+## 🔒 Privacy
+
+This screening tool is completely private:
+- **No data storage** on your device
+- **No data transmission** anywhere
+- **No analytics or tracking**
+- Session-only existence - closing the window permanently deletes all information
 
 ## 📱 Live Demo
 
-Visit the live application: [ClarityAge - 40](https://bitlogicforge.github.io/ClarityAge)
+Visit the live application: [bitlogicforge.github.io/ClarityAge](https://bitlogicforge.github.io/ClarityAge)
 
 ## 🤝 Contributing
 
-Contributions are welcome! Feel free to open issues or submit pull requests.
+Contributions are welcome! Please feel free to open issues or submit pull requests.
 
 Please review the [Development Guide](docs/DEVELOPMENT.md) for development setup and coding standards.
 
@@ -104,3 +111,5 @@ Please review the [Development Guide](docs/DEVELOPMENT.md) for development setup
 This project is open source and available under the [MIT License](LICENSE).
 
 ---
+
+**Disclaimer**: This tool is for educational and screening purposes only and is not a substitute for professional mental health care, diagnosis, or treatment.

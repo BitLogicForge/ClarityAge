@@ -1,4 +1,4 @@
-# ClarityAge - 40: Development Guide
+# CES-D Depression Screening: Development Guide
 
 **📚 [Documentation Hub](./README.md) | [← Back to Documentation](./README.md)**
 
@@ -6,7 +6,7 @@
 
 ## Development Overview
 
-This guide provides comprehensive information for contributing to ClarityAge - 40, including development environment setup, coding standards, workflow procedures, and best practices.
+This guide provides comprehensive information for contributing to CES-D Depression Screening, including development environment setup, coding standards, workflow procedures, and best practices.
 
 ---
 
@@ -27,7 +27,6 @@ This guide provides comprehensive information for contributing to ClarityAge - 4
 | **VS Code** | Recommended IDE |
 | **ESLint Plugin** | Inline linting |
 | **Prettier Plugin** | Code formatting |
-| **GitLens** | Git history visualization |
 
 ---
 
@@ -46,8 +45,6 @@ cd ClarityAge
 npm install
 ```
 
-This installs all production and development dependencies.
-
 ### 3. Verify Installation
 
 ```bash
@@ -55,22 +52,21 @@ This installs all production and development dependencies.
 npm run dev
 
 # Should see:
-# VITE v5.x.x ready in xxx ms
+# VITE v7.x.x ready in xxx ms
 # ➜ Local: http://localhost:5173/
-# ➜ Network: http://0.0.0.0:5173/
 ```
 
 ### 4. Development Environment Check
 
 ```bash
 # Type checking
-npm run type-check
+npm run typecheck
 
 # Linting
 npm run lint
 
 # Format check
-npm run format
+npm run format:check
 ```
 
 ---
@@ -87,10 +83,10 @@ npm run dev
 # Hot reload automatically refreshes the browser
 
 # 3. Run type checking
-npm run type-check
+npm run typecheck
 
 # 4. Fix any issues
-npm run format
+npm run lint:fix
 
 # 5. Test production build
 npm run build && npm run preview
@@ -103,37 +99,11 @@ npm run build && npm run preview
 git add .
 
 # 2. Run quality checks
-npm run type-check
-npm run lint
+npm run typecheck
+npm run lint:fix
 
-# 3. Format code
-npm run format
-
-# 4. Commit
+# 3. Commit
 git commit -m "feat: description of changes"
-```
-
-### Feature Development
-
-```bash
-# 1. Create feature branch
-git checkout -b feature/your-feature-name
-
-# 2. Develop feature
-npm run dev
-
-# 3. Test thoroughly
-npm run build && npm run preview
-
-# 4. Commit changes
-git add .
-git commit -m "feat: add feature description"
-
-# 5. Push to GitHub
-git push origin feature/your-feature-name
-
-# 6. Create pull request
-# (via GitHub web interface)
 ```
 
 ---
@@ -146,10 +116,9 @@ git push origin feature/your-feature-name
 
 ```typescript
 // ✅ Good - Explicit types
-interface UserProps {
-  name: string;
-  age: number;
-  onUpdate: (user: User) => void;
+interface Props {
+  title: string;
+  onAction: (value: number) => void;
 }
 
 // ❌ Bad - Any types
@@ -158,30 +127,15 @@ const processData = (data: any) => {
 };
 ```
 
-#### Component Definition
+#### Type-Only Imports
 
 ```typescript
-// ✅ Good - Functional component with types
-interface ComponentProps {
-  title: string;
-  items: string[];
-}
+// ✅ Good - Type-only imports
+import type { TCESDQuestion } from '../types/all.types';
+import type { CESDCategory } from '../types/all.types';
 
-export const MyComponent: React.FC<ComponentProps> = ({ title, items }) => {
-  return (
-    <div>
-      <h2>{title}</h2>
-      <ul>
-        {items.map(item => <li key={item}>{item}</li>)}
-      </ul>
-    </div>
-  );
-};
-
-// ❌ Bad - Missing types
-export const MyComponent = ({ title, items }) => {
-  // Missing type definitions
-};
+// ❌ Bad - Value import for types
+import { TCESDQuestion } from '../types/all.types';
 ```
 
 ### React Best Practices
@@ -190,13 +144,12 @@ export const MyComponent = ({ title, items }) => {
 
 ```typescript
 // ✅ Good - Proper hook usage
-const [state, setState] = useState<string>('');
+const [state, setState] = useState<number>(0);
 const dispatch = useAppDispatch();
-const { t } = useTranslation();
 
 // ❌ Bad - Hooks in wrong order
 if (condition) {
-  const [state, setState] = useState(''); // Never conditionally call hooks
+  const [state, setState] = useState(0); // Never conditionally call hooks
 }
 ```
 
@@ -204,34 +157,26 @@ if (condition) {
 
 ```typescript
 // Component structure:
-// 1. Imports
+// 1. Imports (including type-only)
 // 2. Type definitions
 // 3. Component definition
 // 4. Helper functions
 // 5. Export
 
-import { useState } from 'react';
-import { Box } from '@mui/material';
+import type { Props } from './types';
+import { useTranslation } from 'react-i18next';
 
-interface Props {
-  value: string;
-}
-
-export const Component: React.FC<Props> = ({ value }) => {
+export const Component: React.FC<Props> = ({ value, onChange }) => {
   // Hooks first
-  const [localState, setLocalState] = useState('');
+  const { t } = useTranslation();
 
   // Helper functions
   const handleClick = () => {
-    setLocalState(value);
+    onChange(value);
   };
 
   // Render last
-  return (
-    <Box onClick={handleClick}>
-      {localState}
-    </Box>
-  );
+  return <div onClick={handleClick}>{t('text')}</div>;
 };
 ```
 
@@ -247,9 +192,6 @@ export const Component: React.FC<Props> = ({ value }) => {
   gap: 2,
   p: 2
 }}>
-
-// ❌ Bad - Inline styles
-<Box style={{ display: 'flex', gap: '16px' }}>
 ```
 
 #### Consistent Spacing
@@ -270,11 +212,10 @@ export const Component: React.FC<Props> = ({ value }) => {
 ```
 src/
 ├── components/          # Reusable UI components
-├── config/              # Configuration files
+├── config/              # CES-D question configuration
 ├── locales/             # Translation files
-├── store/               # Redux state management
+├── store/               # Redux state management (no persistence)
 ├── types/               # TypeScript types
-├── docs/                # Documentation
 ├── App.tsx              # Root component
 ├── main.tsx             # Entry point
 └── index.css            # Global styles
@@ -282,10 +223,10 @@ src/
 
 ### File Naming
 
-- **Components**: PascalCase (`Question.tsx`, `Header.tsx`)
+- **Components**: PascalCase (`CESDQuestion.tsx`, `Header.tsx`)
 - **Utilities**: camelCase (`formatDate.ts`, `apiHelpers.ts`)
 - **Types**: camelCase with `.types` suffix (`all.types.ts`)
-- **Constants**: camelCase (`constants.ts`, `base.ts`)
+- **Config**: camelCase (`cesd.ts`)
 
 ---
 
@@ -307,29 +248,13 @@ Follow conventional commits:
 
 | Type | Usage | Example |
 |------|-------|---------|
-| `feat` | New feature | `feat: add question export` |
-| `fix` | Bug fix | `fix: correct translation keys` |
+| `feat` | New feature | `feat: add crisis resources component` |
+| `fix` | Bug fix | `fix: correct reverse-scoring calculation` |
 | `docs` | Documentation | `docs: update deployment guide` |
 | `style` | Code style | `style: format code with prettier` |
-| `refactor` | Refactoring | `refactor: simplify component structure` |
-| `test` | Test changes | `test: add unit tests for slice` |
+| `refactor` | Refactoring | `refactor: simplify state structure` |
+| `test` | Test changes | `test: add scoring algorithm tests` |
 | `chore` | Maintenance | `chore: update dependencies` |
-
-### Examples
-
-```bash
-# Feature
-git commit -m "feat: add question bookmarking functionality"
-
-# Bug fix
-git commit -m "fix: prevent progress reset on page reload"
-
-# Documentation
-git commit -m "docs: add AI agent guidelines"
-
-# Refactoring
-git commit -m "refactor: extract common button styles"
-```
 
 ---
 
@@ -343,24 +268,36 @@ git commit -m "refactor: extract common button styles"
 
 ### Manual Testing Checklist
 
-When making changes:
+#### Functional Testing
 
-1. **Visual Inspection**
-   - [ ] Check all screen sizes (mobile, tablet, desktop)
-   - [ ] Test both light and dark themes
-   - [ ] Verify all translations
+- [ ] Disclaimer screen shows and accepts
+- [ ] All 20 questions display correctly
+- [ ] Response options work (0-3 scale)
+- [ ] Navigation works (next/previous)
+- [ ] Scoring calculates correctly
+- [ ] Reverse-scoring works (items 4, 8, 12, 16)
+- [ ] Results display correct category
 
-2. **Functional Testing**
-   - [ ] Complete full questionnaire flow
-   - [ ] Test answer persistence across reloads
-   - [ ] Verify navigation (next, previous)
-   - [ ] Test language switching
+#### Privacy Testing
 
-3. **Browser Testing**
-   - [ ] Chrome/Edge
-   - [ ] Firefox
-   - [ ] Safari (if available)
-   - [ ] Mobile browsers
+- [ ] No data in localStorage after refresh
+- [ ] No data in sessionStorage
+- [ ] All state lost on browser refresh
+- [ ] No tracking/analytics code
+
+#### Safety Testing
+
+- [ ] Severe scores show crisis resources
+- [ ] Moderate scores show appropriate resources
+- [ ] Disclaimers display prominently
+- [ ] Crisis hotlines are accurate
+
+#### Accessibility Testing
+
+- [ ] Keyboard navigation works
+- [ ] Screen reader compatible
+- [ ] Color contrast meets WCAG AA
+- [ ] Focus indicators visible
 
 ---
 
@@ -368,24 +305,9 @@ When making changes:
 
 ### Development Tools
 
-#### Browser DevTools
-
 - **React DevTools**: Inspect component hierarchy and state
-- **Redux DevTools**: Monitor state changes and actions
+- **Redux DevTools**: Monitor state changes
 - **Console**: View errors and warnings
-
-#### VS Code Debugging
-
-1. Install "Debugger for Chrome" extension
-2. Configure launch.json:
-```json
-{
-  "type": "chrome",
-  "request": "launch",
-  "url": "http://localhost:5173",
-  "webRoot": "${workspaceFolder}/src"
-}
-```
 
 ### Common Debugging Scenarios
 
@@ -396,36 +318,17 @@ When making changes:
 const dispatch = useAppDispatch();
 const handleClick = () => {
   console.log('Before dispatch');
-  dispatch(setAnswer({ questionId: 'q1', answer: 'Option 1' }));
+  dispatch(setAnswer({ questionId: 1, value: 2 }));
   console.log('After dispatch');
 };
-
-// Check Redux DevTools
-// Verify reducer logic
 ```
 
-#### Translation Not Working
+#### Translation Issues
 
 ```typescript
 // Check i18n instance
 console.log('Current language:', i18n.language);
-
-// Verify translation key exists
-console.log('Translation:', t('common.next'));
-
-// Check locale file loading
-```
-
-#### Styling Issues
-
-```typescript
-// Use sx prop debugging
-<Box sx={{
-  border: '1px solid red',  // Visual debugging
-  p: 2
-}}>
-
-// Check applied styles in browser DevTools
+console.log('Translation:', t('cesd.questions.q1'));
 ```
 
 ---
@@ -434,134 +337,34 @@ console.log('Translation:', t('common.next'));
 
 ### Optimization Strategies
 
-#### Component Optimization
+#### Component Memoization
 
 ```typescript
 // Memoize expensive computations
 const filteredItems = useMemo(() => {
   return items.filter(item => item.active);
 }, [items]);
-
-// Memoize callbacks
-const handleClick = useCallback(() => {
-  onItemClick(item);
-}, [item, onItemClick]);
-```
-
-#### Bundle Optimization
-
-```bash
-# Analyze bundle size
-npm run build
-
-# Check output for bundle sizes
-# dist/assets/index-xxx.js   XX kB
-```
-
-### Performance Targets
-
-- **First Load**: < 3 seconds
-- **Interaction**: < 100ms response
-- **Animations**: 60 FPS
-- **Bundle Size**: < 500 KB (total)
-
----
-
-## Localization Development
-
-### Adding New Translations
-
-1. **Update locale files**
-
-```json
-// src/locales/en.json
-{
-  "newKey": "English text",
-  "newSection": {
-    "key": "Value"
-  }
-}
-
-// src/locales/pl.json
-{
-  "newKey": "Polish text",
-  "newSection": {
-    "key": "Wartość"
-  }
-}
-```
-
-2. **Use in component**
-
-```typescript
-const { t } = useTranslation();
-<h2>{t('newSection.key')}</h2>
-```
-
-3. **Test both languages**
-
-```typescript
-// Switch language and verify
-// Check for missing translations
-```
-
-### Adding New Languages
-
-1. **Create locale file**
-```bash
-# src/locales/fr.json
-```
-
-2. **Configure i18next**
-```typescript
-// src/i18n.ts
-resources: {
-  en: { translation: require('./locales/en.json') },
-  pl: { translation: require('./locales/pl.json') },
-  fr: { translation: require('./locales/fr.json') },
-}
-```
-
-3. **Add language switcher option**
-```typescript
-// src/components/LanguageSwitcher.tsx
-const languages = [
-  { code: 'en', name: 'English' },
-  { code: 'pl', name: 'Polski' },
-  { code: 'fr', name: 'Français' },
-];
 ```
 
 ---
 
-## Code Review Guidelines
+## Privacy Guidelines
 
-### Review Checklist
+### Critical Requirements
 
-When reviewing pull requests:
+**NO Data Storage:**
+- Never use localStorage for user data
+- Never use sessionStorage for user data
+- Never send data to external servers
+- Never use cookies for tracking
 
-- [ ] Code follows TypeScript conventions
-- [ ] Components are properly typed
-- [ ] No console.logs in production code
-- [ ] Translations added for all supported languages
-- [ ] Responsive design maintained
-- [ ] No accessibility regressions
-- [ ] Performance considerations addressed
-- [ ] Documentation updated if needed
+**Implementation Check:**
+```typescript
+// ✅ Correct - In-memory only
+const state = useAppSelector(state => state.cesd);
 
-### Providing Feedback
-
-```markdown
-## Code Review Feedback
-
-### Issues
-- [ ] Issue description
-
-### Suggestions
-- [ ] Suggestion for improvement
-
-### Questions
-- [ ] Clarification needed
+// ❌ WRONG - Storing data
+localStorage.setItem('data', JSON.stringify(data));
 ```
 
 ---
@@ -575,9 +378,6 @@ When reviewing pull requests:
 ```bash
 # Kill process on port 5173
 lsof -ti:5173 | xargs kill -9
-
-# Or use different port
-npm run dev -- --port 3000
 ```
 
 #### Dependency Issues
@@ -585,15 +385,7 @@ npm run dev -- --port 3000
 ```bash
 # Clear node modules and reinstall
 rm -rf node_modules package-lock.json
-npm install
-```
-
-#### TypeScript Errors
-
-```bash
-# Clear TypeScript cache
-rm -rf node_modules/.cache
-npm run type-check
+# (Requires user permission for npm install)
 ```
 
 #### Build Failures
@@ -625,11 +417,6 @@ npm run build
 - [Redux Toolkit Documentation](https://redux-toolkit.js.org/)
 - [i18next Documentation](https://www.i18next.com/)
 
-### Community
-
-- **GitHub Issues**: [Project Issues](https://github.com/BitLogicForge/ClarityAge/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/BitLogicForge/ClarityAge/discussions)
-
 ---
 
-*Happy coding! Remember to test thoroughly and document your changes.*
+*Happy coding! Remember: Privacy is our top priority. Never store user data.*

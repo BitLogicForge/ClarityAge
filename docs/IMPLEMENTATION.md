@@ -1,4 +1,4 @@
-# ClarityAge - 40: Technical Implementation
+# CES-D Depression Screening: Technical Implementation
 
 **📚 [Documentation Hub](./README.md) | [← Back to Documentation](./README.md)**
 
@@ -6,7 +6,7 @@
 
 ## Implementation Overview
 
-This document provides detailed technical implementation guidance for ClarityAge - 40, covering component implementation patterns, state management, internationalization, and key technical decisions.
+This document provides detailed technical implementation guidance for CES-D Depression Screening, covering component implementation patterns, state management, internationalization, scoring algorithm, and key technical decisions.
 
 ---
 
@@ -67,258 +67,195 @@ export const ExampleComponent: React.FC<Props> = () => {
 }}>
 ```
 
-**Styled components** for reusable styles:
-
-```typescript
-import styled from '@emotion/styled';
-
-const StyledContainer = styled.div`
-  max-width: 800px;
-  margin: 0 auto;
-  padding: ${theme.spacing(2)};
-`;
-```
-
 ---
 
 ## State Management Implementation
 
 ### Redux Slice Pattern
 
-State is managed using Redux Toolkit's slice pattern:
+State is managed using Redux Toolkit's slice pattern with NO persistence:
 
 ```typescript
-// src/store/questionsSlice.ts
+// src/store/cesdSlice.ts
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import type { CESDState, CESDCategory } from '../types/all.types';
 
-interface QuestionsState {
-  currentStep: number;
-  answers: Record<string, string>;
+interface CESDState {
+  answers: Record<number, number>;
+  currentQuestion: number;
   completed: boolean;
-  isStarted: boolean;
+  score: number | null;
+  category: CESDCategory | null;
+  started: boolean;
 }
 
-const initialState: QuestionsState = {
-  currentStep: 0,
+const initialState: CESDState = {
   answers: {},
+  currentQuestion: 0,
   completed: false,
-  isStarted: false,
+  score: null,
+  category: null,
+  started: false,
 };
 
-const questionsSlice = createSlice({
-  name: 'questions',
+const cesdSlice = createSlice({
+  name: 'cesd',
   initialState,
   reducers: {
-    setAnswer: (state, action: PayloadAction<{ questionId: string; answer: string }>) => {
-      state.answers[action.payload.questionId] = action.payload.answer;
+    startAssessment: (state) => {
+      state.started = true;
     },
-    nextStep: (state) => {
-      state.currentStep += 1;
+    setAnswer: (state, action: PayloadAction<{ questionId: number; value: number }>) => {
+      state.answers[action.payload.questionId] = action.payload.value;
     },
-    prevStep: (state) => {
-      state.currentStep = Math.max(0, state.currentStep - 1);
-    },
-    setCompleted: (state) => {
-      state.completed = true;
+    calculateAndComplete: (state) => {
+      // Score calculation
     },
     reset: () => initialState,
   },
 });
-
-export const { setAnswer, nextStep, prevStep, setCompleted, reset } = questionsSlice.actions;
-export default questionsSlice.reducer;
 ```
 
-### Typed Hooks
+### Privacy-First Architecture
 
-Use typed hooks for type-safe Redux access:
-
-```typescript
-// src/store/hooks.ts
-import { useDispatch, useSelector, TypedUseSelectorHook } from 'react-redux';
-import type { RootState, AppDispatch } from './store';
-
-export const useAppDispatch = () => useDispatch<AppDispatch>();
-export const useAppSelector: TypedUseSelectorHook<RootState> = useSelector;
-```
-
-### Persistence Configuration
-
-State persistence configured for questions slice only:
+**NO Redux Persist middleware** - This is intentional for privacy:
 
 ```typescript
 // src/store/store.ts
-import { persistStore, persistReducer } from 'redux-persist';
-import storage from 'redux-persist/lib/storage';
+import { configureStore } from '@reduxjs/toolkit';
+import cesdReducer from './cesdSlice';
 
-const persistConfig = {
-  key: 'clarityage-root',
-  storage,
-  whitelist: ['questions'],
-};
-
-const persistedReducer = persistReducer(persistConfig, rootReducer);
+export const store = configureStore({
+  reducer: {
+    cesd: cesdReducer,
+  },
+  // NO persist middleware - state exists only in memory
+});
 ```
 
 ---
 
-## Internationalization Implementation
+## Scoring Algorithm Implementation
 
-### i18next Configuration
+### CES-D Scoring Logic
 
-```typescript
-// src/i18n.ts
-import i18n from 'i18next';
-import { initReactI18next } from 'react-i18next';
-import LanguageDetector from 'i18next-browser-languagedetector';
-
-i18n
-  .use(LanguageDetector)
-  .use(initReactI18next)
-  .init({
-    fallbackLng: 'en',
-    detection: {
-      order: ['localStorage', 'navigator'],
-      caches: ['localStorage'],
-    },
-    resources: {
-      en: { translation: require('./locales/en.json') },
-      pl: { translation: require('./locales/pl.json') },
-    },
-  });
-
-export default i18n;
-```
-
-### Translation Usage Pattern
+The CES-D scoring algorithm includes reverse-scoring for positively worded items:
 
 ```typescript
-import { useTranslation } from 'react-i18next';
+const calculateScoreAndCategory = (answers: Record<number, number>) => {
+  let total = 0;
+  const reverseScored = [4, 8, 12, 16];
 
-export const Component: React.FC = () => {
-  const { t } = useTranslation();
+  for (let i = 1; i <= 20; i++) {
+    const value = answers[i] ?? 0;
 
-  return (
-    <Button>
-      {t('common.next')}
-    </Button>
-  );
+    // Reverse scoring for positively worded items
+    if (reverseScored.includes(i as 4 | 8 | 12 | 16)) {
+      total += (3 - value);
+    } else {
+      total += value;
+    }
+  }
+
+  const category = getCategoryFromScore(total);
+
+  return { score: total, category };
 };
 ```
 
-### Translation File Structure
+### Category Determination
 
-```json
-{
-  "common": {
-    "next": "Next",
-    "previous": "Previous",
-    "submit": "Submit",
-    "restart": "Start Over"
-  },
-  "question": {
-    "of": "of",
-    "question": "Question"
-  },
-  "theme": {
-    "light": "Light",
-    "dark": "Dark"
-  },
-  "contact": {
-    "title": "Contact Us",
-    "email": "Email"
-  }
-}
+```typescript
+export const getCategoryFromScore = (score: number): CESDCategory => {
+  if (score < 16) return 'minimal';
+  if (score <= 20) return 'mild';
+  if (score <= 25) return 'moderate';
+  return 'severe';
+};
 ```
 
 ---
 
 ## Key Component Implementations
 
-### ThemeProvider
+### DisclaimerScreen Component
 
 ```typescript
-// src/components/ThemeProvider.tsx
-import { ThemeProvider as MuiThemeProvider } from '@mui/material/styles';
-import { CssBaseline } from '@mui/material';
-
-export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [mode, setMode] = useState<'light' | 'dark'>('dark');
-
-  const theme = useMemo(() => createTheme({
-    palette: {
-      mode,
-      primary: { main: '#1976D2' },
-      secondary: { main: '#7B1FA2' },
-    },
-  }), [mode]);
-
-  const toggleTheme = () => {
-    setMode(prev => prev === 'light' ? 'dark' : 'light');
-  };
-
+// src/components/DisclaimerScreen.tsx
+export const DisclaimerScreen: React.FC<DisclaimerScreenProps> = ({ onAccept }) => {
   return (
-    <MuiThemeProvider theme={theme}>
-      <CssBaseline />
-      {children}
-    </MuiThemeProvider>
-  );
-};
-```
-
-### Question Component
-
-```typescript
-// src/components/Question.tsx
-import { Question as QuestionType } from '../types/all.types';
-
-interface Props {
-  question: QuestionType;
-  onAnswer: (answer: string) => void;
-  currentAnswer?: string;
-}
-
-export const Question: React.FC<Props> = ({ question, onAnswer, currentAnswer }) => {
-  return (
-    <Box sx={questionContainerStyles}>
-      <QuoteBox quote={question.quote} author={question.author} />
-      <Typography variant="h5">{question.text}</Typography>
-      <RadioAnswers
-        options={question.answers}
-        value={currentAnswer}
-        onChange={(answer) => onAnswer(answer)}
-      />
+    <Box sx={{ maxWidth: 600, mx: 'auto', p: 3 }}>
+      <Alert severity="warning">
+        <Typography variant="h4">{t('cesd.disclaimer.title')}</Typography>
+        <Typography variant="body1">{t('cesd.disclaimer.text')}</Typography>
+      </Alert>
+      <Button variant="contained" onClick={onAccept}>
+        {t('cesd.disclaimer.agree')}
+      </Button>
     </Box>
   );
 };
 ```
 
-### ProgressBar Component
+### CESDQuestion Component
 
 ```typescript
-// src/components/ProgressBar.tsx
-import { CircularProgress, Box, Typography } from '@mui/material';
-
-interface Props {
-  current: number;
-  total: number;
-  completed?: boolean;
-}
-
-export const ProgressBar: React.FC<Props> = ({ current, total, completed }) => {
-  const progress = ((current + 1) / total) * 100;
+// src/components/CESDQuestion.tsx
+export const CESDQuestion: React.FC<CESDQuestionProps> = ({
+  question,
+  value,
+  onChange,
+  questionNumber
+}) => {
+  const { t } = useTranslation();
 
   return (
-    <Box sx={progressContainerStyles}>
-      <CircularProgress
-        variant="determinate"
-        value={progress}
-        size={80}
-        sx={{ color: completed ? 'success.main' : 'primary.main' }}
-      />
-      <Typography variant="caption">
-        {current + 1} / {total}
+    <Box sx={{ mb: 3 }}>
+      <Typography variant="h6">{t(question.text)}</Typography>
+      <RadioGroup value={value} onChange={(e) => onChange(parseInt(e.target.value))}>
+        <FormControlLabel value={0} control={<Radio />} label={t('cesd.responses.r0')} />
+        <FormControlLabel value={1} control={<Radio />} label={t('cesd.responses.r1')} />
+        <FormControlLabel value={2} control={<Radio />} label={t('cesd.responses.r2')} />
+        <FormControlLabel value={3} control={<Radio />} label={t('cesd.responses.r3')} />
+      </RadioGroup>
+    </Box>
+  );
+};
+```
+
+### CESDResults Component
+
+```typescript
+// src/components/CESDResults.tsx
+export const CESDResults: React.FC<CESDResultsProps> = ({ score, category, onRestart }) => {
+  const { t } = useTranslation();
+
+  return (
+    <Box>
+      {/* Score Display */}
+      <Typography variant="h4">{t('cesd.results.scoreLabel')}: {score}/60</Typography>
+      <Typography variant="h5">{t(`cesd.results.${category}.title`)}</Typography>
+
+      {/* Category-specific information */}
+      <Typography variant="body1">
+        {t(`cesd.results.${category}.description`)}
       </Typography>
+
+      {/* Disclaimer */}
+      <Alert severity="warning">
+        {t('cesd.disclaimer.notDiagnostic')}
+      </Alert>
+
+      {/* Crisis resources for severe */}
+      {category === 'severe' && <CrisisResources />}
+
+      {/* Self-help for moderate/severe */}
+      {(category === 'moderate' || category === 'severe') && <SelfHelpResources />}
+
+      {/* Action buttons */}
+      <Button variant="outlined" onClick={onRestart}>
+        {t('cesd.actions.retake')}
+      </Button>
     </Box>
   );
 };
@@ -333,31 +270,32 @@ export const ProgressBar: React.FC<Props> = ({ current, total, completed }) => {
 ```typescript
 // src/types/all.types.ts
 
-export interface Question {
-  id: string;
+export interface TCESDQuestion {
+  id: number;
   text: string;
-  answers: string[];
-  quote: string;
-  author: string;
-  category?: string;
+  isReverseScored: boolean;
 }
 
-export interface Answer {
-  questionId: string;
-  answer: string;
-  timestamp?: number;
-}
-
-export interface AppState {
-  questions: QuestionsState;
-}
-
-export interface QuestionsState {
-  currentStep: number;
-  answers: Record<string, string>;
+export interface CESDState {
+  answers: Record<number, number>;
+  currentQuestion: number;
   completed: boolean;
-  isStarted: boolean;
+  score: number | null;
+  category: CESDCategory | null;
+  started: boolean;
 }
+
+export type CESDCategory = 'minimal' | 'mild' | 'moderate' | 'severe';
+export type CESDResponse = 0 | 1 | 2 | 3;
+
+// Constants
+export const REVERSE_SCORED_ITEMS = [4, 8, 12, 16] as const;
+export const CESDScoreRanges = {
+  MINIMAL: { min: 0, max: 15 },
+  MILD: { min: 16, max: 20 },
+  MODERATE: { min: 21, max: 25 },
+  SEVERE: { min: 26, max: 60 },
+} as const;
 ```
 
 ---
@@ -366,33 +304,17 @@ export interface QuestionsState {
 
 ### Question Structure
 
-Questions are defined in `src/config/base.ts`:
+Questions are defined in `src/config/cesd.ts`:
 
 ```typescript
-export const questions: Question[] = [
-  {
-    id: 'q1',
-    text: 'Question text here',
-    answers: [
-      'Answer option 1',
-      'Answer option 2',
-      'Answer option 3',
-      'Answer option 4'
-    ],
-    quote: 'Philosophical quote',
-    author: 'Author name',
-    category: 'life-purpose'
-  },
-  // ... more questions
+export const cesdQuestions: TCESDQuestion[] = [
+  { id: 1, text: 'cesd.questions.q1', isReverseScored: false },
+  { id: 2, text: 'cesd.questions.q2', isReverseScored: false },
+  { id: 3, text: 'cesd.questions.q3', isReverseScored: false },
+  { id: 4, text: 'cesd.questions.q4', isReverseScored: true },
+  // ... all 20 questions
 ];
 ```
-
-### Adding New Questions
-
-1. **Add question object** to `src/config/base.ts`
-2. **Add translation keys** to `src/locales/en.json` and `pl.json`
-3. **Test navigation** through new question
-4. **Verify persistence** across page reloads
 
 ---
 
@@ -404,116 +326,13 @@ export const questions: Question[] = [
 {
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "tsc -b && vite build",
     "preview": "vite preview",
     "deploy": "gh-pages -d dist",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "format": "prettier --write \"src/**/*.{ts,tsx,css}\"",
-    "type-check": "tsc --noEmit"
+    "typecheck": "tsc -b --noEmit"
   }
-}
-```
-
-### Development Workflow
-
-1. **Start development server**: `npm run dev`
-2. **Make changes** to source files
-3. **Hot reload** automatically refreshes
-4. **Type check**: `npm run type-check`
-5. **Lint**: `npm run lint`
-6. **Format**: `npm run format`
-7. **Test build**: `npm run build && npm run preview`
-
----
-
-## Performance Optimization
-
-### Code Splitting
-
-Vite automatically handles code splitting. For manual splitting:
-
-```typescript
-// Lazy load a component
-const HeavyComponent = lazy(() => import('./components/HeavyComponent'));
-
-// Use with Suspense
-<Suspense fallback={<Loading />}>
-  <HeavyComponent />
-</Suspense>
-```
-
-### Memoization
-
-For expensive computations:
-
-```typescript
-import { useMemo } from 'react';
-
-const expensiveValue = useMemo(() => {
-  return computeExpensiveValue(dependencies);
-}, [dependencies]);
-```
-
-### Image Optimization
-
-Use modern formats and provide fallbacks:
-
-```typescript
-<img
-  srcSet="image.webp, image.jpg"
-  type="image/webp"
-  alt="Description"
-/>
-```
-
----
-
-## Testing Considerations
-
-### Unit Testing Pattern
-
-```typescript
-describe('questionsSlice', () => {
-  it('should set answer correctly', () => {
-    const initialState = { currentStep: 0, answers: {}, completed: false, isStarted: false };
-    const action = setAnswer({ questionId: 'q1', answer: 'Option 1' });
-    const newState = questionsSlice.reducer(initialState, action);
-    expect(newState.answers['q1']).toBe('Option 1');
-  });
-});
-```
-
-### Integration Testing Pattern
-
-```typescript
-describe('Question Flow', () => {
-  it('should navigate through questions', () => {
-    render(<App />);
-    fireEvent.click(screen.getByText('Start'));
-    // Test question navigation
-  });
-});
-```
-
----
-
-## Debugging Tools
-
-### Redux DevTools
-
-The store is configured to work with Redux DevTools browser extension.
-
-### React DevTools
-
-Use React DevTools to inspect component hierarchy and state.
-
-### Console Logging
-
-Strategic console logging for development (removed in production):
-
-```typescript
-if (import.meta.env.DEV) {
-  console.log('Debug info:', data);
 }
 ```
 
@@ -521,43 +340,54 @@ if (import.meta.env.DEV) {
 
 ## Common Implementation Patterns
 
-### Conditional Rendering
+### Conditional Rendering Based on State
 
 ```typescript
-{condition && <Component />}
+if (!started) {
+  return <DisclaimerScreen onAccept={handleAcceptDisclaimer} />;
+}
 
-{condition ? <ComponentA /> : <ComponentB />}
+if (completed && score !== null && category !== null) {
+  return <CESDResults score={score} category={category} onRestart={handleRestart} />;
+}
 
-{condition && (
-  <Box>
-    <Component />
-  </Box>
-)}
-```
-
-### List Rendering
-
-```typescript
-{items.map((item, index) => (
-  <Component
-    key={item.id}
-    item={item}
-    index={index}
-  />
-))}
+// Otherwise show questions
 ```
 
 ### Event Handling
 
 ```typescript
-const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
-  event.preventDefault();
-  // Handle click
+const handleAnswer = (value: number) => {
+  dispatch(setAnswer({ questionId: currentQuestionData.id, value }));
 };
 
-<Button onClick={handleClick}>
-  Click Me
-</Button>
+const handleSubmit = () => {
+  dispatch(calculateAndComplete());
+};
+```
+
+---
+
+## Testing Considerations
+
+### Privacy Testing
+
+```typescript
+// Verify no data is stored
+expect(localStorage.getItem('cesd-state')).toBeNull();
+expect(sessionStorage.getItem('cesd-state')).toBeNull();
+```
+
+### Scoring Testing
+
+```typescript
+describe('CES-D Scoring', () => {
+  it('should calculate score correctly', () => {
+    const answers = { 1: 0, 2: 1, 3: 2, 4: 3 }; // Example
+    const { score } = calculateScoreAndCategory(answers);
+    // Verify calculation with reverse-scoring
+  });
+});
 ```
 
 ---
