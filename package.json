@@ -11,11 +11,21 @@
     "lint:fix": "eslint . --ext ts,tsx --fix",
     "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx}\"",
     "format:check": "prettier --check .",
-    "type-check": "tsc --noEmit",
+    "typecheck": "tsc -b --noEmit",
     "preview": "vite preview",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
-    "update": "npm-check-updates -u"
+    "deploy:clean": "gh-pages -d dist -c",
+    "update": "npm-check-updates -u",
+    "update:minor": "npm-check-updates -u --target minor",
+    "update:noes": "npx npm-check-updates -u --reject @eslint/js --reject eslint",
+    "clean:linux": "rm -rf dist node_modules",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:run": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "knip": "knip",
+    "git:fix": "git add . && git commit -m 'clean' && git push"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
