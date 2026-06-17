@@ -1,4 +1,3 @@
-import { Brightness4, Brightness7, ContactMail } from "@mui/icons-material";
 import { Box, IconButton, Typography } from "@mui/material";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
@@ -43,7 +42,7 @@ export default function Header() {
               sx={{ color: "primary.main" }}
               aria-label="toggle theme"
             >
-              {isDarkMode ? <Brightness7 /> : <Brightness4 />}
+              {isDarkMode ? "☀️" : "🌙"}
             </IconButton>
             <Typography
               variant="caption"
@@ -67,7 +66,7 @@ export default function Header() {
               sx={{ color: "primary.main" }}
               aria-label="contact"
             >
-              <ContactMail />
+              ✉️
             </IconButton>
             <Typography
               variant="caption"

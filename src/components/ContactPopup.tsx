@@ -1,4 +1,3 @@
-import EmailIcon from "@mui/icons-material/Email";
 import {
   Button,
   Dialog,
@@ -64,7 +63,7 @@ export default function ContactPopup({ open, onClose }: ContactPopupProps) {
           borderBottom: `1px solid ${theme.palette.divider}`,
         }}
       >
-        <EmailIcon color="primary" />
+        <span>✉️</span>
         {t("contact.title")}
       </DialogTitle>
 
@@ -83,7 +82,6 @@ export default function ContactPopup({ open, onClose }: ContactPopupProps) {
               <Button
                 variant="outlined"
                 onClick={handleEmailReveal}
-                startIcon={<EmailIcon />}
                 sx={{ minWidth: 200 }}
               >
                 {t("contact.revealEmail")}
